@@ -1,0 +1,392 @@
+{
+  "title": "Queues & Stacks",
+  "description": "Covers FIFO/LIFO principles, queue and stack implementations, and real-world applications.",
+  "subject": "Programming",
+  "difficulty": "medium",
+  "ageMin": 10,
+  "ageMax": 18,
+  "estimatedMinutes": 10,
+  "tags": [
+    "python",
+    "queues",
+    "stacks",
+    "data-structures",
+    "FIFO",
+    "LIFO"
+  ]
+}
+
+// ==================== QUESTIONS ====================
+
+[
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What does FIFO stand for?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 20,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "First In, First Out"
+        },
+        {
+          "id": "b",
+          "text": "First In, Final Out"
+        },
+        {
+          "id": "c",
+          "text": "Fast Input, Fast Output"
+        },
+        {
+          "id": "d",
+          "text": "Find In, Find Out"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 1
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What does LIFO stand for?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 20,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Last In, First Out"
+        },
+        {
+          "id": "b",
+          "text": "Last Input, Final Output"
+        },
+        {
+          "id": "c",
+          "text": "Latest In, Fastest Out"
+        },
+        {
+          "id": "d",
+          "text": "List In, Find Out"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 2
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "Which data structure is like a line at a store — first person in line is served first?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 20,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Queue"
+        },
+        {
+          "id": "b",
+          "text": "Stack"
+        },
+        {
+          "id": "c",
+          "text": "Dictionary"
+        },
+        {
+          "id": "d",
+          "text": "Set"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 3
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "Which data structure is like a stack of plates — you take the top plate first?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 20,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Stack"
+        },
+        {
+          "id": "b",
+          "text": "Queue"
+        },
+        {
+          "id": "c",
+          "text": "List"
+        },
+        {
+          "id": "d",
+          "text": "Tuple"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 4
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "To implement a stack using a Python list, which methods do you use?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 30,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "append() to push and pop() to remove from top"
+        },
+        {
+          "id": "b",
+          "text": "insert(0) and pop(0)"
+        },
+        {
+          "id": "c",
+          "text": "add() and remove()"
+        },
+        {
+          "id": "d",
+          "text": "push() and pull()"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 5
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "To implement a queue using a Python list, how do you dequeue (remove from front)?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 30,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "pop(0) — removes and returns the first element"
+        },
+        {
+          "id": "b",
+          "text": "pop() — removes the last element"
+        },
+        {
+          "id": "c",
+          "text": "remove(0) — removes element 0"
+        },
+        {
+          "id": "d",
+          "text": "dequeue() — built-in method"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 6
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "You push A, B, C, D onto a stack in that order. What is the first item popped?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 25,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "D"
+        },
+        {
+          "id": "b",
+          "text": "A"
+        },
+        {
+          "id": "c",
+          "text": "B"
+        },
+        {
+          "id": "d",
+          "text": "C"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 7
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "Which real-world scenario best represents a queue?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 20,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Waiting in line at a cafeteria"
+        },
+        {
+          "id": "b",
+          "text": "A stack of books on a desk"
+        },
+        {
+          "id": "c",
+          "text": "Undo button in a text editor"
+        },
+        {
+          "id": "d",
+          "text": "A calculator's memory"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 8
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "How can stacks be used to check for balanced parentheses?",
+    "ageMin": 12,
+    "ageMax": 18,
+    "difficulty": "hard",
+    "estimatedSeconds": 40,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Push open brackets; pop when a matching close bracket is found; balanced if stack is empty at end"
+        },
+        {
+          "id": "b",
+          "text": "Count opening and closing separately"
+        },
+        {
+          "id": "c",
+          "text": "Sort the brackets first"
+        },
+        {
+          "id": "d",
+          "text": "Use a queue instead"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 9
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What Python module provides an efficient deque for queue operations?",
+    "ageMin": 12,
+    "ageMax": 18,
+    "difficulty": "hard",
+    "estimatedSeconds": 30,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "collections"
+        },
+        {
+          "id": "b",
+          "text": "queue_lib"
+        },
+        {
+          "id": "c",
+          "text": "math"
+        },
+        {
+          "id": "d",
+          "text": "random"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 10
+  }
+]

@@ -1,0 +1,148 @@
+{
+  "title": "Conditional Logic Coding",
+  "description": "Coding challenges using if/elif/else with multiple conditions and edge-case handling.",
+  "subject": "Programming",
+  "difficulty": "medium",
+  "ageMin": 10,
+  "ageMax": 18,
+  "estimatedMinutes": 20,
+  "tags": [
+    "python",
+    "conditionals",
+    "coding"
+  ]
+}
+
+// ==================== QUESTIONS ====================
+
+[
+  {
+    "questionType": "program_submission",
+    "questionText": "Age Category Classifier",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 150,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 15.0,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "prompt": "Write a program that classifies people into age categories: Child (0-12), Teenager (13-19), Adult (20-64), Senior (65+). Handle negative ages as errors.",
+      "starterCode": "age = int(input(\"Enter your age: \"))\n\n# TODO: Add conditional logic to classify age\n# Categories:\n# - Negative ages: \"Error: Age cannot be negative!\"\n# - 0-12: \"You are a Child!\"\n# - 13-19: \"You are a Teenager!\"\n# - 20-64: \"You are an Adult!\"\n# - 65+: \"You are a Senior!\"\n\nprint(\"Classification complete.\")",
+      "language": "python",
+      "testCases": [
+        {
+          "input": "10",
+          "expected": "You are a Child!\nClassification complete.",
+          "weight": 0.2,
+          "visible": true,
+          "description": "Child category"
+        },
+        {
+          "input": "16",
+          "expected": "You are a Teenager!\nClassification complete.",
+          "weight": 0.2,
+          "visible": true,
+          "description": "Teenager category"
+        },
+        {
+          "input": "30",
+          "expected": "You are an Adult!\nClassification complete.",
+          "weight": 0.2,
+          "visible": false,
+          "description": "Adult category"
+        },
+        {
+          "input": "70",
+          "expected": "You are a Senior!\nClassification complete.",
+          "weight": 0.2,
+          "visible": false,
+          "description": "Senior category"
+        },
+        {
+          "input": "-5",
+          "expected": "Error: Age cannot be negative!\nClassification complete.",
+          "weight": 0.2,
+          "visible": false,
+          "description": "Error handling"
+        }
+      ],
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 64,
+      "allowedImports": [],
+      "forbiddenKeywords": []
+    },
+    "position": 1
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Grade Calculator with Feedback",
+    "ageMin": 11,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 180,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 18.0,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "prompt": "Create a grade calculator that assigns letter grades and provides feedback. Handle invalid scores (negative or over 100).",
+      "starterCode": "score = int(input(\"Enter your test score: \"))\n\n# TODO: Implement grade calculation\n# Grade Scale:\n# - Invalid (< 0 or > 100): \"Invalid score! Must be 0-100.\"\n# - 90-100: \"Grade: A\" and \"Excellent work!\"\n# - 80-89: \"Grade: B\" and \"Good job!\"\n# - 70-79: \"Grade: C\" and \"You passed!\"\n# - 60-69: \"Grade: D\" and \"You need improvement.\"\n# - 0-59: \"Grade: F\" and \"Please study harder.\"\n\nprint(\"Grade calculation complete.\")",
+      "language": "python",
+      "testCases": [
+        {
+          "input": "95",
+          "expected": "Grade: A\nExcellent work!\nGrade calculation complete.",
+          "weight": 0.2,
+          "visible": true,
+          "description": "A grade"
+        },
+        {
+          "input": "85",
+          "expected": "Grade: B\nGood job!\nGrade calculation complete.",
+          "weight": 0.2,
+          "visible": true,
+          "description": "B grade"
+        },
+        {
+          "input": "75",
+          "expected": "Grade: C\nYou passed!\nGrade calculation complete.",
+          "weight": 0.2,
+          "visible": false,
+          "description": "C grade"
+        },
+        {
+          "input": "65",
+          "expected": "Grade: D\nYou need improvement.\nGrade calculation complete.",
+          "weight": 0.2,
+          "visible": false,
+          "description": "D grade"
+        },
+        {
+          "input": "45",
+          "expected": "Grade: F\nPlease study harder.\nGrade calculation complete.",
+          "weight": 0.1,
+          "visible": false,
+          "description": "F grade"
+        },
+        {
+          "input": "105",
+          "expected": "Invalid score! Must be 0-100.\nGrade calculation complete.",
+          "weight": 0.1,
+          "visible": false,
+          "description": "Invalid high score"
+        }
+      ],
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 64,
+      "allowedImports": [],
+      "forbiddenKeywords": []
+    },
+    "position": 2
+  }
+]

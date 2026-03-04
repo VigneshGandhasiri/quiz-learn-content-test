@@ -1,0 +1,101 @@
+{
+  "title": "Loops Coding",
+  "description": "Coding challenges using for and while loops including loop control with break and continue.",
+  "subject": "Programming",
+  "difficulty": "medium",
+  "ageMin": 10,
+  "ageMax": 18,
+  "estimatedMinutes": 20,
+  "tags": [
+    "python",
+    "loops",
+    "coding",
+    "while",
+    "for"
+  ]
+}
+
+// ==================== QUESTIONS ====================
+
+[
+  {
+    "questionType": "program_submission",
+    "questionText": "Simple Counter Loop",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 120,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 12.0,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "prompt": "Write a program that uses a for loop to count from 1 to 10 and prints each number.",
+      "starterCode": "# TODO: Create a for loop that counts from 1 to 10\n# Print each number on a new line\n\n# Your loop should print:\n# 1\n# 2\n# 3\n# ...\n# 10\n\nprint(\"Counting complete!\")",
+      "language": "python",
+      "testCases": [
+        {
+          "input": "",
+          "expected": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10\nCounting complete!",
+          "weight": 1.0,
+          "visible": true,
+          "description": "Count from 1 to 10"
+        }
+      ],
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 64,
+      "allowedImports": [],
+      "forbiddenKeywords": []
+    },
+    "position": 1
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Password Validation with While Loop",
+    "ageMin": 13,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 240,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 20.0,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "prompt": "Create a password validation system that keeps asking for a password until the user enters the correct one ('python123').",
+      "starterCode": "correct_password = \"python123\"\nattempts = 0\nmax_attempts = 3\n\n# TODO: Use a while loop to ask for password\n# - Keep track of attempts\n# - If password is correct, print \"Access granted!\" and exit\n# - If max attempts reached, print \"Access denied!\"\n# - For wrong password, print \"Incorrect password. Try again.\"\n\nprint(\"Password Security System\")\n\n# Your while loop here",
+      "language": "python",
+      "testCases": [
+        {
+          "input": "python123",
+          "expected": "Password Security System\nAccess granted!",
+          "weight": 0.4,
+          "visible": true,
+          "description": "Correct password first try"
+        },
+        {
+          "input": "wrong\npython123",
+          "expected": "Password Security System\nIncorrect password. Try again.\nAccess granted!",
+          "weight": 0.3,
+          "visible": true,
+          "description": "Correct on second try"
+        },
+        {
+          "input": "wrong1\nwrong2\nwrong3",
+          "expected": "Password Security System\nIncorrect password. Try again.\nIncorrect password. Try again.\nIncorrect password. Try again.\nAccess denied!",
+          "weight": 0.3,
+          "visible": false,
+          "description": "Max attempts exceeded"
+        }
+      ],
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 64,
+      "allowedImports": [],
+      "forbiddenKeywords": []
+    },
+    "position": 2
+  }
+]

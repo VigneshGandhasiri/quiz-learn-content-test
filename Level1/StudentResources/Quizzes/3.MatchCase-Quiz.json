@@ -1,0 +1,389 @@
+{
+  "title": "Match-Case",
+  "description": "Covers Python 3.10's match-case statement, pattern matching, wildcards, and OR patterns.",
+  "subject": "Programming",
+  "difficulty": "medium",
+  "ageMin": 10,
+  "ageMax": 18,
+  "estimatedMinutes": 10,
+  "tags": [
+    "python",
+    "match-case",
+    "pattern-matching"
+  ]
+}
+
+// ==================== QUESTIONS ====================
+
+[
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What Python version introduced the match-case statement?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 25,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Python 3.10"
+        },
+        {
+          "id": "b",
+          "text": "Python 3.6"
+        },
+        {
+          "id": "c",
+          "text": "Python 2.7"
+        },
+        {
+          "id": "d",
+          "text": "Python 3.0"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 1
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What does the underscore (_) pattern match in a match-case statement?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 25,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Anything not matched by other cases (default/wildcard)"
+        },
+        {
+          "id": "b",
+          "text": "Only the number zero"
+        },
+        {
+          "id": "c",
+          "text": "Only empty strings"
+        },
+        {
+          "id": "d",
+          "text": "Nothing — it causes an error"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 2
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the output?\n\nday = \"Monday\"\nmatch day:\n    case \"Saturday\" | \"Sunday\":\n        print(\"Weekend\")\n    case _:\n        print(\"Weekday\")",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Weekday"
+        },
+        {
+          "id": "b",
+          "text": "Weekend"
+        },
+        {
+          "id": "c",
+          "text": "Monday"
+        },
+        {
+          "id": "d",
+          "text": "Error"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 3
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "Which symbol is used to match multiple patterns in one case?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 25,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "| (pipe)"
+        },
+        {
+          "id": "b",
+          "text": "& (ampersand)"
+        },
+        {
+          "id": "c",
+          "text": ", (comma)"
+        },
+        {
+          "id": "d",
+          "text": "or"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 4
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "When is match-case preferred over if-elif-else?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 35,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "When comparing one value against many specific patterns"
+        },
+        {
+          "id": "b",
+          "text": "When you need range comparisons like x > 10"
+        },
+        {
+          "id": "c",
+          "text": "When you have only two choices"
+        },
+        {
+          "id": "d",
+          "text": "When working with loops"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 5
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What happens if no case matches and there is no wildcard (_) case?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 30,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Nothing happens — the match block is skipped"
+        },
+        {
+          "id": "b",
+          "text": "A MatchError is raised"
+        },
+        {
+          "id": "c",
+          "text": "The program crashes"
+        },
+        {
+          "id": "d",
+          "text": "The first case runs by default"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 6
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the output?\n\ncommand = \"quit\"\nmatch command:\n    case \"start\":\n        print(\"Starting\")\n    case \"stop\":\n        print(\"Stopping\")\n    case \"quit\" | \"exit\":\n        print(\"Goodbye\")\n    case _:\n        print(\"Unknown\")",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Goodbye"
+        },
+        {
+          "id": "b",
+          "text": "Unknown"
+        },
+        {
+          "id": "c",
+          "text": "Starting"
+        },
+        {
+          "id": "d",
+          "text": "Error"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 7
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "Which keyword starts a match-case block in Python?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 20,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "match"
+        },
+        {
+          "id": "b",
+          "text": "switch"
+        },
+        {
+          "id": "c",
+          "text": "select"
+        },
+        {
+          "id": "d",
+          "text": "choose"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 8
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "Can match-case match against integers, strings, and tuples?",
+    "ageMin": 11,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 25,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Yes, it supports multiple data types"
+        },
+        {
+          "id": "b",
+          "text": "No, only strings"
+        },
+        {
+          "id": "c",
+          "text": "No, only integers"
+        },
+        {
+          "id": "d",
+          "text": "Only with special imports"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 9
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "How does match-case differ from switch in other languages like Java?",
+    "ageMin": 12,
+    "ageMax": 18,
+    "difficulty": "hard",
+    "estimatedSeconds": 40,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "match-case does NOT fall through to the next case; each case is independent"
+        },
+        {
+          "id": "b",
+          "text": "match-case requires a break statement"
+        },
+        {
+          "id": "c",
+          "text": "match-case only works with numbers"
+        },
+        {
+          "id": "d",
+          "text": "There is no difference"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 10
+  }
+]

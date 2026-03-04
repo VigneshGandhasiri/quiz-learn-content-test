@@ -1,0 +1,391 @@
+{
+  "title": "Loop Patterns",
+  "description": "Covers nested loops, break/continue, accumulator pattern, sentinel values, and pattern printing.",
+  "subject": "Programming",
+  "difficulty": "medium",
+  "ageMin": 10,
+  "ageMax": 18,
+  "estimatedMinutes": 10,
+  "tags": [
+    "python",
+    "loops",
+    "patterns",
+    "nested-loops",
+    "accumulator"
+  ]
+}
+
+// ==================== QUESTIONS ====================
+
+[
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is a nested loop?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 25,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "A loop inside another loop"
+        },
+        {
+          "id": "b",
+          "text": "A loop that never ends"
+        },
+        {
+          "id": "c",
+          "text": "Two loops running at the same time"
+        },
+        {
+          "id": "d",
+          "text": "A loop with no body"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 1
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "How many times does the inner print execute?\n\nfor i in range(3):\n    for j in range(4):\n        print(\"*\")",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "12"
+        },
+        {
+          "id": "b",
+          "text": "7"
+        },
+        {
+          "id": "c",
+          "text": "3"
+        },
+        {
+          "id": "d",
+          "text": "4"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 2
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What does the 'break' statement do inside a loop?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 25,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Exits the loop immediately"
+        },
+        {
+          "id": "b",
+          "text": "Skips to the next iteration"
+        },
+        {
+          "id": "c",
+          "text": "Restarts the loop"
+        },
+        {
+          "id": "d",
+          "text": "Ends the entire program"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 3
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What does the 'continue' statement do inside a loop?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 25,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Skips the rest of the current iteration and goes to the next"
+        },
+        {
+          "id": "b",
+          "text": "Exits the loop immediately"
+        },
+        {
+          "id": "c",
+          "text": "Continues running the rest of the code below the loop"
+        },
+        {
+          "id": "d",
+          "text": "Pauses the loop for 1 second"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 4
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What pattern does this code create?\n\nfor i in range(1, 4):\n    print(\"*\" * i)",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 35,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "*\n**\n***"
+        },
+        {
+          "id": "b",
+          "text": "***\n**\n*"
+        },
+        {
+          "id": "c",
+          "text": "***"
+        },
+        {
+          "id": "d",
+          "text": "*\n*\n*"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 5
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is an accumulator pattern in loops?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 30,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "A variable that collects or builds up a result across iterations"
+        },
+        {
+          "id": "b",
+          "text": "A loop that accumulates speed over time"
+        },
+        {
+          "id": "c",
+          "text": "A pattern that creates infinite loops"
+        },
+        {
+          "id": "d",
+          "text": "A special type of for loop"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 6
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the output?\n\nfor i in range(5):\n    if i == 3:\n        break\n    print(i, end=\" \")",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 35,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "0 1 2"
+        },
+        {
+          "id": "b",
+          "text": "0 1 2 3"
+        },
+        {
+          "id": "c",
+          "text": "0 1 2 4"
+        },
+        {
+          "id": "d",
+          "text": "0 1 2 3 4"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 7
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the output?\n\nfor i in range(5):\n    if i == 3:\n        continue\n    print(i, end=\" \")",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 35,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "0 1 2 4"
+        },
+        {
+          "id": "b",
+          "text": "0 1 2"
+        },
+        {
+          "id": "c",
+          "text": "0 1 2 3 4"
+        },
+        {
+          "id": "d",
+          "text": "3"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 8
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "In a nested loop, which loop completes all its iterations first?",
+    "ageMin": 11,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 30,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "The inner loop"
+        },
+        {
+          "id": "b",
+          "text": "The outer loop"
+        },
+        {
+          "id": "c",
+          "text": "Both complete at the same time"
+        },
+        {
+          "id": "d",
+          "text": "It depends on the loop type"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 9
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the sentinel value pattern?",
+    "ageMin": 11,
+    "ageMax": 18,
+    "difficulty": "hard",
+    "estimatedSeconds": 35,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Using a special value to signal when to stop a loop"
+        },
+        {
+          "id": "b",
+          "text": "A loop that guards against errors"
+        },
+        {
+          "id": "c",
+          "text": "A variable that counts loop iterations"
+        },
+        {
+          "id": "d",
+          "text": "A security feature in Python"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 10
+  }
+]

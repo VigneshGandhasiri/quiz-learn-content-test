@@ -1,0 +1,363 @@
+{
+  "title": "Test 4: Cumulative Quiz",
+  "description": "Cumulative assessment covering Functions, Sets, Dictionaries, Queues, Stacks, Searching, and Sorting.",
+  "subject": "Programming",
+  "difficulty": "medium",
+  "ageMin": 10,
+  "ageMax": 18,
+  "estimatedMinutes": 25,
+  "tags": [
+    "python",
+    "functions",
+    "sets",
+    "dictionaries",
+    "data-structures",
+    "searching",
+    "sorting",
+    "cumulative"
+  ]
+}
+
+// ==================== QUESTIONS ====================
+
+[
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What keyword defines a function in Python?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 15,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "def"
+        },
+        {
+          "id": "b",
+          "text": "func"
+        },
+        {
+          "id": "c",
+          "text": "function"
+        },
+        {
+          "id": "d",
+          "text": "method"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 1
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the time complexity of looking up a key in a dictionary?",
+    "ageMin": 12,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 25,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "O(1) on average"
+        },
+        {
+          "id": "b",
+          "text": "O(n)"
+        },
+        {
+          "id": "c",
+          "text": "O(log n)"
+        },
+        {
+          "id": "d",
+          "text": "O(n²)"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 2
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "Which data structure uses LIFO (Last In, First Out)?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 20,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Stack"
+        },
+        {
+          "id": "b",
+          "text": "Queue"
+        },
+        {
+          "id": "c",
+          "text": "List"
+        },
+        {
+          "id": "d",
+          "text": "Dictionary"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 3
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the output?\ndef double(x):\n    return x * 2\nresult = double(double(3))\nprint(result)",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 30,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "12"
+        },
+        {
+          "id": "b",
+          "text": "6"
+        },
+        {
+          "id": "c",
+          "text": "9"
+        },
+        {
+          "id": "d",
+          "text": "Error"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 4
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the time complexity of binary search?",
+    "ageMin": 11,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 20,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "O(log n)"
+        },
+        {
+          "id": "b",
+          "text": "O(n)"
+        },
+        {
+          "id": "c",
+          "text": "O(1)"
+        },
+        {
+          "id": "d",
+          "text": "O(n²)"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 5
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "Which sorting algorithms have a worst-case time complexity of O(n²)?",
+    "ageMin": 11,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 25,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Bubble, Selection, and Insertion Sort"
+        },
+        {
+          "id": "b",
+          "text": "Only Bubble Sort"
+        },
+        {
+          "id": "c",
+          "text": "Binary Sort"
+        },
+        {
+          "id": "d",
+          "text": "None of the above"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 6
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What does a set guarantee about its elements?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 20,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "All elements are unique (no duplicates)"
+        },
+        {
+          "id": "b",
+          "text": "Elements are always sorted"
+        },
+        {
+          "id": "c",
+          "text": "Elements are always strings"
+        },
+        {
+          "id": "d",
+          "text": "There are always exactly 10 elements"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 7
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Contact Book",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 180,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 18.0,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "prompt": "Build a simple contact book using a dictionary. Read n contacts (each on a line as 'name:phone'). Then read a name to look up. If found, print 'Found: <name> - <phone>'. If not found, print 'Not found'.",
+      "starterCode": "# TODO: Read number of contacts\nn = int(input())\n\n# TODO: Build dictionary from n lines of 'name:phone'\ncontacts = {}\nfor _ in range(n):\n    line = input()\n    # Split on ':' and add to dictionary\n\n# TODO: Look up a name\nlookup = input()\n# Print result",
+      "language": "python",
+      "testCases": [
+        {
+          "input": "3\nAlice:555-0100\nBob:555-0200\nCharlie:555-0300\nBob",
+          "expected": "Found: Bob - 555-0200",
+          "weight": 0.5,
+          "visible": true,
+          "description": "Look up existing contact Bob"
+        },
+        {
+          "input": "2\nAlice:555-0100\nBob:555-0200\nDana",
+          "expected": "Not found",
+          "weight": 0.5,
+          "visible": true,
+          "description": "Look up non-existent contact"
+        }
+      ],
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 64,
+      "allowedImports": [],
+      "forbiddenKeywords": []
+    },
+    "position": 8
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Sort and Search",
+    "ageMin": 11,
+    "ageMax": 18,
+    "difficulty": "hard",
+    "estimatedSeconds": 240,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 18.0,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "prompt": "Read space-separated integers. Sort them using any sorting algorithm (implement yourself, don't use built-in sort). Then read a target and use binary search to find it. Print the sorted list (space-separated), then whether the target was found and at what index.",
+      "starterCode": "# TODO: Read list and target\nnums = list(map(int, input().split()))\ntarget = int(input())\n\n# TODO: Sort the list (implement your own sort)\n# TODO: Binary search for target\n# Print: Sorted: <space-separated>\n# Print: Found at index <i> OR Not found",
+      "language": "python",
+      "testCases": [
+        {
+          "input": "5 2 8 1 9\n8",
+          "expected": "Sorted: 1 2 5 8 9\nFound at index 3",
+          "weight": 0.5,
+          "visible": true,
+          "description": "Sort and find 8"
+        },
+        {
+          "input": "3 1 4 1 5\n6",
+          "expected": "Sorted: 1 1 3 4 5\nNot found",
+          "weight": 0.5,
+          "visible": true,
+          "description": "Sort and search for missing element"
+        }
+      ],
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 64,
+      "allowedImports": [],
+      "forbiddenKeywords": []
+    },
+    "position": 9
+  }
+]

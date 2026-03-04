@@ -1,0 +1,99 @@
+{
+  "title": "Functions Coding",
+  "description": "Coding challenges requiring students to write and call functions with multiple parameters.",
+  "subject": "Programming",
+  "difficulty": "medium",
+  "ageMin": 10,
+  "ageMax": 18,
+  "estimatedMinutes": 20,
+  "tags": [
+    "python",
+    "functions",
+    "coding"
+  ]
+}
+
+// ==================== QUESTIONS ====================
+
+[
+  {
+    "questionType": "program_submission",
+    "questionText": "Temperature Converter Function",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 150,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 15.0,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "prompt": "Write two functions:\n1. celsius_to_fahrenheit(c) — returns c × 9/5 + 32\n2. fahrenheit_to_celsius(f) — returns (f - 32) × 5/9\nRead a temperature and a unit ('C' or 'F') from input. Convert it and print the result rounded to 1 decimal place with the target unit.",
+      "starterCode": "# TODO: Define celsius_to_fahrenheit(c)\n# TODO: Define fahrenheit_to_celsius(f)\n\n# Read temperature and unit\ntemp = float(input(\"Enter temperature: \"))\nunit = input(\"Enter unit (C/F): \").upper()\n\n# TODO: Convert and print\n# Example: 100.0C = 212.0F\n# Example: 32.0F = 0.0C",
+      "language": "python",
+      "testCases": [
+        {
+          "input": "100\nC",
+          "expected": "100.0C = 212.0F",
+          "weight": 0.5,
+          "visible": true,
+          "description": "Convert 100°C to Fahrenheit"
+        },
+        {
+          "input": "32\nF",
+          "expected": "32.0F = 0.0C",
+          "weight": 0.5,
+          "visible": true,
+          "description": "Convert 32°F to Celsius"
+        }
+      ],
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 64,
+      "allowedImports": [],
+      "forbiddenKeywords": []
+    },
+    "position": 1
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Mini Math Library",
+    "ageMin": 11,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 180,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 18.0,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "prompt": "Write three functions:\n1. find_max(numbers) — returns the maximum value in a list\n2. find_min(numbers) — returns the minimum value in a list\n3. find_average(numbers) — returns the average rounded to 2 decimal places\nDo NOT use the built-in max(), min(), or statistics functions.\nRead space-separated integers and print the max, min, and average.",
+      "starterCode": "# TODO: Define find_max(numbers)\n# TODO: Define find_min(numbers)\n# TODO: Define find_average(numbers)\n\n# Read input\nnums = list(map(int, input(\"Enter numbers: \").split()))\n\n# TODO: Print results\n# Max: <value>\n# Min: <value>\n# Average: <value>",
+      "language": "python",
+      "testCases": [
+        {
+          "input": "3 7 1 9 4",
+          "expected": "Max: 9\nMin: 1\nAverage: 4.80",
+          "weight": 0.5,
+          "visible": true,
+          "description": "Basic list statistics"
+        },
+        {
+          "input": "10 20 30",
+          "expected": "Max: 30\nMin: 10\nAverage: 20.00",
+          "weight": 0.5,
+          "visible": true,
+          "description": "Three-element list"
+        }
+      ],
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 64,
+      "allowedImports": [],
+      "forbiddenKeywords": []
+    },
+    "position": 2
+  }
+]

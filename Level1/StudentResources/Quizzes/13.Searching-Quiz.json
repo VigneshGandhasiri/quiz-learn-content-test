@@ -1,0 +1,391 @@
+{
+  "title": "Searching Algorithms",
+  "description": "Covers linear search and binary search — how they work, time complexity, and when to use each.",
+  "subject": "Programming",
+  "difficulty": "medium",
+  "ageMin": 10,
+  "ageMax": 18,
+  "estimatedMinutes": 10,
+  "tags": [
+    "python",
+    "searching",
+    "linear-search",
+    "binary-search",
+    "algorithms"
+  ]
+}
+
+// ==================== QUESTIONS ====================
+
+[
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is linear search?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 20,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Checking each element one by one from start to end"
+        },
+        {
+          "id": "b",
+          "text": "Jumping to the middle and splitting the search"
+        },
+        {
+          "id": "c",
+          "text": "Sorting first, then searching"
+        },
+        {
+          "id": "d",
+          "text": "Searching only the first element"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 1
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the time complexity of linear search?",
+    "ageMin": 11,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 25,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "O(n)"
+        },
+        {
+          "id": "b",
+          "text": "O(1)"
+        },
+        {
+          "id": "c",
+          "text": "O(log n)"
+        },
+        {
+          "id": "d",
+          "text": "O(n²)"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 2
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is required for binary search to work?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 25,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "The data must be sorted"
+        },
+        {
+          "id": "b",
+          "text": "The data must be unsorted"
+        },
+        {
+          "id": "c",
+          "text": "The data must contain only numbers"
+        },
+        {
+          "id": "d",
+          "text": "The list must have an even length"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 3
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the time complexity of binary search?",
+    "ageMin": 11,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 25,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "O(log n)"
+        },
+        {
+          "id": "b",
+          "text": "O(n)"
+        },
+        {
+          "id": "c",
+          "text": "O(1)"
+        },
+        {
+          "id": "d",
+          "text": "O(n²)"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 4
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "In binary search, what do you do if the target is greater than the middle element?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 30,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Search the right half (left = mid + 1)"
+        },
+        {
+          "id": "b",
+          "text": "Search the left half"
+        },
+        {
+          "id": "c",
+          "text": "Start over from the beginning"
+        },
+        {
+          "id": "d",
+          "text": "Return -1 (not found)"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 5
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "How many comparisons does binary search need for a sorted list of 1024 elements in the worst case?",
+    "ageMin": 12,
+    "ageMax": 18,
+    "difficulty": "hard",
+    "estimatedSeconds": 40,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "10 (since log₂(1024) = 10)"
+        },
+        {
+          "id": "b",
+          "text": "1024"
+        },
+        {
+          "id": "c",
+          "text": "512"
+        },
+        {
+          "id": "d",
+          "text": "100"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 6
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "In binary search, how do you calculate the middle index?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 25,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "mid = (left + right) // 2"
+        },
+        {
+          "id": "b",
+          "text": "mid = left + right"
+        },
+        {
+          "id": "c",
+          "text": "mid = right - left"
+        },
+        {
+          "id": "d",
+          "text": "mid = len(list) / 2"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 7
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "When does binary search stop?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 30,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "When the target is found OR left > right (not found)"
+        },
+        {
+          "id": "b",
+          "text": "Only when the target is found"
+        },
+        {
+          "id": "c",
+          "text": "After checking every element"
+        },
+        {
+          "id": "d",
+          "text": "After 10 comparisons"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 8
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "Can linear search work on unsorted data?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 20,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Yes, it works on both sorted and unsorted data"
+        },
+        {
+          "id": "b",
+          "text": "No, data must be sorted first"
+        },
+        {
+          "id": "c",
+          "text": "Only on numeric data"
+        },
+        {
+          "id": "d",
+          "text": "Only on strings"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 9
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "Which search algorithm would you choose for a phone book with 1 million entries?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 25,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Binary search — only ~20 comparisons needed"
+        },
+        {
+          "id": "b",
+          "text": "Linear search — always reliable"
+        },
+        {
+          "id": "c",
+          "text": "Random search — pick pages randomly"
+        },
+        {
+          "id": "d",
+          "text": "Both are equally fast"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 10
+  }
+]

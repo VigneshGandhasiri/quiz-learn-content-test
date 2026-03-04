@@ -1,0 +1,108 @@
+{
+  "title": "Reversing & Two Pointers Coding",
+  "description": "Coding challenges implementing palindrome checking and in-place array reversal using two pointers.",
+  "subject": "Programming",
+  "difficulty": "medium",
+  "ageMin": 10,
+  "ageMax": 18,
+  "estimatedMinutes": 20,
+  "tags": [
+    "python",
+    "two-pointers",
+    "reversing",
+    "palindrome",
+    "coding"
+  ]
+}
+
+// ==================== QUESTIONS ====================
+
+[
+  {
+    "questionType": "program_submission",
+    "questionText": "Palindrome Checker",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 150,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 15.0,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "prompt": "Read a string from input. Using the two-pointer technique (comparing characters from the start and end moving inward), determine if the string is a palindrome (reads the same forwards and backwards). Ignore case. Print 'Yes' if it is a palindrome, 'No' otherwise.",
+      "starterCode": "# TODO: Read a string\ntext = input(\"Enter text: \").lower()\n\n# TODO: Use two pointers (left and right)\n# Compare characters moving inward\n# Print 'Yes' if palindrome, 'No' otherwise",
+      "language": "python",
+      "testCases": [
+        {
+          "input": "racecar",
+          "expected": "Yes",
+          "weight": 0.33,
+          "visible": true,
+          "description": "racecar is a palindrome"
+        },
+        {
+          "input": "hello",
+          "expected": "No",
+          "weight": 0.33,
+          "visible": true,
+          "description": "hello is not a palindrome"
+        },
+        {
+          "input": "Level",
+          "expected": "Yes",
+          "weight": 0.34,
+          "visible": true,
+          "description": "Level (case-insensitive) is a palindrome"
+        }
+      ],
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 64,
+      "allowedImports": [],
+      "forbiddenKeywords": []
+    },
+    "position": 1
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Reverse Array In-Place",
+    "ageMin": 11,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 180,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 18.0,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "prompt": "Read a list of space-separated integers. Reverse the list in-place using two pointers (do NOT use the built-in reverse() or slicing [::-1]). Print the reversed list space-separated.",
+      "starterCode": "# TODO: Read space-separated integers\nnums = list(map(int, input(\"Enter numbers: \").split()))\n\n# TODO: Reverse in-place using two pointers\n# left starts at 0, right starts at len-1\n# Swap and move inward until they meet\n\n# TODO: Print reversed list space-separated",
+      "language": "python",
+      "testCases": [
+        {
+          "input": "1 2 3 4 5",
+          "expected": "5 4 3 2 1",
+          "weight": 0.5,
+          "visible": true,
+          "description": "Reverse [1,2,3,4,5]"
+        },
+        {
+          "input": "10 20 30",
+          "expected": "30 20 10",
+          "weight": 0.5,
+          "visible": true,
+          "description": "Reverse [10,20,30]"
+        }
+      ],
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 64,
+      "allowedImports": [],
+      "forbiddenKeywords": []
+    },
+    "position": 2
+  }
+]

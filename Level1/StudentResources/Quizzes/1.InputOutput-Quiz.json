@@ -1,0 +1,390 @@
+{
+  "title": "Input & Output",
+  "description": "Covers Python's print(), input(), f-strings, and basic I/O concepts.",
+  "subject": "Programming",
+  "difficulty": "easy",
+  "ageMin": 10,
+  "ageMax": 18,
+  "estimatedMinutes": 10,
+  "tags": [
+    "python",
+    "input",
+    "output",
+    "f-strings"
+  ]
+}
+
+// ==================== QUESTIONS ====================
+
+[
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "Which function is used to display output in Python?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 20,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "print()"
+        },
+        {
+          "id": "b",
+          "text": "display()"
+        },
+        {
+          "id": "c",
+          "text": "show()"
+        },
+        {
+          "id": "d",
+          "text": "output()"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 1
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "Which function is used to get input from the user?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 20,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "input()"
+        },
+        {
+          "id": "b",
+          "text": "read()"
+        },
+        {
+          "id": "c",
+          "text": "get()"
+        },
+        {
+          "id": "d",
+          "text": "scan()"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 2
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What does the input() function always return?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 25,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "A string"
+        },
+        {
+          "id": "b",
+          "text": "An integer"
+        },
+        {
+          "id": "c",
+          "text": "A float"
+        },
+        {
+          "id": "d",
+          "text": "A boolean"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 3
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What will print(\"Hello\" + \" \" + \"World\") output?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 25,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Hello World"
+        },
+        {
+          "id": "b",
+          "text": "HelloWorld"
+        },
+        {
+          "id": "c",
+          "text": "Hello + World"
+        },
+        {
+          "id": "d",
+          "text": "Error"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 4
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What does the 'f' in f\"Hello {name}\" stand for?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 30,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Formatted string"
+        },
+        {
+          "id": "b",
+          "text": "Fast string"
+        },
+        {
+          "id": "c",
+          "text": "Final string"
+        },
+        {
+          "id": "d",
+          "text": "Function string"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 5
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What will print(5, 10, 15) output?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 30,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "5 10 15"
+        },
+        {
+          "id": "b",
+          "text": "51015"
+        },
+        {
+          "id": "c",
+          "text": "5, 10, 15"
+        },
+        {
+          "id": "d",
+          "text": "[5, 10, 15]"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 6
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "How do you convert user input to an integer?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 30,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "int(input())"
+        },
+        {
+          "id": "b",
+          "text": "input(int())"
+        },
+        {
+          "id": "c",
+          "text": "integer(input())"
+        },
+        {
+          "id": "d",
+          "text": "input().int()"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 7
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What does print(\"Hi\", end=\"!\") output?",
+    "ageMin": 11,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 35,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Hi!"
+        },
+        {
+          "id": "b",
+          "text": "Hi! followed by a new line"
+        },
+        {
+          "id": "c",
+          "text": "Hi end=!"
+        },
+        {
+          "id": "d",
+          "text": "Error"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 8
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the correct order of operations in a basic program?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 25,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Input → Process → Output"
+        },
+        {
+          "id": "b",
+          "text": "Output → Input → Process"
+        },
+        {
+          "id": "c",
+          "text": "Process → Input → Output"
+        },
+        {
+          "id": "d",
+          "text": "Input → Output → Process"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 9
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What happens if you try to print a variable that hasn't been defined?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 30,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "NameError"
+        },
+        {
+          "id": "b",
+          "text": "It prints nothing"
+        },
+        {
+          "id": "c",
+          "text": "It prints 0"
+        },
+        {
+          "id": "d",
+          "text": "TypeError"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 10
+  }
+]

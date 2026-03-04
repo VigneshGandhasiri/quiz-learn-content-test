@@ -1,0 +1,244 @@
+{
+  "title": "Loops",
+  "description": "Covers for loops, while loops, range(), break, continue, and infinite loops in Python.",
+  "subject": "Programming",
+  "difficulty": "easy",
+  "ageMin": 10,
+  "ageMax": 18,
+  "estimatedMinutes": 8,
+  "tags": [
+    "python",
+    "loops",
+    "for",
+    "while",
+    "break",
+    "continue"
+  ]
+}
+
+// ==================== QUESTIONS ====================
+
+[
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the main purpose of loops in programming?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "To execute a block of code repeatedly"
+        },
+        {
+          "id": "b",
+          "text": "To store multiple values in variables"
+        },
+        {
+          "id": "c",
+          "text": "To make decisions in code"
+        },
+        {
+          "id": "d",
+          "text": "To create user interfaces"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 1
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "Which loop is best when you know exactly how many times to repeat?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 25,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "for loop"
+        },
+        {
+          "id": "b",
+          "text": "while loop"
+        },
+        {
+          "id": "c",
+          "text": "if loop"
+        },
+        {
+          "id": "d",
+          "text": "switch loop"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 2
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What does range(1, 6) generate in Python?",
+    "ageMin": 11,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Numbers 1, 2, 3, 4, 5"
+        },
+        {
+          "id": "b",
+          "text": "Numbers 1, 2, 3, 4, 5, 6"
+        },
+        {
+          "id": "c",
+          "text": "Numbers 0, 1, 2, 3, 4, 5"
+        },
+        {
+          "id": "d",
+          "text": "Numbers 6, 5, 4, 3, 2, 1"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 3
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What happens when you use 'break' in a loop?",
+    "ageMin": 12,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 35,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 8.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "The loop exits immediately"
+        },
+        {
+          "id": "b",
+          "text": "The loop pauses for 1 second"
+        },
+        {
+          "id": "c",
+          "text": "The current iteration is skipped"
+        },
+        {
+          "id": "d",
+          "text": "The loop restarts from the beginning"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 4
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What does 'continue' do in a loop?",
+    "ageMin": 12,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 35,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 8.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Skips the rest of the current iteration and moves to the next"
+        },
+        {
+          "id": "b",
+          "text": "Exits the loop completely"
+        },
+        {
+          "id": "c",
+          "text": "Restarts the loop from the beginning"
+        },
+        {
+          "id": "d",
+          "text": "Pauses the loop execution"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 5
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What happens if a while loop's condition never becomes False?",
+    "ageMin": 12,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 35,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 8.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "The loop runs forever (infinite loop)"
+        },
+        {
+          "id": "b",
+          "text": "The loop runs exactly once"
+        },
+        {
+          "id": "c",
+          "text": "Python automatically stops it after 1000 iterations"
+        },
+        {
+          "id": "d",
+          "text": "The loop never starts"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 6
+  }
+]

@@ -1,0 +1,86 @@
+{
+  "title": "Variables & Data Types Coding",
+  "description": "Coding challenges that require creating variables and performing basic arithmetic.",
+  "subject": "Programming",
+  "difficulty": "easy",
+  "ageMin": 10,
+  "ageMax": 18,
+  "estimatedMinutes": 15,
+  "tags": [
+    "python",
+    "variables",
+    "data-types",
+    "coding"
+  ]
+}
+
+// ==================== QUESTIONS ====================
+
+[
+  {
+    "questionType": "program_submission",
+    "questionText": "Variable Creation and Assignment",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 120,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 15.0,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "prompt": "Create variables for a student profile: name (string), age (integer), grade (float), and is_enrolled (boolean). Print each variable.",
+      "starterCode": "# TODO: Create the following variables:\n# name - your name as a string\n# age - your age as an integer\n# grade - your current grade as a float (like 85.5)\n# is_enrolled - True if you're enrolled in school\n\n# Create your variables here\n\n# Print each variable\nprint(f\"Name: {name}\")\nprint(f\"Age: {age}\")\nprint(f\"Grade: {grade}\")\nprint(f\"Enrolled: {is_enrolled}\")",
+      "language": "python",
+      "testCases": [
+        {
+          "input": "",
+          "expected": "Name: Alice\nAge: 16\nGrade: 92.5\nEnrolled: True",
+          "weight": 1.0,
+          "visible": true,
+          "description": "Student profile creation"
+        }
+      ],
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 64,
+      "allowedImports": [],
+      "forbiddenKeywords": []
+    },
+    "position": 1
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Basic Calculator",
+    "ageMin": 11,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 180,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 18.0,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "prompt": "Create a simple calculator that takes two numbers and performs addition, subtraction, multiplication, and division.",
+      "starterCode": "# Get two numbers from user\nfirst_number = float(input(\"Enter first number: \"))\nsecond_number = float(input(\"Enter second number: \"))\n\n# TODO: Calculate and display all four operations\n# Addition: first_number + second_number\n# Subtraction: first_number - second_number\n# Multiplication: first_number * second_number\n# Division: first_number / second_number\n\n# Your calculations here",
+      "language": "python",
+      "testCases": [
+        {
+          "input": "10\n5",
+          "expected": "Addition: 15.0\nSubtraction: 5.0\nMultiplication: 50.0\nDivision: 2.0",
+          "weight": 1.0,
+          "visible": true,
+          "description": "Basic arithmetic operations"
+        }
+      ],
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 64,
+      "allowedImports": [],
+      "forbiddenKeywords": []
+    },
+    "position": 2
+  }
+]

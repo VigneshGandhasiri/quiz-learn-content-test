@@ -1,0 +1,390 @@
+{
+  "title": "Reversing & Two Pointers",
+  "description": "Covers the two-pointer technique, in-place reversal, palindrome checking, and pointer logic.",
+  "subject": "Programming",
+  "difficulty": "medium",
+  "ageMin": 10,
+  "ageMax": 18,
+  "estimatedMinutes": 10,
+  "tags": [
+    "python",
+    "two-pointers",
+    "reversing",
+    "palindrome"
+  ]
+}
+
+// ==================== QUESTIONS ====================
+
+[
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the two-pointer technique?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 25,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Using two index variables that move towards each other or in the same direction"
+        },
+        {
+          "id": "b",
+          "text": "Using two separate lists"
+        },
+        {
+          "id": "c",
+          "text": "Having two loops"
+        },
+        {
+          "id": "d",
+          "text": "Using two print statements"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 1
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "To reverse an array in-place using two pointers, where do you start the pointers?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 25,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "One at the beginning, one at the end"
+        },
+        {
+          "id": "b",
+          "text": "Both at the beginning"
+        },
+        {
+          "id": "c",
+          "text": "Both at the end"
+        },
+        {
+          "id": "d",
+          "text": "One at the middle, one at the end"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 2
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is a palindrome?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 20,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "A word or sequence that reads the same forwards and backwards"
+        },
+        {
+          "id": "b",
+          "text": "A word with exactly 5 letters"
+        },
+        {
+          "id": "c",
+          "text": "A number that is divisible by 2"
+        },
+        {
+          "id": "d",
+          "text": "A list sorted in reverse order"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 3
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "When using two pointers on a SORTED array to find a pair that sums to a target, what do you do if the current sum is too small?",
+    "ageMin": 11,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 35,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Move the left pointer to the right (increase the smaller value)"
+        },
+        {
+          "id": "b",
+          "text": "Move the right pointer to the left"
+        },
+        {
+          "id": "c",
+          "text": "Move both pointers"
+        },
+        {
+          "id": "d",
+          "text": "Start over"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 4
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the result of reversing [1, 2, 3, 4, 5] in-place?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 20,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "[5, 4, 3, 2, 1]"
+        },
+        {
+          "id": "b",
+          "text": "[1, 2, 3, 4, 5]"
+        },
+        {
+          "id": "c",
+          "text": "[5, 1, 2, 3, 4]"
+        },
+        {
+          "id": "d",
+          "text": "[2, 3, 4, 5, 1]"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 5
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "How many swaps are needed to reverse a list of 6 elements using two pointers?",
+    "ageMin": 11,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 35,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "3"
+        },
+        {
+          "id": "b",
+          "text": "6"
+        },
+        {
+          "id": "c",
+          "text": "5"
+        },
+        {
+          "id": "d",
+          "text": "2"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 6
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What does 'in-place' mean when reversing an array?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 30,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Modifying the original array without creating a new one"
+        },
+        {
+          "id": "b",
+          "text": "Creating a new reversed copy"
+        },
+        {
+          "id": "c",
+          "text": "Sorting the array first"
+        },
+        {
+          "id": "d",
+          "text": "Reversing only part of the array"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 7
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "Which of these is a palindrome?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 20,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "racecar"
+        },
+        {
+          "id": "b",
+          "text": "python"
+        },
+        {
+          "id": "c",
+          "text": "computer"
+        },
+        {
+          "id": "d",
+          "text": "coding"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 8
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "When do the two pointers stop moving in a reverse algorithm?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 30,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "When left >= right (they meet or cross)"
+        },
+        {
+          "id": "b",
+          "text": "When left reaches the end"
+        },
+        {
+          "id": "c",
+          "text": "When right reaches the start"
+        },
+        {
+          "id": "d",
+          "text": "After exactly n swaps"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 9
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What advantage does the two-pointer technique have over using extra arrays?",
+    "ageMin": 11,
+    "ageMax": 18,
+    "difficulty": "hard",
+    "estimatedSeconds": 35,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "It uses constant O(1) extra space"
+        },
+        {
+          "id": "b",
+          "text": "It is always faster"
+        },
+        {
+          "id": "c",
+          "text": "It works with unsorted data"
+        },
+        {
+          "id": "d",
+          "text": "It requires less code"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 10
+  }
+]

@@ -1,0 +1,100 @@
+{
+  "title": "2D Arrays Coding",
+  "description": "Coding challenges involving matrix row/column sums and diagonal sum computations.",
+  "subject": "Programming",
+  "difficulty": "medium",
+  "ageMin": 11,
+  "ageMax": 18,
+  "estimatedMinutes": 20,
+  "tags": [
+    "python",
+    "2d-arrays",
+    "matrix",
+    "coding"
+  ]
+}
+
+// ==================== QUESTIONS ====================
+
+[
+  {
+    "questionType": "program_submission",
+    "questionText": "Matrix Row and Column Sums",
+    "ageMin": 11,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 180,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 18.0,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "prompt": "Read an integer n (size of square matrix). Then read n lines each containing n space-separated integers. Print the sum of each row on one line (space-separated), then the sum of each column on the next line (space-separated).",
+      "starterCode": "# TODO: Read n\nn = int(input())\n\n# TODO: Read n rows of n integers each\nmatrix = []\nfor i in range(n):\n    row = list(map(int, input().split()))\n    matrix.append(row)\n\n# TODO: Calculate and print row sums (space-separated)\n# TODO: Calculate and print column sums (space-separated)",
+      "language": "python",
+      "testCases": [
+        {
+          "input": "3\n1 2 3\n4 5 6\n7 8 9",
+          "expected": "6 15 24\n12 15 18",
+          "weight": 0.5,
+          "visible": true,
+          "description": "3x3 matrix row and column sums"
+        },
+        {
+          "input": "2\n1 0\n0 1",
+          "expected": "1 1\n1 1",
+          "weight": 0.5,
+          "visible": true,
+          "description": "2x2 identity matrix"
+        }
+      ],
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 64,
+      "allowedImports": [],
+      "forbiddenKeywords": []
+    },
+    "position": 1
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Diagonal Sum",
+    "ageMin": 11,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 150,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 15.0,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "prompt": "Read an integer n (size of square matrix), then read n lines with n space-separated integers. Print the sum of the primary diagonal (top-left to bottom-right) and the sum of the secondary diagonal (top-right to bottom-left) on separate lines.",
+      "starterCode": "# TODO: Read n\nn = int(input())\n\n# TODO: Read the matrix\nmatrix = []\nfor i in range(n):\n    row = list(map(int, input().split()))\n    matrix.append(row)\n\n# TODO: Calculate primary diagonal sum: matrix[i][i]\n# TODO: Calculate secondary diagonal sum: matrix[i][n-1-i]\n# Print each on a separate line",
+      "language": "python",
+      "testCases": [
+        {
+          "input": "3\n1 2 3\n4 5 6\n7 8 9",
+          "expected": "Primary: 15\nSecondary: 15",
+          "weight": 0.5,
+          "visible": true,
+          "description": "3x3 matrix diagonals"
+        },
+        {
+          "input": "2\n1 2\n3 4",
+          "expected": "Primary: 5\nSecondary: 5",
+          "weight": 0.5,
+          "visible": true,
+          "description": "2x2 matrix diagonals"
+        }
+      ],
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 64,
+      "allowedImports": [],
+      "forbiddenKeywords": []
+    },
+    "position": 2
+  }
+]

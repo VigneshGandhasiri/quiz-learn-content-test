@@ -1,0 +1,100 @@
+{
+  "title": "Sets & Dictionaries Coding",
+  "description": "Coding challenges using sets and dictionaries for frequency counting and set operations.",
+  "subject": "Programming",
+  "difficulty": "medium",
+  "ageMin": 10,
+  "ageMax": 18,
+  "estimatedMinutes": 20,
+  "tags": [
+    "python",
+    "sets",
+    "dictionaries",
+    "coding"
+  ]
+}
+
+// ==================== QUESTIONS ====================
+
+[
+  {
+    "questionType": "program_submission",
+    "questionText": "Word Frequency Counter",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 150,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 15.0,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "prompt": "Read a sentence from input. Count the frequency of each word using a dictionary. Print each word and its count in the order they first appear, one per line in the format 'word: count'.",
+      "starterCode": "# TODO: Read a sentence\nsentence = input(\"Enter sentence: \")\n\n# TODO: Split into words\n# TODO: Count frequency using a dictionary\n# TODO: Print each word and count in first-appearance order\n# Format: word: count",
+      "language": "python",
+      "testCases": [
+        {
+          "input": "the cat sat on the mat",
+          "expected": "the: 2\ncat: 1\nsat: 1\non: 1\nmat: 1",
+          "weight": 0.5,
+          "visible": true,
+          "description": "Simple sentence with repeated word"
+        },
+        {
+          "input": "hello hello hello",
+          "expected": "hello: 3",
+          "weight": 0.5,
+          "visible": true,
+          "description": "All same word"
+        }
+      ],
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 64,
+      "allowedImports": [],
+      "forbiddenKeywords": []
+    },
+    "position": 1
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Unique Elements Finder",
+    "ageMin": 11,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 180,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 18.0,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "prompt": "Read two lines of space-separated integers (two lists). Using sets, find and print:\n1. Elements common to both lists (intersection), sorted\n2. Elements in the first list but not the second (difference), sorted\n3. All unique elements from both lists combined (union), sorted\nPrint each on a separate line, space-separated.",
+      "starterCode": "# TODO: Read two lists\nlist1 = list(map(int, input(\"Enter list 1: \").split()))\nlist2 = list(map(int, input(\"Enter list 2: \").split()))\n\n# TODO: Convert to sets\n# TODO: Find intersection, difference, union\n# TODO: Print each sorted and space-separated\n# Common: ...\n# Only in first: ...\n# All unique: ...",
+      "language": "python",
+      "testCases": [
+        {
+          "input": "1 2 3 4 5\n3 4 5 6 7",
+          "expected": "Common: 3 4 5\nOnly in first: 1 2\nAll unique: 1 2 3 4 5 6 7",
+          "weight": 0.5,
+          "visible": true,
+          "description": "Overlapping lists"
+        },
+        {
+          "input": "10 20\n30 40",
+          "expected": "Common: \nOnly in first: 10 20\nAll unique: 10 20 30 40",
+          "weight": 0.5,
+          "visible": true,
+          "description": "No overlap"
+        }
+      ],
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 64,
+      "allowedImports": [],
+      "forbiddenKeywords": []
+    },
+    "position": 2
+  }
+]

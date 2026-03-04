@@ -1,0 +1,107 @@
+{
+  "title": "Queues & Stacks Coding",
+  "description": "Coding challenges simulating a queue and using a stack for balanced bracket checking.",
+  "subject": "Programming",
+  "difficulty": "medium",
+  "ageMin": 10,
+  "ageMax": 18,
+  "estimatedMinutes": 20,
+  "tags": [
+    "python",
+    "queues",
+    "stacks",
+    "coding"
+  ]
+}
+
+// ==================== QUESTIONS ====================
+
+[
+  {
+    "questionType": "program_submission",
+    "questionText": "Queue Simulation",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 150,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 15.0,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "prompt": "Simulate a ticket booth queue. Read n (number of operations), then n lines of commands:\n- 'ARRIVE <name>' — person joins the back of the queue\n- 'SERVE' — serve the person at the front (print 'Serving: <name>')\n- 'STATUS' — print the current queue as comma-separated names, or 'Empty' if no one is waiting\nUse a list as a queue (append to add, pop(0) to serve).",
+      "starterCode": "# TODO: Read number of operations\nn = int(input())\nqueue = []\n\nfor _ in range(n):\n    command = input()\n    # TODO: Process ARRIVE, SERVE, and STATUS commands",
+      "language": "python",
+      "testCases": [
+        {
+          "input": "6\nARRIVE Alice\nARRIVE Bob\nSTATUS\nSERVE\nSERVE\nSTATUS",
+          "expected": "Alice,Bob\nServing: Alice\nServing: Bob\nEmpty",
+          "weight": 0.5,
+          "visible": true,
+          "description": "Basic queue operations"
+        },
+        {
+          "input": "4\nARRIVE Charlie\nSERVE\nARRIVE Dana\nSTATUS",
+          "expected": "Serving: Charlie\nDana",
+          "weight": 0.5,
+          "visible": true,
+          "description": "Mixed operations"
+        }
+      ],
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 64,
+      "allowedImports": [],
+      "forbiddenKeywords": []
+    },
+    "position": 1
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Balanced Brackets Checker",
+    "ageMin": 12,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 180,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 18.0,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "prompt": "Read a string of brackets: (), [], {}. Using a stack (Python list with append/pop), determine if the brackets are balanced. Print 'Balanced' or 'Not balanced'.\nBalanced means every opening bracket has a matching closing bracket in correct order.",
+      "starterCode": "# TODO: Read the bracket string\nbrackets = input(\"Enter brackets: \")\n\n# TODO: Use a stack to check balance\n# Push opening brackets, pop for matching closing brackets\n# Print 'Balanced' or 'Not balanced'",
+      "language": "python",
+      "testCases": [
+        {
+          "input": "{[()]}",
+          "expected": "Balanced",
+          "weight": 0.33,
+          "visible": true,
+          "description": "Nested balanced brackets"
+        },
+        {
+          "input": "([)]",
+          "expected": "Not balanced",
+          "weight": 0.33,
+          "visible": true,
+          "description": "Mismatched brackets"
+        },
+        {
+          "input": "((()))",
+          "expected": "Balanced",
+          "weight": 0.34,
+          "visible": true,
+          "description": "Nested parentheses"
+        }
+      ],
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 64,
+      "allowedImports": [],
+      "forbiddenKeywords": []
+    },
+    "position": 2
+  }
+]

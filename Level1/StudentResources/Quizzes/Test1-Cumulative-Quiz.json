@@ -1,0 +1,395 @@
+{
+  "title": "Test 1: Cumulative Quiz",
+  "description": "Cumulative assessment covering Input/Output, Variables & Data Types, Conditionals, and Match-Case.",
+  "subject": "Programming",
+  "difficulty": "medium",
+  "ageMin": 10,
+  "ageMax": 18,
+  "estimatedMinutes": 20,
+  "tags": [
+    "python",
+    "input",
+    "variables",
+    "conditionals",
+    "match-case",
+    "cumulative"
+  ]
+}
+
+// ==================== QUESTIONS ====================
+
+[
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What function is used to display output in Python?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 15,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "print()"
+        },
+        {
+          "id": "b",
+          "text": "echo()"
+        },
+        {
+          "id": "c",
+          "text": "display()"
+        },
+        {
+          "id": "d",
+          "text": "show()"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 1
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What does input() return?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 20,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Always a string"
+        },
+        {
+          "id": "b",
+          "text": "Always an integer"
+        },
+        {
+          "id": "c",
+          "text": "Whatever type the user enters"
+        },
+        {
+          "id": "d",
+          "text": "A boolean"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 2
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the data type of x after: x = 3.14?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 20,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "float"
+        },
+        {
+          "id": "b",
+          "text": "int"
+        },
+        {
+          "id": "c",
+          "text": "str"
+        },
+        {
+          "id": "d",
+          "text": "double"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 3
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "Which operator checks equality in Python?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 20,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "=="
+        },
+        {
+          "id": "b",
+          "text": "="
+        },
+        {
+          "id": "c",
+          "text": "!="
+        },
+        {
+          "id": "d",
+          "text": "==="
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 4
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the output?\n\nx = 10\nif x > 5:\n    print(\"Big\")\nelse:\n    print(\"Small\")",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 25,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Big"
+        },
+        {
+          "id": "b",
+          "text": "Small"
+        },
+        {
+          "id": "c",
+          "text": "10"
+        },
+        {
+          "id": "d",
+          "text": "Error"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 5
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is an f-string in Python?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 25,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "A string with f prefix that allows embedding expressions in curly braces {}"
+        },
+        {
+          "id": "b",
+          "text": "A function that formats output"
+        },
+        {
+          "id": "c",
+          "text": "A string that starts with the letter f"
+        },
+        {
+          "id": "d",
+          "text": "A file-reading function"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 6
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What Python version introduced match/case?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 20,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Python 3.10"
+        },
+        {
+          "id": "b",
+          "text": "Python 2.7"
+        },
+        {
+          "id": "c",
+          "text": "Python 3.0"
+        },
+        {
+          "id": "d",
+          "text": "Python 3.6"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 7
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What does 'elif' stand for?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 20,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "else if"
+        },
+        {
+          "id": "b",
+          "text": "else import function"
+        },
+        {
+          "id": "c",
+          "text": "eliminate if"
+        },
+        {
+          "id": "d",
+          "text": "evaluate line input field"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 8
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the wildcard pattern in match/case?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 25,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "_ (underscore) — matches anything"
+        },
+        {
+          "id": "b",
+          "text": "* (asterisk)"
+        },
+        {
+          "id": "c",
+          "text": "default"
+        },
+        {
+          "id": "d",
+          "text": "else"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 9
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Score Classifier",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 180,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 15.0,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "prompt": "Read a student's name and score (0-100). Print their grade:\n90-100 → A\n80-89 → B\n70-79 → C\n60-69 → D\nbelow 60 → F\nPrint in format: <name> scored <score> — Grade: <grade>",
+      "starterCode": "# TODO: Read name and score\nname = input(\"Enter name: \")\nscore = int(input(\"Enter score: \"))\n\n# TODO: Determine grade using if/elif/else\n# TODO: Print result",
+      "language": "python",
+      "testCases": [
+        {
+          "input": "Alice\n95",
+          "expected": "Alice scored 95 — Grade: A",
+          "weight": 0.5,
+          "visible": true,
+          "description": "Score 95 is grade A"
+        },
+        {
+          "input": "Bob\n72",
+          "expected": "Bob scored 72 — Grade: C",
+          "weight": 0.5,
+          "visible": true,
+          "description": "Score 72 is grade C"
+        }
+      ],
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 64,
+      "allowedImports": [],
+      "forbiddenKeywords": []
+    },
+    "position": 10
+  }
+]

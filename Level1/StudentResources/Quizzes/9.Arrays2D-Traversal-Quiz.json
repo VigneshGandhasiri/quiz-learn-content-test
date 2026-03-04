@@ -1,0 +1,390 @@
+{
+  "title": "2D Arrays & Traversal",
+  "description": "Covers 2D list creation, row/column indexing, traversal patterns, and diagonal operations.",
+  "subject": "Programming",
+  "difficulty": "medium",
+  "ageMin": 10,
+  "ageMax": 18,
+  "estimatedMinutes": 10,
+  "tags": [
+    "python",
+    "2d-arrays",
+    "matrix",
+    "traversal"
+  ]
+}
+
+// ==================== QUESTIONS ====================
+
+[
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "How do you create a 2D list (matrix) in Python?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 25,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "A list of lists, like [[1,2],[3,4]]"
+        },
+        {
+          "id": "b",
+          "text": "Using the matrix() function"
+        },
+        {
+          "id": "c",
+          "text": "Using double brackets [[]]"
+        },
+        {
+          "id": "d",
+          "text": "It's not possible in Python"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 1
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "Given grid = [[1,2,3],[4,5,6],[7,8,9]], what is grid[1][2]?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 25,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "6"
+        },
+        {
+          "id": "b",
+          "text": "5"
+        },
+        {
+          "id": "c",
+          "text": "8"
+        },
+        {
+          "id": "d",
+          "text": "2"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 2
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "How do you get the number of rows in a 2D list called matrix?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 25,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "len(matrix)"
+        },
+        {
+          "id": "b",
+          "text": "matrix.rows()"
+        },
+        {
+          "id": "c",
+          "text": "matrix.size()"
+        },
+        {
+          "id": "d",
+          "text": "len(matrix[0])"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 3
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is row-major traversal of a 2D array?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 30,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Processing all elements row by row, left to right"
+        },
+        {
+          "id": "b",
+          "text": "Processing all elements column by column"
+        },
+        {
+          "id": "c",
+          "text": "Processing only the first row"
+        },
+        {
+          "id": "d",
+          "text": "Processing elements diagonally"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 4
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "How many nested loops do you need to traverse every element of a 2D array?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 20,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "2 (one for rows, one for columns)"
+        },
+        {
+          "id": "b",
+          "text": "1"
+        },
+        {
+          "id": "c",
+          "text": "3"
+        },
+        {
+          "id": "d",
+          "text": "4"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 5
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "To traverse a 2D array column by column, what should the outer loop iterate over?",
+    "ageMin": 11,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 35,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Columns (col index)"
+        },
+        {
+          "id": "b",
+          "text": "Rows (row index)"
+        },
+        {
+          "id": "c",
+          "text": "The diagonal"
+        },
+        {
+          "id": "d",
+          "text": "It doesn't matter"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 6
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is a common real-world use of 2D arrays?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 25,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Game boards like Tic-Tac-Toe or chess"
+        },
+        {
+          "id": "b",
+          "text": "Storing a single number"
+        },
+        {
+          "id": "c",
+          "text": "Playing audio files"
+        },
+        {
+          "id": "d",
+          "text": "Connecting to the internet"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 7
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "How do you sum all elements on the main diagonal of GridN×N?",
+    "ageMin": 12,
+    "ageMax": 18,
+    "difficulty": "hard",
+    "estimatedSeconds": 40,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Sum grid[i][i] for i in range(N)"
+        },
+        {
+          "id": "b",
+          "text": "Sum the first row"
+        },
+        {
+          "id": "c",
+          "text": "Sum grid[0][i] for all i"
+        },
+        {
+          "id": "d",
+          "text": "Sum grid[i][0] for all i"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 8
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What does len(matrix[0]) give you for a 2D array?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 25,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "The number of columns"
+        },
+        {
+          "id": "b",
+          "text": "The number of rows"
+        },
+        {
+          "id": "c",
+          "text": "The total number of elements"
+        },
+        {
+          "id": "d",
+          "text": "The first element"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 9
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is boundary checking in 2D arrays?",
+    "ageMin": 11,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 30,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Making sure row and column indices are within valid range before accessing"
+        },
+        {
+          "id": "b",
+          "text": "Counting the total number of elements"
+        },
+        {
+          "id": "c",
+          "text": "Adding a border around the array"
+        },
+        {
+          "id": "d",
+          "text": "Sorting the boundary elements"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 10
+  }
+]

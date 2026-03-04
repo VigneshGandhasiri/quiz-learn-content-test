@@ -1,0 +1,391 @@
+{
+  "title": "Functions",
+  "description": "Covers function definition, parameters, return values, variable scope, and default arguments.",
+  "subject": "Programming",
+  "difficulty": "medium",
+  "ageMin": 10,
+  "ageMax": 18,
+  "estimatedMinutes": 10,
+  "tags": [
+    "python",
+    "functions",
+    "scope",
+    "parameters",
+    "return"
+  ]
+}
+
+// ==================== QUESTIONS ====================
+
+[
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What keyword is used to define a function in Python?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 20,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "def"
+        },
+        {
+          "id": "b",
+          "text": "func"
+        },
+        {
+          "id": "c",
+          "text": "function"
+        },
+        {
+          "id": "d",
+          "text": "define"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 1
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What does 'return' do in a function?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 25,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Sends a value back to where the function was called"
+        },
+        {
+          "id": "b",
+          "text": "Prints a value to the screen"
+        },
+        {
+          "id": "c",
+          "text": "Restarts the function from the beginning"
+        },
+        {
+          "id": "d",
+          "text": "Deletes the function"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 2
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the difference between a parameter and an argument?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 30,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "A parameter is in the function definition; an argument is the value passed when calling"
+        },
+        {
+          "id": "b",
+          "text": "They are the same thing"
+        },
+        {
+          "id": "c",
+          "text": "A parameter is always a number"
+        },
+        {
+          "id": "d",
+          "text": "An argument is in the function definition"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 3
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the output?\n\ndef greet(name):\n    return f\"Hello, {name}!\"\n\nmessage = greet(\"Alice\")\nprint(message)",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 25,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Hello, Alice!"
+        },
+        {
+          "id": "b",
+          "text": "greet(\"Alice\")"
+        },
+        {
+          "id": "c",
+          "text": "None"
+        },
+        {
+          "id": "d",
+          "text": "Error"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 4
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What does a function return if there is no return statement?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 25,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "None"
+        },
+        {
+          "id": "b",
+          "text": "0"
+        },
+        {
+          "id": "c",
+          "text": "An empty string"
+        },
+        {
+          "id": "d",
+          "text": "It causes an error"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 5
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is variable scope?",
+    "ageMin": 11,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 30,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "The region of code where a variable can be accessed"
+        },
+        {
+          "id": "b",
+          "text": "The data type of a variable"
+        },
+        {
+          "id": "c",
+          "text": "The size of a variable in memory"
+        },
+        {
+          "id": "d",
+          "text": "The name of a variable"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 6
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is a default parameter value?",
+    "ageMin": 11,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 30,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "A value a parameter takes if no argument is provided when calling the function"
+        },
+        {
+          "id": "b",
+          "text": "The first argument passed to a function"
+        },
+        {
+          "id": "c",
+          "text": "A constant that can't be changed"
+        },
+        {
+          "id": "d",
+          "text": "The return value of a function"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 7
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the output?\n\nx = 10\ndef change():\n    x = 20\n    print(x)\nchange()\nprint(x)",
+    "ageMin": 11,
+    "ageMax": 18,
+    "difficulty": "hard",
+    "estimatedSeconds": 40,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "20\n10"
+        },
+        {
+          "id": "b",
+          "text": "20\n20"
+        },
+        {
+          "id": "c",
+          "text": "10\n10"
+        },
+        {
+          "id": "d",
+          "text": "Error"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 8
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "Can a function call another function?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 20,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Yes, functions can call other functions"
+        },
+        {
+          "id": "b",
+          "text": "No, each function runs independently"
+        },
+        {
+          "id": "c",
+          "text": "Only if they are defined in the same file"
+        },
+        {
+          "id": "d",
+          "text": "Only built-in functions can be called"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 9
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the output?\n\ndef add(a, b=5):\n    return a + b\n\nprint(add(3))\nprint(add(3, 7))",
+    "ageMin": 11,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 35,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "8\n10"
+        },
+        {
+          "id": "b",
+          "text": "3\n10"
+        },
+        {
+          "id": "c",
+          "text": "8\n8"
+        },
+        {
+          "id": "d",
+          "text": "Error"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 10
+  }
+]

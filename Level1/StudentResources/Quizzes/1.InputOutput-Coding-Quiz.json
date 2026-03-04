@@ -1,0 +1,101 @@
+{
+  "title": "Input & Output Coding",
+  "description": "Hands-on coding challenges using Python's input/output functions and string formatting.",
+  "subject": "Programming",
+  "difficulty": "easy",
+  "ageMin": 10,
+  "ageMax": 18,
+  "estimatedMinutes": 15,
+  "tags": [
+    "python",
+    "input",
+    "output",
+    "coding",
+    "f-strings"
+  ]
+}
+
+// ==================== QUESTIONS ====================
+
+[
+  {
+    "questionType": "program_submission",
+    "questionText": "Greeting Generator",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 120,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 15.0,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "prompt": "Ask the user for their name and age. Then print a greeting message and tell them what year they will turn 100 years old. Use the current year as 2025.",
+      "starterCode": "# TODO: Ask for the user's name and age\n# Hint: Use input() for name and int(input()) for age\n\n# TODO: Print a greeting like: Hello, Alice!\n# TODO: Calculate and print the year they turn 100\n# Example: You will turn 100 in 2109!",
+      "language": "python",
+      "testCases": [
+        {
+          "input": "Alice\n16",
+          "expected": "Hello, Alice!\nYou will turn 100 in 2109!",
+          "weight": 0.5,
+          "visible": true,
+          "description": "Basic greeting with name Alice, age 16"
+        },
+        {
+          "input": "Bob\n10",
+          "expected": "Hello, Bob!\nYou will turn 100 in 2115!",
+          "weight": 0.5,
+          "visible": true,
+          "description": "Greeting with name Bob, age 10"
+        }
+      ],
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 64,
+      "allowedImports": [],
+      "forbiddenKeywords": []
+    },
+    "position": 1
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Receipt Printer",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 180,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 18.0,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "prompt": "Ask the user for an item name and its price. Calculate a 10% tax and print a formatted receipt showing the item, price, tax, and total. Round all amounts to 2 decimal places.",
+      "starterCode": "# TODO: Ask for item name and price\n# item = input(...)\n# price = float(input(...))\n\n# TODO: Calculate 10% tax\n# TODO: Calculate total (price + tax)\n\n# TODO: Print the receipt in this format:\n# Item: Notebook\n# Price: $5.99\n# Tax: $0.60\n# Total: $6.59",
+      "language": "python",
+      "testCases": [
+        {
+          "input": "Notebook\n5.99",
+          "expected": "Item: Notebook\nPrice: $5.99\nTax: $0.60\nTotal: $6.59",
+          "weight": 0.5,
+          "visible": true,
+          "description": "Receipt for a Notebook at $5.99"
+        },
+        {
+          "input": "Laptop\n999.99",
+          "expected": "Item: Laptop\nPrice: $999.99\nTax: $100.00\nTotal: $1099.99",
+          "weight": 0.5,
+          "visible": true,
+          "description": "Receipt for a Laptop at $999.99"
+        }
+      ],
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 64,
+      "allowedImports": [],
+      "forbiddenKeywords": []
+    },
+    "position": 2
+  }
+]

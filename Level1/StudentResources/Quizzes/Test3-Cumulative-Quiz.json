@@ -1,0 +1,361 @@
+{
+  "title": "Test 3: Cumulative Quiz",
+  "description": "Cumulative assessment covering Lists, Array Math, Reversing, Two Pointers, and 2D Arrays.",
+  "subject": "Programming",
+  "difficulty": "medium",
+  "ageMin": 10,
+  "ageMax": 18,
+  "estimatedMinutes": 25,
+  "tags": [
+    "python",
+    "lists",
+    "arrays",
+    "two-pointers",
+    "2d-arrays",
+    "cumulative"
+  ]
+}
+
+// ==================== QUESTIONS ====================
+
+[
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "How do you access the third element of a list called 'fruits'?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 20,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "fruits[2]"
+        },
+        {
+          "id": "b",
+          "text": "fruits[3]"
+        },
+        {
+          "id": "c",
+          "text": "fruits(3)"
+        },
+        {
+          "id": "d",
+          "text": "fruits.get(3)"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 1
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What does fruits[-1] return?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 20,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "The last element of the list"
+        },
+        {
+          "id": "b",
+          "text": "The first element of the list"
+        },
+        {
+          "id": "c",
+          "text": "An error"
+        },
+        {
+          "id": "d",
+          "text": "The list in reverse"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 2
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the running sum of [1, 3, 5]?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 30,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "[1, 4, 9]"
+        },
+        {
+          "id": "b",
+          "text": "[1, 3, 5]"
+        },
+        {
+          "id": "c",
+          "text": "[9, 9, 9]"
+        },
+        {
+          "id": "d",
+          "text": "[5, 3, 1]"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 3
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "In the two-pointer technique, what typically happens when the pointers meet?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 25,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "The algorithm stops — the work is done"
+        },
+        {
+          "id": "b",
+          "text": "The pointers reset to the beginning"
+        },
+        {
+          "id": "c",
+          "text": "The array is deleted"
+        },
+        {
+          "id": "d",
+          "text": "An error occurs"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 4
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "How do you access element at row 1, column 2 in a 2D list 'grid'?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 20,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "grid[1][2]"
+        },
+        {
+          "id": "b",
+          "text": "grid[2][1]"
+        },
+        {
+          "id": "c",
+          "text": "grid(1, 2)"
+        },
+        {
+          "id": "d",
+          "text": "grid[1, 2]"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 5
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is list slicing? For example: nums[1:4]",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 25,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Creates a new list from index 1 up to (but not including) index 4"
+        },
+        {
+          "id": "b",
+          "text": "Removes elements 1 through 4"
+        },
+        {
+          "id": "c",
+          "text": "Returns elements from index 1 to 4 inclusive"
+        },
+        {
+          "id": "d",
+          "text": "Returns the element at index 14"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 6
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What does reversing a list in-place mean?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 25,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Modifying the original list without creating a new one"
+        },
+        {
+          "id": "b",
+          "text": "Creating a reversed copy"
+        },
+        {
+          "id": "c",
+          "text": "Printing it backwards"
+        },
+        {
+          "id": "d",
+          "text": "Sorting it first, then reversing"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 7
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Average Calculator",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 120,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 15.0,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "prompt": "Read space-separated integers. Calculate and print the average rounded to 2 decimal places, the minimum, and the maximum.",
+      "starterCode": "# TODO: Read list of integers\nnums = list(map(int, input().split()))\n\n# TODO: Calculate average, min, max\n# Print: Average: <value>\n# Print: Min: <value>\n# Print: Max: <value>",
+      "language": "python",
+      "testCases": [
+        {
+          "input": "10 20 30 40 50",
+          "expected": "Average: 30.00\nMin: 10\nMax: 50",
+          "weight": 0.5,
+          "visible": true,
+          "description": "Basic stats for [10,20,30,40,50]"
+        },
+        {
+          "input": "5 5 5",
+          "expected": "Average: 5.00\nMin: 5\nMax: 5",
+          "weight": 0.5,
+          "visible": true,
+          "description": "All same values"
+        }
+      ],
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 64,
+      "allowedImports": [],
+      "forbiddenKeywords": []
+    },
+    "position": 8
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Matrix Transpose",
+    "ageMin": 11,
+    "ageMax": 18,
+    "difficulty": "hard",
+    "estimatedSeconds": 180,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 18.0,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "prompt": "Read n (rows) and m (columns). Read an n×m matrix. Print the transpose (m×n matrix) where rows become columns. Print each row space-separated.",
+      "starterCode": "# TODO: Read n and m\nn, m = map(int, input().split())\n\n# TODO: Read n rows\nmatrix = []\nfor i in range(n):\n    row = list(map(int, input().split()))\n    matrix.append(row)\n\n# TODO: Compute and print transpose\n# The transpose has m rows and n columns\n# transpose[j][i] = matrix[i][j]",
+      "language": "python",
+      "testCases": [
+        {
+          "input": "2 3\n1 2 3\n4 5 6",
+          "expected": "1 4\n2 5\n3 6",
+          "weight": 0.5,
+          "visible": true,
+          "description": "Transpose of 2x3 matrix"
+        },
+        {
+          "input": "3 3\n1 0 0\n0 1 0\n0 0 1",
+          "expected": "1 0 0\n0 1 0\n0 0 1",
+          "weight": 0.5,
+          "visible": true,
+          "description": "Identity matrix transpose is same"
+        }
+      ],
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 64,
+      "allowedImports": [],
+      "forbiddenKeywords": []
+    },
+    "position": 9
+  }
+]

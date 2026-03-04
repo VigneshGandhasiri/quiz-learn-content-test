@@ -1,0 +1,391 @@
+{
+  "title": "Sets & Dictionaries",
+  "description": "Covers Python sets, dictionaries, frequency counters, .get(), .items(), and set operations.",
+  "subject": "Programming",
+  "difficulty": "medium",
+  "ageMin": 10,
+  "ageMax": 18,
+  "estimatedMinutes": 10,
+  "tags": [
+    "python",
+    "sets",
+    "dictionaries",
+    "data-structures",
+    "frequency"
+  ]
+}
+
+// ==================== QUESTIONS ====================
+
+[
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is a set in Python?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 25,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "An unordered collection of unique elements"
+        },
+        {
+          "id": "b",
+          "text": "An ordered list of elements"
+        },
+        {
+          "id": "c",
+          "text": "A key-value pair collection"
+        },
+        {
+          "id": "d",
+          "text": "A type of loop"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 1
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is a dictionary in Python?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 25,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "A collection of key-value pairs"
+        },
+        {
+          "id": "b",
+          "text": "An alphabetically sorted list"
+        },
+        {
+          "id": "c",
+          "text": "A collection of unique numbers"
+        },
+        {
+          "id": "d",
+          "text": "A type of string"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 2
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What happens when you add a duplicate element to a set?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 25,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "The duplicate is ignored; the set stays the same"
+        },
+        {
+          "id": "b",
+          "text": "An error is raised"
+        },
+        {
+          "id": "c",
+          "text": "Both copies are kept"
+        },
+        {
+          "id": "d",
+          "text": "The original element is removed"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 3
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "How do you access a value in a dictionary?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 25,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Using its key: my_dict[\"key\"]"
+        },
+        {
+          "id": "b",
+          "text": "Using an index number: my_dict[0]"
+        },
+        {
+          "id": "c",
+          "text": "Using .value()"
+        },
+        {
+          "id": "d",
+          "text": "Using .find()"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 4
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the time complexity of checking if an element is in a set?",
+    "ageMin": 12,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 30,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "O(1) — constant time on average"
+        },
+        {
+          "id": "b",
+          "text": "O(n) — linear time"
+        },
+        {
+          "id": "c",
+          "text": "O(log n) — logarithmic"
+        },
+        {
+          "id": "d",
+          "text": "O(n²) — quadratic"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 5
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What does .get(key, default) do on a dictionary?",
+    "ageMin": 11,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 30,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Returns the value for key if it exists, otherwise returns default"
+        },
+        {
+          "id": "b",
+          "text": "Always returns the default value"
+        },
+        {
+          "id": "c",
+          "text": "Removes the key from the dictionary"
+        },
+        {
+          "id": "d",
+          "text": "Creates a new key with default value"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 6
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "How do you create a frequency counter using a dictionary?",
+    "ageMin": 11,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 35,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Loop through items, using dict[item] = dict.get(item, 0) + 1"
+        },
+        {
+          "id": "b",
+          "text": "Use dict.count(item)"
+        },
+        {
+          "id": "c",
+          "text": "Use dict.frequency(item)"
+        },
+        {
+          "id": "d",
+          "text": "It's not possible with dictionaries"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 7
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the result of set([1, 2, 2, 3, 3, 3])?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 20,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "{1, 2, 3}"
+        },
+        {
+          "id": "b",
+          "text": "{1, 2, 2, 3, 3, 3}"
+        },
+        {
+          "id": "c",
+          "text": "[1, 2, 3]"
+        },
+        {
+          "id": "d",
+          "text": "Error"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 8
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "How do you iterate over key-value pairs in a dictionary?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 30,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "for key, value in my_dict.items():"
+        },
+        {
+          "id": "b",
+          "text": "for key in my_dict.pairs():"
+        },
+        {
+          "id": "c",
+          "text": "for i in range(len(my_dict)):"
+        },
+        {
+          "id": "d",
+          "text": "for value in my_dict:"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 9
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "Which operation works with sets but NOT with lists?\nA = {1, 2, 3}\nB = {2, 3, 4}",
+    "ageMin": 12,
+    "ageMax": 18,
+    "difficulty": "hard",
+    "estimatedSeconds": 35,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "A & B (intersection) → {2, 3}"
+        },
+        {
+          "id": "b",
+          "text": "len(A)"
+        },
+        {
+          "id": "c",
+          "text": "for x in A:"
+        },
+        {
+          "id": "d",
+          "text": "2 in A"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 10
+  }
+]

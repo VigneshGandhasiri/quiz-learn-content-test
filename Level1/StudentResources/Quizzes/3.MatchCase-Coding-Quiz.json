@@ -1,0 +1,113 @@
+{
+  "title": "Match-Case Coding",
+  "description": "Coding challenges using Python's match-case statement for pattern-based branching.",
+  "subject": "Programming",
+  "difficulty": "easy",
+  "ageMin": 10,
+  "ageMax": 18,
+  "estimatedMinutes": 15,
+  "tags": [
+    "python",
+    "match-case",
+    "coding"
+  ]
+}
+
+// ==================== QUESTIONS ====================
+
+[
+  {
+    "questionType": "program_submission",
+    "questionText": "Day of the Week Planner",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 150,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 15.0,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "prompt": "Ask the user for a day number (1-7). Use match/case to print the corresponding day name and activity:\n1 → Monday: School\n2 → Tuesday: Sports\n3 → Wednesday: Art\n4 → Thursday: Music\n5 → Friday: Free Time\n6 → Saturday: Family\n7 → Sunday: Rest\nAnything else → Invalid day",
+      "starterCode": "# TODO: Ask for a day number\nday = int(input(\"Enter day number (1-7): \"))\n\n# TODO: Use match/case to print the day and activity\n# Example output: Monday: School",
+      "language": "python",
+      "testCases": [
+        {
+          "input": "1",
+          "expected": "Monday: School",
+          "weight": 0.33,
+          "visible": true,
+          "description": "Day 1 is Monday"
+        },
+        {
+          "input": "5",
+          "expected": "Friday: Free Time",
+          "weight": 0.33,
+          "visible": true,
+          "description": "Day 5 is Friday"
+        },
+        {
+          "input": "9",
+          "expected": "Invalid day",
+          "weight": 0.34,
+          "visible": true,
+          "description": "Invalid day number"
+        }
+      ],
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 64,
+      "allowedImports": [],
+      "forbiddenKeywords": []
+    },
+    "position": 1
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Shape Area Calculator",
+    "ageMin": 11,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 180,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 18.0,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "prompt": "Ask the user for a shape name (circle, square, triangle). Use match/case to ask for the right measurements and calculate the area.\n- circle: ask for radius, area = 3.14159 × r²\n- square: ask for side, area = side²\n- triangle: ask for base and height, area = 0.5 × base × height\n- anything else: print 'Unknown shape'\nPrint the area rounded to 2 decimal places.",
+      "starterCode": "# TODO: Ask for shape name\nshape = input(\"Enter shape: \").lower()\n\n# TODO: Use match/case for each shape\n# For each shape, ask for measurements and calculate area\n# Print: Area: <result>",
+      "language": "python",
+      "testCases": [
+        {
+          "input": "circle\n5",
+          "expected": "Area: 78.54",
+          "weight": 0.33,
+          "visible": true,
+          "description": "Circle with radius 5"
+        },
+        {
+          "input": "square\n4",
+          "expected": "Area: 16.00",
+          "weight": 0.33,
+          "visible": true,
+          "description": "Square with side 4"
+        },
+        {
+          "input": "triangle\n6\n3",
+          "expected": "Area: 9.00",
+          "weight": 0.34,
+          "visible": true,
+          "description": "Triangle with base 6 and height 3"
+        }
+      ],
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 64,
+      "allowedImports": [],
+      "forbiddenKeywords": []
+    },
+    "position": 2
+  }
+]

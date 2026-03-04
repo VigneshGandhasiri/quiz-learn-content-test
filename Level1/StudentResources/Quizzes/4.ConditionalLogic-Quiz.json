@@ -1,0 +1,242 @@
+{
+  "title": "Conditional Logic",
+  "description": "Covers if/elif/else, comparison operators, and logical operators in Python.",
+  "subject": "Programming",
+  "difficulty": "easy",
+  "ageMin": 10,
+  "ageMax": 18,
+  "estimatedMinutes": 8,
+  "tags": [
+    "python",
+    "conditionals",
+    "if-else",
+    "logic"
+  ]
+}
+
+// ==================== QUESTIONS ====================
+
+[
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What keyword is used to start a conditional statement in Python?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 20,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "if"
+        },
+        {
+          "id": "b",
+          "text": "when"
+        },
+        {
+          "id": "c",
+          "text": "check"
+        },
+        {
+          "id": "d",
+          "text": "condition"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 1
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What does 'elif' stand for in Python?",
+    "ageMin": 11,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 25,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "else if"
+        },
+        {
+          "id": "b",
+          "text": "end if"
+        },
+        {
+          "id": "c",
+          "text": "equal if"
+        },
+        {
+          "id": "d",
+          "text": "every if"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 2
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "Which comparison operator checks for equality?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 25,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "=="
+        },
+        {
+          "id": "b",
+          "text": "="
+        },
+        {
+          "id": "c",
+          "text": "!="
+        },
+        {
+          "id": "d",
+          "text": "<>"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 3
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What will be printed: if 5 > 3: print('Hello') else: print('Bye')",
+    "ageMin": 11,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 30,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 8.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Hello"
+        },
+        {
+          "id": "b",
+          "text": "Bye"
+        },
+        {
+          "id": "c",
+          "text": "Both Hello and Bye"
+        },
+        {
+          "id": "d",
+          "text": "Nothing"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 4
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "Which logical operator represents AND in Python?",
+    "ageMin": 12,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 25,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 8.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "and"
+        },
+        {
+          "id": "b",
+          "text": "&&"
+        },
+        {
+          "id": "c",
+          "text": "&"
+        },
+        {
+          "id": "d",
+          "text": "AND"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 5
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What happens if no condition in an if-elif chain is True and there's no else?",
+    "ageMin": 13,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 40,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 10.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Nothing happens, the program continues"
+        },
+        {
+          "id": "b",
+          "text": "An error occurs"
+        },
+        {
+          "id": "c",
+          "text": "The first condition automatically runs"
+        },
+        {
+          "id": "d",
+          "text": "The program terminates"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 6
+  }
+]

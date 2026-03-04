@@ -1,0 +1,241 @@
+{
+  "title": "Variables & Data Types",
+  "description": "Covers variable creation, assignment, and Python's core data types (int, str, float, bool).",
+  "subject": "Programming",
+  "difficulty": "easy",
+  "ageMin": 10,
+  "ageMax": 18,
+  "estimatedMinutes": 8,
+  "tags": [
+    "python",
+    "variables",
+    "data-types"
+  ]
+}
+
+// ==================== QUESTIONS ====================
+
+[
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is a variable in programming?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "A container that stores data values"
+        },
+        {
+          "id": "b",
+          "text": "A type of computer monitor"
+        },
+        {
+          "id": "c",
+          "text": "A programming language"
+        },
+        {
+          "id": "d",
+          "text": "A computer virus"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 1
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "Which of these is a valid variable name in Python?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 25,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "my_age"
+        },
+        {
+          "id": "b",
+          "text": "2cool"
+        },
+        {
+          "id": "c",
+          "text": "my-name"
+        },
+        {
+          "id": "d",
+          "text": "for"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 2
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What data type is the value 42 in Python?",
+    "ageMin": 11,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 20,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "int (integer)"
+        },
+        {
+          "id": "b",
+          "text": "str (string)"
+        },
+        {
+          "id": "c",
+          "text": "float"
+        },
+        {
+          "id": "d",
+          "text": "bool (boolean)"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 3
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What data type is 'Hello World' in Python?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 20,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "str (string)"
+        },
+        {
+          "id": "b",
+          "text": "int (integer)"
+        },
+        {
+          "id": "c",
+          "text": "float"
+        },
+        {
+          "id": "d",
+          "text": "list"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 4
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "How do you create a string variable in Python?",
+    "ageMin": 11,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 30,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 8.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "name = \"Alice\""
+        },
+        {
+          "id": "b",
+          "text": "name = Alice"
+        },
+        {
+          "id": "c",
+          "text": "string name = Alice"
+        },
+        {
+          "id": "d",
+          "text": "var name = Alice"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 5
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What happens when you assign a new value to an existing variable?",
+    "ageMin": 11,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 35,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 8.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "The old value is replaced with the new value"
+        },
+        {
+          "id": "b",
+          "text": "Both values are stored together"
+        },
+        {
+          "id": "c",
+          "text": "An error occurs"
+        },
+        {
+          "id": "d",
+          "text": "The variable becomes undefined"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 6
+  }
+]

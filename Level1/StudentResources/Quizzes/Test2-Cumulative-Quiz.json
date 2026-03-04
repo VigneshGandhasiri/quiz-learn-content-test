@@ -1,0 +1,359 @@
+{
+  "title": "Test 2: Cumulative Quiz",
+  "description": "Cumulative assessment covering For Loops, While Loops, Loop Patterns, and nested iteration.",
+  "subject": "Programming",
+  "difficulty": "medium",
+  "ageMin": 10,
+  "ageMax": 18,
+  "estimatedMinutes": 20,
+  "tags": [
+    "python",
+    "loops",
+    "patterns",
+    "cumulative"
+  ]
+}
+
+// ==================== QUESTIONS ====================
+
+[
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the output of: for i in range(3): print(i)",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 20,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "0\n1\n2"
+        },
+        {
+          "id": "b",
+          "text": "1\n2\n3"
+        },
+        {
+          "id": "c",
+          "text": "0\n1\n2\n3"
+        },
+        {
+          "id": "d",
+          "text": "3"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 1
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What does 'break' do inside a loop?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 20,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Exits the loop immediately"
+        },
+        {
+          "id": "b",
+          "text": "Skips the current iteration"
+        },
+        {
+          "id": "c",
+          "text": "Restarts the loop"
+        },
+        {
+          "id": "d",
+          "text": "Pauses the loop for 1 second"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 2
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the difference between a for loop and a while loop?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 30,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "A for loop iterates a known number of times; a while loop repeats as long as a condition is true"
+        },
+        {
+          "id": "b",
+          "text": "They are exactly the same"
+        },
+        {
+          "id": "c",
+          "text": "A while loop can only run once"
+        },
+        {
+          "id": "d",
+          "text": "A for loop runs forever"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 3
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "How many times does the inner print execute?\nfor i in range(3):\n    for j in range(2):\n        print(i, j)",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 35,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "6 times"
+        },
+        {
+          "id": "b",
+          "text": "5 times"
+        },
+        {
+          "id": "c",
+          "text": "3 times"
+        },
+        {
+          "id": "d",
+          "text": "2 times"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 4
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the accumulator pattern?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 25,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "A variable that collects/builds up a result as a loop iterates"
+        },
+        {
+          "id": "b",
+          "text": "A type of battery charger"
+        },
+        {
+          "id": "c",
+          "text": "A function that counts errors"
+        },
+        {
+          "id": "d",
+          "text": "A variable that resets each iteration"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 5
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is an infinite loop?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 20,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "A loop that never stops because its condition is always true"
+        },
+        {
+          "id": "b",
+          "text": "A loop that runs 1000 times"
+        },
+        {
+          "id": "c",
+          "text": "A loop without a body"
+        },
+        {
+          "id": "d",
+          "text": "A for loop with range(0)"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 6
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What does 'continue' do in a loop?",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 20,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 5.0,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Skips the rest of the current iteration and jumps to the next"
+        },
+        {
+          "id": "b",
+          "text": "Exits the loop"
+        },
+        {
+          "id": "c",
+          "text": "Continues to the next function"
+        },
+        {
+          "id": "d",
+          "text": "Does nothing"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    "position": 7
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Sum of Even Numbers",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 150,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 15.0,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "prompt": "Read an integer n. Using a loop, calculate the sum of all even numbers from 1 to n (inclusive). Print the result.",
+      "starterCode": "# TODO: Read n\nn = int(input(\"Enter n: \"))\n\n# TODO: Sum all even numbers from 1 to n\n# Use a for loop and check if number is even\n# Print: Sum: <result>",
+      "language": "python",
+      "testCases": [
+        {
+          "input": "10",
+          "expected": "Sum: 30",
+          "weight": 0.5,
+          "visible": true,
+          "description": "Even sum from 1 to 10: 2+4+6+8+10=30"
+        },
+        {
+          "input": "7",
+          "expected": "Sum: 12",
+          "weight": 0.5,
+          "visible": true,
+          "description": "Even sum from 1 to 7: 2+4+6=12"
+        }
+      ],
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 64,
+      "allowedImports": [],
+      "forbiddenKeywords": []
+    },
+    "position": 8
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Countdown with While Loop",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 120,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 15.0,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "prompt": "Read a number n. Using a while loop, count down from n to 1, printing each number. After the countdown, print 'Liftoff!'.",
+      "starterCode": "# TODO: Read n\nn = int(input(\"Enter n: \"))\n\n# TODO: Use a while loop to count down from n to 1\n# Print each number on its own line\n# Print 'Liftoff!' at the end",
+      "language": "python",
+      "testCases": [
+        {
+          "input": "5",
+          "expected": "5\n4\n3\n2\n1\nLiftoff!",
+          "weight": 0.5,
+          "visible": true,
+          "description": "Countdown from 5"
+        },
+        {
+          "input": "3",
+          "expected": "3\n2\n1\nLiftoff!",
+          "weight": 0.5,
+          "visible": true,
+          "description": "Countdown from 3"
+        }
+      ],
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 64,
+      "allowedImports": [],
+      "forbiddenKeywords": []
+    },
+    "position": 9
+  }
+]
