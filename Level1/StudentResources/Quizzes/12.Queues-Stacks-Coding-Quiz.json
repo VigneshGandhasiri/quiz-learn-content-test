@@ -1,17 +1,12 @@
-{
-  "title": "Queues & Stacks Coding",
-  "description": "Coding challenges simulating a queue and using a stack for balanced bracket checking.",
+﻿{
+  "title": "Queues & Stacks -- Coding Quiz",
+  "description": "Write Python programs using queues and stacks with deque to solve practical problems.",
   "subject": "Programming",
   "difficulty": "medium",
   "ageMin": 10,
   "ageMax": 18,
-  "estimatedMinutes": 20,
-  "tags": [
-    "python",
-    "queues",
-    "stacks",
-    "coding"
-  ]
+  "estimatedMinutes": 30,
+  "tags": ["python", "queues", "stacks", "deque", "coding"]
 }
 
 // ==================== QUESTIONS ====================
@@ -19,89 +14,139 @@
 [
   {
     "questionType": "program_submission",
-    "questionText": "Queue Simulation",
+    "questionText": "Simulate a stack using a list. Read N operations (N given first). Each operation is either:\n- PUSH x  (push x onto the stack)\n- POP  (pop the top item and print it; if empty print 'Empty')\n\nExample:\nInput:\n5\nPUSH 10\nPUSH 20\nPOP\nPOP\nPOP\n\nOutput:\n20\n10\nEmpty",
+    "difficulty": "easy",
+    "points": 20,
+    "estimatedSeconds": 240,
+    "subject": "Programming",
     "ageMin": 10,
     "ageMax": 18,
-    "difficulty": "easy",
-    "estimatedSeconds": 150,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 15.0,
     "allowPartialCredit": true,
     "negativeMarking": false,
     "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 1,
     "content": {
-      "prompt": "Simulate a ticket booth queue. Read n (number of operations), then n lines of commands:\n- 'ARRIVE <name>' — person joins the back of the queue\n- 'SERVE' — serve the person at the front (print 'Serving: <name>')\n- 'STATUS' — print the current queue as comma-separated names, or 'Empty' if no one is waiting\nUse a list as a queue (append to add, pop(0) to serve).",
-      "starterCode": "# TODO: Read number of operations\nn = int(input())\nqueue = []\n\nfor _ in range(n):\n    command = input()\n    # TODO: Process ARRIVE, SERVE, and STATUS commands",
       "language": "python",
+      "starterCode": "n = int(input())\nstack = []\nfor _ in range(n):\n    op = input().split()\n    # Handle PUSH and POP\n",
       "testCases": [
-        {
-          "input": "6\nARRIVE Alice\nARRIVE Bob\nSTATUS\nSERVE\nSERVE\nSTATUS",
-          "expected": "Alice,Bob\nServing: Alice\nServing: Bob\nEmpty",
-          "weight": 0.5,
-          "visible": true,
-          "description": "Basic queue operations"
-        },
-        {
-          "input": "4\nARRIVE Charlie\nSERVE\nARRIVE Dana\nSTATUS",
-          "expected": "Serving: Charlie\nDana",
-          "weight": 0.5,
-          "visible": true,
-          "description": "Mixed operations"
-        }
+        { "input": "5\nPUSH 10\nPUSH 20\nPOP\nPOP\nPOP", "expected_output": "20\n10\nEmpty" },
+        { "input": "3\nPUSH 5\nPUSH 15\nPOP", "expected_output": "15" },
+        { "input": "2\nPOP\nPOP", "expected_output": "Empty\nEmpty" },
+        { "input": "4\nPUSH 1\nPOP\nPUSH 2\nPOP", "expected_output": "1\n2" },
+        { "input": "1\nPUSH 99", "expected_output": "" }
       ],
-      "timeLimitMs": 2000,
-      "memoryLimitMb": 64,
-      "allowedImports": [],
-      "forbiddenKeywords": []
-    },
-    "position": 1
+      "explanation": "Use append() to push and pop() to pop. Check if the list is empty before popping."
+    }
   },
   {
     "questionType": "program_submission",
-    "questionText": "Balanced Brackets Checker",
-    "ageMin": 12,
+    "questionText": "Simulate a queue using collections.deque. Read N operations (N given first). Each operation is either:\n- ENQUEUE x  (add x to the queue)\n- DEQUEUE  (remove the front item and print it; if empty print 'Empty')\n\nExample:\nInput:\n5\nENQUEUE Alice\nENQUEUE Bob\nDEQUEUE\nDEQUEUE\nDEQUEUE\n\nOutput:\nAlice\nBob\nEmpty",
+    "difficulty": "easy",
+    "points": 20,
+    "estimatedSeconds": 240,
+    "subject": "Programming",
+    "ageMin": 10,
     "ageMax": 18,
-    "difficulty": "medium",
-    "estimatedSeconds": 180,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 18.0,
     "allowPartialCredit": true,
     "negativeMarking": false,
     "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 2,
     "content": {
-      "prompt": "Read a string of brackets: (), [], {}. Using a stack (Python list with append/pop), determine if the brackets are balanced. Print 'Balanced' or 'Not balanced'.\nBalanced means every opening bracket has a matching closing bracket in correct order.",
-      "starterCode": "# TODO: Read the bracket string\nbrackets = input(\"Enter brackets: \")\n\n# TODO: Use a stack to check balance\n# Push opening brackets, pop for matching closing brackets\n# Print 'Balanced' or 'Not balanced'",
       "language": "python",
+      "starterCode": "from collections import deque\nn = int(input())\nq = deque()\nfor _ in range(n):\n    op = input().split()\n    # Handle ENQUEUE and DEQUEUE\n",
       "testCases": [
-        {
-          "input": "{[()]}",
-          "expected": "Balanced",
-          "weight": 0.33,
-          "visible": true,
-          "description": "Nested balanced brackets"
-        },
-        {
-          "input": "([)]",
-          "expected": "Not balanced",
-          "weight": 0.33,
-          "visible": true,
-          "description": "Mismatched brackets"
-        },
-        {
-          "input": "((()))",
-          "expected": "Balanced",
-          "weight": 0.34,
-          "visible": true,
-          "description": "Nested parentheses"
-        }
+        { "input": "5\nENQUEUE Alice\nENQUEUE Bob\nDEQUEUE\nDEQUEUE\nDEQUEUE", "expected_output": "Alice\nBob\nEmpty" },
+        { "input": "3\nENQUEUE X\nENQUEUE Y\nDEQUEUE", "expected_output": "X" },
+        { "input": "2\nDEQUEUE\nDEQUEUE", "expected_output": "Empty\nEmpty" },
+        { "input": "4\nENQUEUE A\nDEQUEUE\nENQUEUE B\nDEQUEUE", "expected_output": "A\nB" },
+        { "input": "1\nENQUEUE Z", "expected_output": "" }
       ],
-      "timeLimitMs": 2000,
-      "memoryLimitMb": 64,
-      "allowedImports": [],
-      "forbiddenKeywords": []
-    },
-    "position": 2
+      "explanation": "Use append() to enqueue and popleft() to dequeue. Check if the deque is empty before dequeuing."
+    }
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Write a program that reads a string containing only parentheses '(' and ')' and prints 'Balanced' if every opening parenthesis has a matching closing one, or 'Not balanced' otherwise.\n\nExample:\nInput:\n(()())\n\nOutput:\nBalanced",
+    "difficulty": "medium",
+    "points": 25,
+    "estimatedSeconds": 300,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 3,
+    "content": {
+      "language": "python",
+      "starterCode": "s = input()\n# Use a stack to check if parentheses are balanced\n",
+      "testCases": [
+        { "input": "(()())", "expected_output": "Balanced" },
+        { "input": "(()", "expected_output": "Not balanced" },
+        { "input": "()", "expected_output": "Balanced" },
+        { "input": ")(", "expected_output": "Not balanced" },
+        { "input": "((()))", "expected_output": "Balanced" },
+        { "input": "())(", "expected_output": "Not balanced" },
+        { "input": "", "expected_output": "Balanced" }
+      ],
+      "explanation": "Push '(' onto the stack. On ')', pop from the stack. If the stack is empty when trying to pop, or non-empty at the end, it's not balanced."
+    }
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Write a program that reads a line of space-separated words. Reverse the order of the words using a stack and print them on one line separated by spaces.\n\nExample:\nInput:\nhello world foo bar\n\nOutput:\nbar foo world hello",
+    "difficulty": "medium",
+    "points": 25,
+    "estimatedSeconds": 240,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 4,
+    "content": {
+      "language": "python",
+      "starterCode": "words = input().split()\n# Use a stack to reverse the word order\n",
+      "testCases": [
+        { "input": "hello world foo bar", "expected_output": "bar foo world hello" },
+        { "input": "a b c", "expected_output": "c b a" },
+        { "input": "one", "expected_output": "one" },
+        { "input": "the quick brown fox", "expected_output": "fox brown quick the" },
+        { "input": "x y", "expected_output": "y x" }
+      ],
+      "explanation": "Push each word onto the stack, then pop all words off. Because of LIFO, they come out in reverse order."
+    }
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "A hot dog stand serves customers in FIFO order. Read operations (N given first):\n- ARRIVE name  (customer joins the queue)\n- SERVE  (serve the next customer and print 'Serving: name'; if no one is waiting print 'No customers')\n- STATUS  (print how many people are waiting, like 'Waiting: 3')\n\nExample:\nInput:\n6\nARRIVE Alice\nARRIVE Bob\nSTATUS\nSERVE\nSERVE\nSTATUS\n\nOutput:\nWaiting: 2\nServing: Alice\nServing: Bob\nWaiting: 0",
+    "difficulty": "hard",
+    "points": 30,
+    "estimatedSeconds": 360,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 5,
+    "content": {
+      "language": "python",
+      "starterCode": "from collections import deque\nn = int(input())\nline = deque()\nfor _ in range(n):\n    op = input().split()\n    # Handle ARRIVE, SERVE, STATUS\n",
+      "testCases": [
+        { "input": "6\nARRIVE Alice\nARRIVE Bob\nSTATUS\nSERVE\nSERVE\nSTATUS", "expected_output": "Waiting: 2\nServing: Alice\nServing: Bob\nWaiting: 0" },
+        { "input": "3\nSERVE\nARRIVE Zoe\nSERVE", "expected_output": "No customers\nServing: Zoe" },
+        { "input": "2\nARRIVE Max\nSTATUS", "expected_output": "Waiting: 1" },
+        { "input": "4\nARRIVE A\nARRIVE B\nARRIVE C\nSTATUS", "expected_output": "Waiting: 3" },
+        { "input": "5\nARRIVE X\nSERVE\nSERVE\nARRIVE Y\nSERVE", "expected_output": "Serving: X\nNo customers\nServing: Y" }
+      ],
+      "explanation": "Use deque as a queue. ARRIVE: append(name). SERVE: popleft() if not empty. STATUS: print len(line)."
+    }
   }
 ]

@@ -1,18 +1,12 @@
-{
-  "title": "Loop Patterns",
-  "description": "Covers nested loops, break/continue, accumulator pattern, sentinel values, and pattern printing.",
+﻿{
+  "title": "Loop Patterns (Nested Loops & Output Patterns)",
+  "description": "Test your understanding of nested loops, star patterns, pyramids, grids, and controlling output with end parameter.",
   "subject": "Programming",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "ageMin": 10,
   "ageMax": 18,
-  "estimatedMinutes": 10,
-  "tags": [
-    "python",
-    "loops",
-    "patterns",
-    "nested-loops",
-    "accumulator"
-  ]
+  "estimatedMinutes": 25,
+  "tags": ["python", "nested-loops", "patterns", "grids", "end-parameter"]
 }
 
 // ==================== QUESTIONS ====================
@@ -21,371 +15,568 @@
   {
     "questionType": "multiple_choice_single",
     "questionText": "What is a nested loop?",
+    "difficulty": "easy",
+    "points": 10,
+    "estimatedSeconds": 20,
+    "subject": "Programming",
     "ageMin": 10,
     "ageMax": 18,
-    "difficulty": "easy",
-    "estimatedSeconds": 25,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 5.0,
     "allowPartialCredit": false,
     "negativeMarking": false,
     "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 1,
     "content": {
       "options": [
-        {
-          "id": "a",
-          "text": "A loop inside another loop"
-        },
-        {
-          "id": "b",
-          "text": "A loop that never ends"
-        },
-        {
-          "id": "c",
-          "text": "Two loops running at the same time"
-        },
-        {
-          "id": "d",
-          "text": "A loop with no body"
-        }
+        { "id": "a", "text": "A loop inside another loop" },
+        { "id": "b", "text": "A loop that runs backwards" },
+        { "id": "c", "text": "A loop with a break statement" },
+        { "id": "d", "text": "Two separate loops one after another" }
       ],
       "correct_answer": "a",
-      "explanation": ""
-    },
-    "position": 1
+      "explanation": "A nested loop is a loop placed inside another loop. The inner loop runs completely for each iteration of the outer loop."
+    }
   },
   {
     "questionType": "multiple_choice_single",
-    "questionText": "How many times does the inner print execute?\n\nfor i in range(3):\n    for j in range(4):\n        print(\"*\")",
-    "ageMin": 10,
-    "ageMax": 18,
-    "difficulty": "easy",
+    "questionText": "How many times does the inner print run?\nfor i in range(3):\n    for j in range(4):\n        print(\"*\")",
+    "difficulty": "medium",
+    "points": 10,
     "estimatedSeconds": 30,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 5.0,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
     "allowPartialCredit": false,
     "negativeMarking": false,
     "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 2,
     "content": {
       "options": [
-        {
-          "id": "a",
-          "text": "12"
-        },
-        {
-          "id": "b",
-          "text": "7"
-        },
-        {
-          "id": "c",
-          "text": "3"
-        },
-        {
-          "id": "d",
-          "text": "4"
-        }
+        { "id": "a", "text": "12 times" },
+        { "id": "b", "text": "7 times" },
+        { "id": "c", "text": "3 times" },
+        { "id": "d", "text": "4 times" }
       ],
       "correct_answer": "a",
-      "explanation": ""
-    },
-    "position": 2
+      "explanation": "The outer loop runs 3 times. For each outer iteration, the inner loop runs 4 times. Total: 3 x 4 = 12."
+    }
   },
   {
     "questionType": "multiple_choice_single",
-    "questionText": "What does the 'break' statement do inside a loop?",
-    "ageMin": 10,
-    "ageMax": 18,
+    "questionText": "What does print(\"*\", end=\"\") do differently from print(\"*\")?",
     "difficulty": "easy",
+    "points": 10,
     "estimatedSeconds": 25,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 5.0,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
     "allowPartialCredit": false,
     "negativeMarking": false,
     "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 3,
     "content": {
       "options": [
-        {
-          "id": "a",
-          "text": "Exits the loop immediately"
-        },
-        {
-          "id": "b",
-          "text": "Skips to the next iteration"
-        },
-        {
-          "id": "c",
-          "text": "Restarts the loop"
-        },
-        {
-          "id": "d",
-          "text": "Ends the entire program"
-        }
+        { "id": "a", "text": "Prints on the same line instead of moving to a new line" },
+        { "id": "b", "text": "Prints nothing" },
+        { "id": "c", "text": "Prints the word 'end'" },
+        { "id": "d", "text": "Causes an error" }
       ],
       "correct_answer": "a",
-      "explanation": ""
-    },
-    "position": 3
+      "explanation": "end='' tells print NOT to add a newline at the end. So the next print continues on the same line -- perfect for patterns!"
+    }
   },
   {
     "questionType": "multiple_choice_single",
-    "questionText": "What does the 'continue' statement do inside a loop?",
+    "questionText": "What does this code output?\nfor i in range(3):\n    print(\"*\" * (i + 1))",
+    "difficulty": "medium",
+    "points": 10,
+    "estimatedSeconds": 35,
+    "subject": "Programming",
     "ageMin": 10,
     "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 4,
+    "content": {
+      "options": [
+        { "id": "a", "text": "*\n**\n***" },
+        { "id": "b", "text": "***\n**\n*" },
+        { "id": "c", "text": "***\n***\n***" },
+        { "id": "d", "text": "*\n*\n*" }
+      ],
+      "correct_answer": "a",
+      "explanation": "When i=0: 1 star. When i=1: 2 stars. When i=2: 3 stars. This creates a right triangle pattern!"
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What does this code output?\nfor row in range(2):\n    for col in range(3):\n        print(\"X\", end=\" \")\n    print()",
+    "difficulty": "medium",
+    "points": 10,
+    "estimatedSeconds": 40,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 5,
+    "content": {
+      "options": [
+        { "id": "a", "text": "X X X \nX X X " },
+        { "id": "b", "text": "X X \nX X \nX X " },
+        { "id": "c", "text": "X X X X X X " },
+        { "id": "d", "text": "X\nX\nX\nX\nX\nX" }
+      ],
+      "correct_answer": "a",
+      "explanation": "Outer loop does 2 rows. Inner loop prints 3 X's on the same line (end=' '). print() at the end of each row adds a newline."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the purpose of the empty print() after the inner loop in pattern code?",
     "difficulty": "easy",
+    "points": 10,
+    "estimatedSeconds": 20,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 6,
+    "content": {
+      "options": [
+        { "id": "a", "text": "To move to the next line after finishing a row" },
+        { "id": "b", "text": "To end the program" },
+        { "id": "c", "text": "To reset the inner loop" },
+        { "id": "d", "text": "To print a blank character" }
+      ],
+      "correct_answer": "a",
+      "explanation": "When using end='' in the inner loop, print() (with no arguments) adds a newline to start the next row of the pattern."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What does this code output?\nfor i in range(3):\n    print(\"*\" * 3)",
+    "difficulty": "easy",
+    "points": 10,
     "estimatedSeconds": 25,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 5.0,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
     "allowPartialCredit": false,
     "negativeMarking": false,
     "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 7,
     "content": {
       "options": [
-        {
-          "id": "a",
-          "text": "Skips the rest of the current iteration and goes to the next"
-        },
-        {
-          "id": "b",
-          "text": "Exits the loop immediately"
-        },
-        {
-          "id": "c",
-          "text": "Continues running the rest of the code below the loop"
-        },
-        {
-          "id": "d",
-          "text": "Pauses the loop for 1 second"
-        }
+        { "id": "a", "text": "***\n***\n***" },
+        { "id": "b", "text": "*\n**\n***" },
+        { "id": "c", "text": "***" },
+        { "id": "d", "text": "*********" }
       ],
       "correct_answer": "a",
-      "explanation": ""
-    },
-    "position": 4
+      "explanation": "Each iteration prints '***' (3 stars). The loop runs 3 times. This makes a 3x3 square of stars!"
+    }
   },
   {
     "questionType": "multiple_choice_single",
-    "questionText": "What pattern does this code create?\n\nfor i in range(1, 4):\n    print(\"*\" * i)",
-    "ageMin": 10,
-    "ageMax": 18,
+    "questionText": "What does this code print?\nfor i in range(3, 0, -1):\n    print(\"*\" * i)",
     "difficulty": "medium",
+    "points": 10,
     "estimatedSeconds": 35,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 5.0,
-    "allowPartialCredit": false,
-    "negativeMarking": false,
-    "supportsReadAloud": true,
-    "content": {
-      "options": [
-        {
-          "id": "a",
-          "text": "*\n**\n***"
-        },
-        {
-          "id": "b",
-          "text": "***\n**\n*"
-        },
-        {
-          "id": "c",
-          "text": "***"
-        },
-        {
-          "id": "d",
-          "text": "*\n*\n*"
-        }
-      ],
-      "correct_answer": "a",
-      "explanation": ""
-    },
-    "position": 5
-  },
-  {
-    "questionType": "multiple_choice_single",
-    "questionText": "What is an accumulator pattern in loops?",
+    "subject": "Programming",
     "ageMin": 10,
     "ageMax": 18,
-    "difficulty": "medium",
-    "estimatedSeconds": 30,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 5.0,
     "allowPartialCredit": false,
     "negativeMarking": false,
     "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 8,
     "content": {
       "options": [
-        {
-          "id": "a",
-          "text": "A variable that collects or builds up a result across iterations"
-        },
-        {
-          "id": "b",
-          "text": "A loop that accumulates speed over time"
-        },
-        {
-          "id": "c",
-          "text": "A pattern that creates infinite loops"
-        },
-        {
-          "id": "d",
-          "text": "A special type of for loop"
-        }
+        { "id": "a", "text": "***\n**\n*" },
+        { "id": "b", "text": "*\n**\n***" },
+        { "id": "c", "text": "***\n***\n***" },
+        { "id": "d", "text": "*\n*\n*" }
       ],
       "correct_answer": "a",
-      "explanation": ""
-    },
-    "position": 6
+      "explanation": "range(3, 0, -1) goes 3, 2, 1. So it prints 3 stars, then 2, then 1 -- an upside-down triangle!"
+    }
   },
   {
     "questionType": "multiple_choice_single",
-    "questionText": "What is the output?\n\nfor i in range(5):\n    if i == 3:\n        break\n    print(i, end=\" \")",
+    "questionText": "In a nested loop for creating a grid, which loop controls the rows?",
+    "difficulty": "easy",
+    "points": 10,
+    "estimatedSeconds": 20,
+    "subject": "Programming",
     "ageMin": 10,
     "ageMax": 18,
-    "difficulty": "medium",
-    "estimatedSeconds": 35,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 5.0,
     "allowPartialCredit": false,
     "negativeMarking": false,
     "supportsReadAloud": true,
-    "content": {
-      "options": [
-        {
-          "id": "a",
-          "text": "0 1 2"
-        },
-        {
-          "id": "b",
-          "text": "0 1 2 3"
-        },
-        {
-          "id": "c",
-          "text": "0 1 2 4"
-        },
-        {
-          "id": "d",
-          "text": "0 1 2 3 4"
-        }
-      ],
-      "correct_answer": "a",
-      "explanation": ""
-    },
-    "position": 7
-  },
-  {
-    "questionType": "multiple_choice_single",
-    "questionText": "What is the output?\n\nfor i in range(5):\n    if i == 3:\n        continue\n    print(i, end=\" \")",
-    "ageMin": 10,
-    "ageMax": 18,
-    "difficulty": "medium",
-    "estimatedSeconds": 35,
-    "subject": "programming",
     "locale": "en-US",
-    "points": 5.0,
-    "allowPartialCredit": false,
-    "negativeMarking": false,
-    "supportsReadAloud": true,
+    "position": 9,
     "content": {
       "options": [
-        {
-          "id": "a",
-          "text": "0 1 2 4"
-        },
-        {
-          "id": "b",
-          "text": "0 1 2"
-        },
-        {
-          "id": "c",
-          "text": "0 1 2 3 4"
-        },
-        {
-          "id": "d",
-          "text": "3"
-        }
+        { "id": "a", "text": "The outer loop" },
+        { "id": "b", "text": "The inner loop" },
+        { "id": "c", "text": "Both loops equally" },
+        { "id": "d", "text": "Neither -- rows are automatic" }
       ],
       "correct_answer": "a",
-      "explanation": ""
-    },
-    "position": 8
+      "explanation": "The outer loop handles rows (how many lines), and the inner loop handles columns (what goes on each line)."
+    }
   },
   {
     "questionType": "multiple_choice_single",
-    "questionText": "In a nested loop, which loop completes all its iterations first?",
-    "ageMin": 11,
-    "ageMax": 18,
-    "difficulty": "medium",
-    "estimatedSeconds": 30,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 5.0,
-    "allowPartialCredit": false,
-    "negativeMarking": false,
-    "supportsReadAloud": true,
-    "content": {
-      "options": [
-        {
-          "id": "a",
-          "text": "The inner loop"
-        },
-        {
-          "id": "b",
-          "text": "The outer loop"
-        },
-        {
-          "id": "c",
-          "text": "Both complete at the same time"
-        },
-        {
-          "id": "d",
-          "text": "It depends on the loop type"
-        }
-      ],
-      "correct_answer": "a",
-      "explanation": ""
-    },
-    "position": 9
-  },
-  {
-    "questionType": "multiple_choice_single",
-    "questionText": "What is the sentinel value pattern?",
-    "ageMin": 11,
-    "ageMax": 18,
+    "questionText": "What kind of pattern does this code create?\nn = 4\nfor i in range(1, n + 1):\n    print(\" \" * (n - i) + \"*\" * (2 * i - 1))",
     "difficulty": "hard",
-    "estimatedSeconds": 35,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 5.0,
+    "points": 15,
+    "estimatedSeconds": 45,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
     "allowPartialCredit": false,
     "negativeMarking": false,
     "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 10,
     "content": {
       "options": [
-        {
-          "id": "a",
-          "text": "Using a special value to signal when to stop a loop"
-        },
-        {
-          "id": "b",
-          "text": "A loop that guards against errors"
-        },
-        {
-          "id": "c",
-          "text": "A variable that counts loop iterations"
-        },
-        {
-          "id": "d",
-          "text": "A security feature in Python"
-        }
+        { "id": "a", "text": "A centered pyramid (triangle) made of stars" },
+        { "id": "b", "text": "A right-aligned triangle" },
+        { "id": "c", "text": "A square" },
+        { "id": "d", "text": "A diamond" }
       ],
       "correct_answer": "a",
-      "explanation": ""
-    },
-    "position": 10
+      "explanation": "Spaces before the stars decrease (n-i) while stars increase (2i-1): 1, 3, 5, 7 stars. This makes a centered pyramid."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What pattern does this code create?\nfor i in range(1, 4):\n    for j in range(1, i + 1):\n        print(j, end=\" \")\n    print()",
+    "difficulty": "hard",
+    "points": 15,
+    "estimatedSeconds": 45,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 11,
+    "content": {
+      "options": [
+        { "id": "a", "text": "1 \n1 2 \n1 2 3 " },
+        { "id": "b", "text": "1 2 3 \n1 2 \n1 " },
+        { "id": "c", "text": "1 \n2 \n3 " },
+        { "id": "d", "text": "1 1 1 \n2 2 2 \n3 3 3 " }
+      ],
+      "correct_answer": "a",
+      "explanation": "Row 1: j goes 1. Row 2: j goes 1, 2. Row 3: j goes 1, 2, 3. This is a number triangle!"
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the output?\nfor i in range(3):\n    for j in range(3):\n        if i == j:\n            print(\"1\", end=\"\")\n        else:\n            print(\"0\", end=\"\")\n    print()",
+    "difficulty": "hard",
+    "points": 15,
+    "estimatedSeconds": 50,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 12,
+    "content": {
+      "options": [
+        { "id": "a", "text": "100\n010\n001" },
+        { "id": "b", "text": "111\n000\n000" },
+        { "id": "c", "text": "111\n111\n111" },
+        { "id": "d", "text": "100\n100\n100" }
+      ],
+      "correct_answer": "a",
+      "explanation": "When i equals j (the diagonal), it prints 1. Otherwise 0. This creates an identity matrix pattern!"
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "If you have a nested loop where the outer loop runs N times and the inner loop also runs N times, how many total iterations occur?",
+    "difficulty": "medium",
+    "points": 10,
+    "estimatedSeconds": 25,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 13,
+    "content": {
+      "options": [
+        { "id": "a", "text": "N * N (N squared)" },
+        { "id": "b", "text": "N + N (2N)" },
+        { "id": "c", "text": "N" },
+        { "id": "d", "text": "2 * N * N" }
+      ],
+      "correct_answer": "a",
+      "explanation": "The inner loop runs N times for EACH of the N outer iterations. Total = N x N = N squared."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What does end=\" \" do in print(\"*\", end=\" \")?",
+    "difficulty": "easy",
+    "points": 10,
+    "estimatedSeconds": 20,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 14,
+    "content": {
+      "options": [
+        { "id": "a", "text": "Adds a space after the * instead of a newline" },
+        { "id": "b", "text": "Adds two spaces after *" },
+        { "id": "c", "text": "Removes all output" },
+        { "id": "d", "text": "Prints 'end' after *" }
+      ],
+      "correct_answer": "a",
+      "explanation": "end=' ' replaces the default newline with a space. So stars (or other chars) appear next to each other on the same line."
+    }
+  },
+  {
+    "questionType": "multiple_choice_multi",
+    "questionText": "Which techniques are commonly used to create star patterns? (Select all that apply)",
+    "difficulty": "medium",
+    "points": 15,
+    "estimatedSeconds": 40,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 15,
+    "content": {
+      "options": [
+        { "id": "a", "text": "Nested for loops" },
+        { "id": "b", "text": "String repetition with *" },
+        { "id": "c", "text": "end='' to stay on the same line" },
+        { "id": "d", "text": "print() to move to the next line" },
+        { "id": "e", "text": "match-case statements" }
+      ],
+      "correct_answers": ["a", "b", "c", "d"],
+      "explanation": "Pattern printing uses nested loops (a), string * for repeating (b), end='' for same-line output (c), and print() for new rows (d)."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "String repetition like \"*\" * 5 produces \"*****\".",
+    "difficulty": "easy",
+    "points": 5,
+    "estimatedSeconds": 15,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 16,
+    "content": {
+      "options": [
+        { "id": "a", "text": "True" },
+        { "id": "b", "text": "False" }
+      ],
+      "correct_answer": "a",
+      "explanation": "Multiplying a string by a number repeats it! '*' * 5 gives '*****'. This is super useful for building patterns."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "In a nested loop, the inner loop must always use the same range as the outer loop.",
+    "difficulty": "medium",
+    "points": 10,
+    "estimatedSeconds": 20,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 17,
+    "content": {
+      "options": [
+        { "id": "a", "text": "True" },
+        { "id": "b", "text": "False" }
+      ],
+      "correct_answer": "b",
+      "explanation": "The inner loop can use any range -- even one that depends on the outer loop variable! Like range(i + 1) for triangle patterns."
+    }
+  },
+  {
+    "questionType": "fill_in_blank",
+    "questionText": "To repeat a string 4 times, you write: \"abc\" ___ 4, which gives \"abcabcabcabc\".",
+    "difficulty": "easy",
+    "points": 10,
+    "estimatedSeconds": 15,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 18,
+    "content": {
+      "blanks": [
+        {
+          "position": 1,
+          "accepted_answers": ["*"]
+        }
+      ],
+      "explanation": "The * operator repeats a string the given number of times. 'abc' * 4 = 'abcabcabcabc'."
+    }
+  },
+  {
+    "questionType": "fill_in_blank",
+    "questionText": "To print on the same line, use print('*', ___=\"\").",
+    "difficulty": "easy",
+    "points": 10,
+    "estimatedSeconds": 15,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 19,
+    "content": {
+      "blanks": [
+        {
+          "position": 1,
+          "accepted_answers": ["end"]
+        }
+      ],
+      "explanation": "The end parameter controls what print() adds at the end. end='' means no newline, so the next print stays on the same line."
+    }
+  },
+  {
+    "questionType": "matching",
+    "questionText": "Match each pattern type to the code technique used.",
+    "difficulty": "medium",
+    "points": 15,
+    "estimatedSeconds": 50,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 20,
+    "content": {
+      "leftItems": [
+        { "id": "l1", "text": "Square (N x N stars)" },
+        { "id": "l2", "text": "Right triangle (* to ***)" },
+        { "id": "l3", "text": "Inverted triangle (*** to *)" },
+        { "id": "l4", "text": "Pyramid (centered)" }
+      ],
+      "rightItems": [
+        { "id": "r1", "text": "Same number of stars every row" },
+        { "id": "r2", "text": "Increase stars by 1 each row" },
+        { "id": "r3", "text": "Decrease stars by 1 each row" },
+        { "id": "r4", "text": "Spaces + increasing odd stars" }
+      ],
+      "correctPairs": [
+        { "left": "l1", "right": "r1" },
+        { "left": "l2", "right": "r2" },
+        { "left": "l3", "right": "r3" },
+        { "left": "l4", "right": "r4" }
+      ],
+      "explanation": "Squares keep it constant, right triangles grow, inverted triangles shrink, and pyramids use spaces + odd numbers of stars."
+    }
+  },
+  {
+    "questionType": "matching",
+    "questionText": "Match each code snippet to its output.",
+    "difficulty": "hard",
+    "points": 15,
+    "estimatedSeconds": 60,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 21,
+    "content": {
+      "leftItems": [
+        { "id": "l1", "text": "print('*' * 4)" },
+        { "id": "l2", "text": "print('*', end=' '); print('*')" },
+        { "id": "l3", "text": "print('*\\n*')" },
+        { "id": "l4", "text": "print('*' * 2 + '-' * 2)" }
+      ],
+      "rightItems": [
+        { "id": "r1", "text": "****" },
+        { "id": "r2", "text": "* *" },
+        { "id": "r3", "text": "*\\n*" },
+        { "id": "r4", "text": "**--" }
+      ],
+      "correctPairs": [
+        { "left": "l1", "right": "r1" },
+        { "left": "l2", "right": "r2" },
+        { "left": "l3", "right": "r3" },
+        { "left": "l4", "right": "r4" }
+      ],
+      "explanation": "String * repeats, end=' ' keeps on same line with space, \\n adds newline, and + concatenates strings."
+    }
+  },
+  {
+    "questionType": "ordering",
+    "questionText": "Put these steps in order to create a right triangle pattern with nested loops.",
+    "difficulty": "medium",
+    "points": 15,
+    "estimatedSeconds": 45,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 22,
+    "content": {
+      "items": [
+        { "id": "s1", "text": "Start outer loop: for i in range(1, n+1)" },
+        { "id": "s2", "text": "Start inner loop: for j in range(i)" },
+        { "id": "s3", "text": "Print star with end='' to stay on same line" },
+        { "id": "s4", "text": "After inner loop, print() to go to next line" }
+      ],
+      "correctOrder": ["s1", "s2", "s3", "s4"],
+      "explanation": "Outer loop controls rows, inner loop prints stars for that row (using end=''), then print() moves to the next line."
+    }
   }
 ]

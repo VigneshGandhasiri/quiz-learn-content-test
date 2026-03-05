@@ -1,16 +1,12 @@
-{
+﻿{
   "title": "Variables & Data Types",
-  "description": "Covers variable creation, assignment, and Python's core data types (int, str, float, bool).",
+  "description": "Test your knowledge of Python variables, naming rules, assignment, data types (int, float, str, bool), type casting, and common type errors.",
   "subject": "Programming",
   "difficulty": "easy",
   "ageMin": 10,
   "ageMax": 18,
-  "estimatedMinutes": 8,
-  "tags": [
-    "python",
-    "variables",
-    "data-types"
-  ]
+  "estimatedMinutes": 20,
+  "tags": ["python", "variables", "data-types", "type-casting", "assignment"]
 }
 
 // ==================== QUESTIONS ====================
@@ -19,223 +15,568 @@
   {
     "questionType": "multiple_choice_single",
     "questionText": "What is a variable in programming?",
+    "difficulty": "easy",
+    "points": 10,
+    "estimatedSeconds": 20,
+    "subject": "Programming",
     "ageMin": 10,
     "ageMax": 18,
-    "difficulty": "easy",
-    "estimatedSeconds": 30,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 5.0,
     "allowPartialCredit": false,
     "negativeMarking": false,
     "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 1,
     "content": {
       "options": [
-        {
-          "id": "a",
-          "text": "A container that stores data values"
-        },
-        {
-          "id": "b",
-          "text": "A type of computer monitor"
-        },
-        {
-          "id": "c",
-          "text": "A programming language"
-        },
-        {
-          "id": "d",
-          "text": "A computer virus"
-        }
+        { "id": "a", "text": "A named container that stores a value" },
+        { "id": "b", "text": "A type of computer screen" },
+        { "id": "c", "text": "A Python command" },
+        { "id": "d", "text": "A special kind of number" }
       ],
       "correct_answer": "a",
-      "explanation": ""
-    },
-    "position": 1
+      "explanation": "A variable is like a labeled box in the computer's memory. It has a name and holds a value that your program can use later."
+    }
   },
   {
     "questionType": "multiple_choice_single",
-    "questionText": "Which of these is a valid variable name in Python?",
-    "ageMin": 10,
-    "ageMax": 18,
+    "questionText": "Which of these is a valid Python variable name?",
     "difficulty": "easy",
+    "points": 10,
     "estimatedSeconds": 25,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 5.0,
-    "allowPartialCredit": false,
-    "negativeMarking": false,
-    "supportsReadAloud": true,
-    "content": {
-      "options": [
-        {
-          "id": "a",
-          "text": "my_age"
-        },
-        {
-          "id": "b",
-          "text": "2cool"
-        },
-        {
-          "id": "c",
-          "text": "my-name"
-        },
-        {
-          "id": "d",
-          "text": "for"
-        }
-      ],
-      "correct_answer": "a",
-      "explanation": ""
-    },
-    "position": 2
-  },
-  {
-    "questionType": "multiple_choice_single",
-    "questionText": "What data type is the value 42 in Python?",
-    "ageMin": 11,
-    "ageMax": 18,
-    "difficulty": "easy",
-    "estimatedSeconds": 20,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 5.0,
-    "allowPartialCredit": false,
-    "negativeMarking": false,
-    "supportsReadAloud": true,
-    "content": {
-      "options": [
-        {
-          "id": "a",
-          "text": "int (integer)"
-        },
-        {
-          "id": "b",
-          "text": "str (string)"
-        },
-        {
-          "id": "c",
-          "text": "float"
-        },
-        {
-          "id": "d",
-          "text": "bool (boolean)"
-        }
-      ],
-      "correct_answer": "a",
-      "explanation": ""
-    },
-    "position": 3
-  },
-  {
-    "questionType": "multiple_choice_single",
-    "questionText": "What data type is 'Hello World' in Python?",
+    "subject": "Programming",
     "ageMin": 10,
     "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 2,
+    "content": {
+      "options": [
+        { "id": "a", "text": "player_score" },
+        { "id": "b", "text": "2fast" },
+        { "id": "c", "text": "my-name" },
+        { "id": "d", "text": "for" }
+      ],
+      "correct_answer": "a",
+      "explanation": "player_score uses letters and underscores which is valid. Names can't start with numbers (2fast), can't have hyphens (my-name), and can't be Python keywords (for)."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What does the = sign mean in Python?",
     "difficulty": "easy",
+    "points": 10,
+    "estimatedSeconds": 25,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 3,
+    "content": {
+      "options": [
+        { "id": "a", "text": "Store the value on the right into the variable on the left" },
+        { "id": "b", "text": "Check if two things are equal" },
+        { "id": "c", "text": "Do math" },
+        { "id": "d", "text": "Delete a variable" }
+      ],
+      "correct_answer": "a",
+      "explanation": "In Python, = is the assignment operator. It means 'store this value'. It does NOT check equality -- that's what == is for!"
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What data type is the value 3.14 in Python?",
+    "difficulty": "easy",
+    "points": 10,
     "estimatedSeconds": 20,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 5.0,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
     "allowPartialCredit": false,
     "negativeMarking": false,
     "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 4,
     "content": {
       "options": [
-        {
-          "id": "a",
-          "text": "str (string)"
-        },
-        {
-          "id": "b",
-          "text": "int (integer)"
-        },
-        {
-          "id": "c",
-          "text": "float"
-        },
-        {
-          "id": "d",
-          "text": "list"
-        }
+        { "id": "a", "text": "float" },
+        { "id": "b", "text": "int" },
+        { "id": "c", "text": "str" },
+        { "id": "d", "text": "decimal" }
       ],
       "correct_answer": "a",
-      "explanation": ""
-    },
-    "position": 4
+      "explanation": "Numbers with a decimal point are floats (floating-point numbers). 3.14 has a decimal, so it's a float."
+    }
   },
   {
     "questionType": "multiple_choice_single",
-    "questionText": "How do you create a string variable in Python?",
-    "ageMin": 11,
-    "ageMax": 18,
+    "questionText": "What is the output of:\nx = 5\nx = x + 3\nprint(x)",
     "difficulty": "medium",
+    "points": 10,
     "estimatedSeconds": 30,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 8.0,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
     "allowPartialCredit": false,
     "negativeMarking": false,
     "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 5,
     "content": {
       "options": [
-        {
-          "id": "a",
-          "text": "name = \"Alice\""
-        },
-        {
-          "id": "b",
-          "text": "name = Alice"
-        },
-        {
-          "id": "c",
-          "text": "string name = Alice"
-        },
-        {
-          "id": "d",
-          "text": "var name = Alice"
-        }
+        { "id": "a", "text": "8" },
+        { "id": "b", "text": "5" },
+        { "id": "c", "text": "3" },
+        { "id": "d", "text": "Error" }
       ],
       "correct_answer": "a",
-      "explanation": ""
-    },
-    "position": 5
+      "explanation": "First x is 5. Then x = x + 3 takes the current value of x (5), adds 3, and stores the result (8) back into x."
+    }
   },
   {
     "questionType": "multiple_choice_single",
-    "questionText": "What happens when you assign a new value to an existing variable?",
-    "ageMin": 11,
-    "ageMax": 18,
+    "questionText": "What does x += 5 mean?",
     "difficulty": "medium",
-    "estimatedSeconds": 35,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 8.0,
+    "points": 10,
+    "estimatedSeconds": 25,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
     "allowPartialCredit": false,
     "negativeMarking": false,
     "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 6,
     "content": {
       "options": [
-        {
-          "id": "a",
-          "text": "The old value is replaced with the new value"
-        },
-        {
-          "id": "b",
-          "text": "Both values are stored together"
-        },
-        {
-          "id": "c",
-          "text": "An error occurs"
-        },
-        {
-          "id": "d",
-          "text": "The variable becomes undefined"
-        }
+        { "id": "a", "text": "x = x + 5" },
+        { "id": "b", "text": "x = 5" },
+        { "id": "c", "text": "x == 5" },
+        { "id": "d", "text": "x = x * 5" }
       ],
       "correct_answer": "a",
-      "explanation": ""
-    },
-    "position": 6
+      "explanation": "+= is a shorthand operator. x += 5 is the same as writing x = x + 5. It adds 5 to whatever x already holds."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the output of: print(\"5\" + \"5\")",
+    "difficulty": "medium",
+    "points": 10,
+    "estimatedSeconds": 30,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 7,
+    "content": {
+      "options": [
+        { "id": "a", "text": "55" },
+        { "id": "b", "text": "10" },
+        { "id": "c", "text": "\"5\" + \"5\"" },
+        { "id": "d", "text": "Error" }
+      ],
+      "correct_answer": "a",
+      "explanation": "When you use + with strings, Python concatenates (joins) them. \"5\" + \"5\" glues the two text characters together to get \"55\", not the number 10."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What does int(7.9) return?",
+    "difficulty": "medium",
+    "points": 10,
+    "estimatedSeconds": 30,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 8,
+    "content": {
+      "options": [
+        { "id": "a", "text": "7" },
+        { "id": "b", "text": "8" },
+        { "id": "c", "text": "7.0" },
+        { "id": "d", "text": "Error" }
+      ],
+      "correct_answer": "a",
+      "explanation": "int() chops off the decimal part -- it does NOT round! So int(7.9) drops the .9 and gives you 7."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the output of: print(type(True))",
+    "difficulty": "medium",
+    "points": 10,
+    "estimatedSeconds": 30,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 9,
+    "content": {
+      "options": [
+        { "id": "a", "text": "<class 'bool'>" },
+        { "id": "b", "text": "<class 'str'>" },
+        { "id": "c", "text": "<class 'int'>" },
+        { "id": "d", "text": "True" }
+      ],
+      "correct_answer": "a",
+      "explanation": "True and False are boolean values. The type() function tells you what kind of data something is, and True is a bool."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What happens when you run: print(\"age: \" + 15)",
+    "difficulty": "hard",
+    "points": 15,
+    "estimatedSeconds": 35,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 10,
+    "content": {
+      "options": [
+        { "id": "a", "text": "TypeError -- can't add string and integer" },
+        { "id": "b", "text": "age: 15" },
+        { "id": "c", "text": "age: fifteen" },
+        { "id": "d", "text": "1500" }
+      ],
+      "correct_answer": "a",
+      "explanation": "Python can't concatenate a string with a number using +. You would need str(15) first, or use print(\"age:\", 15) with a comma instead."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the Python shortcut to swap two variables a and b?",
+    "difficulty": "medium",
+    "points": 10,
+    "estimatedSeconds": 30,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 11,
+    "content": {
+      "options": [
+        { "id": "a", "text": "a, b = b, a" },
+        { "id": "b", "text": "a = b then b = a" },
+        { "id": "c", "text": "swap(a, b)" },
+        { "id": "d", "text": "a == b" }
+      ],
+      "correct_answer": "a",
+      "explanation": "Python has a neat trick: a, b = b, a swaps both values at the same time! No temporary variable needed."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the output of: print(len(\"Hello\"))",
+    "difficulty": "easy",
+    "points": 10,
+    "estimatedSeconds": 20,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 12,
+    "content": {
+      "options": [
+        { "id": "a", "text": "5" },
+        { "id": "b", "text": "4" },
+        { "id": "c", "text": "6" },
+        { "id": "d", "text": "Hello" }
+      ],
+      "correct_answer": "a",
+      "explanation": "len() counts the number of characters in a string. H-e-l-l-o = 5 characters."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "After this code runs, what is the value of a?\na = 10\nb = a\na = 20",
+    "difficulty": "hard",
+    "points": 15,
+    "estimatedSeconds": 40,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 13,
+    "content": {
+      "options": [
+        { "id": "a", "text": "20" },
+        { "id": "b", "text": "10" },
+        { "id": "c", "text": "30" },
+        { "id": "d", "text": "Error" }
+      ],
+      "correct_answer": "a",
+      "explanation": "a starts as 10, then b gets a copy of 10. When a is reassigned to 20, b stays 10 but a is now 20. Each variable is independent."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "Are variable names case-sensitive in Python? Is 'Score' the same as 'score'?",
+    "difficulty": "medium",
+    "points": 10,
+    "estimatedSeconds": 25,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 14,
+    "content": {
+      "options": [
+        { "id": "a", "text": "Yes, they are case-sensitive -- Score and score are different variables" },
+        { "id": "b", "text": "No, they are the same variable" },
+        { "id": "c", "text": "Only strings are case-sensitive" },
+        { "id": "d", "text": "It depends on the operating system" }
+      ],
+      "correct_answer": "a",
+      "explanation": "Python is case-sensitive. Score, score, and SCORE are all different variables. Be consistent with your naming!"
+    }
+  },
+  {
+    "questionType": "multiple_choice_multi",
+    "questionText": "Which of the following are INVALID variable names in Python?",
+    "difficulty": "medium",
+    "points": 15,
+    "estimatedSeconds": 45,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 15,
+    "content": {
+      "options": [
+        { "id": "a", "text": "3points" },
+        { "id": "b", "text": "_secret" },
+        { "id": "c", "text": "my-score" },
+        { "id": "d", "text": "class" },
+        { "id": "e", "text": "player1" }
+      ],
+      "correct_answers": ["a", "c", "d"],
+      "explanation": "3points starts with a number (invalid). my-score has a hyphen (invalid). class is a reserved keyword (invalid). _secret and player1 are perfectly fine!"
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "In Python, the value 5 and the text \"5\" are the same data type.",
+    "difficulty": "easy",
+    "points": 5,
+    "estimatedSeconds": 15,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 16,
+    "content": {
+      "options": [
+        { "id": "a", "text": "True" },
+        { "id": "b", "text": "False" }
+      ],
+      "correct_answer": "b",
+      "explanation": "5 (no quotes) is an integer (int), but \"5\" (with quotes) is a string (str). They look the same to us but Python treats them very differently!"
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "The int() function rounds 4.7 up to 5.",
+    "difficulty": "medium",
+    "points": 10,
+    "estimatedSeconds": 20,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 17,
+    "content": {
+      "options": [
+        { "id": "a", "text": "True" },
+        { "id": "b", "text": "False" }
+      ],
+      "correct_answer": "b",
+      "explanation": "int() does NOT round -- it truncates (chops off) the decimal. int(4.7) gives 4, not 5. It always drops the decimal part."
+    }
+  },
+  {
+    "questionType": "fill_in_blank",
+    "questionText": "To find out what type of data a variable holds, you use the ___ function.",
+    "difficulty": "easy",
+    "points": 10,
+    "estimatedSeconds": 20,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 18,
+    "content": {
+      "blanks": [
+        {
+          "position": 1,
+          "accepted_answers": ["type", "type()"]
+        }
+      ],
+      "explanation": "The type() function tells you what kind of data a value is. For example, type(42) returns <class 'int'>."
+    }
+  },
+  {
+    "questionType": "fill_in_blank",
+    "questionText": "What is the output of: print(\"Star\" * 3)?\nAnswer: ___",
+    "difficulty": "medium",
+    "points": 10,
+    "estimatedSeconds": 25,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 19,
+    "content": {
+      "blanks": [
+        {
+          "position": 1,
+          "accepted_answers": ["StarStarStar"]
+        }
+      ],
+      "explanation": "The * operator repeats a string. 'Star' * 3 = 'StarStarStar'."
+    }
+  },
+  {
+    "questionType": "matching",
+    "questionText": "Match each value to its Python data type.",
+    "difficulty": "easy",
+    "points": 15,
+    "estimatedSeconds": 45,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 20,
+    "content": {
+      "leftItems": [
+        { "id": "l1", "text": "42" },
+        { "id": "l2", "text": "3.14" },
+        { "id": "l3", "text": "\"Hello\"" },
+        { "id": "l4", "text": "True" }
+      ],
+      "rightItems": [
+        { "id": "r1", "text": "int" },
+        { "id": "r2", "text": "float" },
+        { "id": "r3", "text": "str" },
+        { "id": "r4", "text": "bool" }
+      ],
+      "correctPairs": [
+        { "left": "l1", "right": "r1" },
+        { "left": "l2", "right": "r2" },
+        { "left": "l3", "right": "r3" },
+        { "left": "l4", "right": "r4" }
+      ],
+      "explanation": "Whole numbers are int, decimal numbers are float, text in quotes is str, and True/False values are bool."
+    }
+  },
+  {
+    "questionType": "matching",
+    "questionText": "Match each shorthand operator to what it does.",
+    "difficulty": "medium",
+    "points": 15,
+    "estimatedSeconds": 50,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 21,
+    "content": {
+      "leftItems": [
+        { "id": "l1", "text": "x += 3" },
+        { "id": "l2", "text": "x -= 3" },
+        { "id": "l3", "text": "x *= 3" },
+        { "id": "l4", "text": "x //= 3" }
+      ],
+      "rightItems": [
+        { "id": "r1", "text": "x = x + 3" },
+        { "id": "r2", "text": "x = x - 3" },
+        { "id": "r3", "text": "x = x * 3" },
+        { "id": "r4", "text": "x = x // 3" }
+      ],
+      "correctPairs": [
+        { "left": "l1", "right": "r1" },
+        { "left": "l2", "right": "r2" },
+        { "left": "l3", "right": "r3" },
+        { "left": "l4", "right": "r4" }
+      ],
+      "explanation": "Shorthand operators combine an operation with assignment. They update the variable using its current value."
+    }
+  },
+  {
+    "questionType": "ordering",
+    "questionText": "Trace this code step by step. Put the values of x in order from first to last.\nx = 2\nx = x * 3\nx += 4\nx = x - 1",
+    "difficulty": "medium",
+    "points": 15,
+    "estimatedSeconds": 50,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 22,
+    "content": {
+      "items": [
+        { "id": "s1", "text": "x = 2" },
+        { "id": "s2", "text": "x = 6" },
+        { "id": "s3", "text": "x = 10" },
+        { "id": "s4", "text": "x = 9" }
+      ],
+      "correctOrder": ["s1", "s2", "s3", "s4"],
+      "explanation": "x starts at 2, then 2*3=6, then 6+4=10, then 10-1=9. Tracing means following each line to track how the variable changes."
+    }
   }
 ]

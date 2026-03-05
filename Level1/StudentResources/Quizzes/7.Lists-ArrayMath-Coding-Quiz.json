@@ -1,17 +1,12 @@
-{
-  "title": "Lists & Array Math Coding",
-  "description": "Coding challenges for list manipulation, running sum computation, and basic statistics.",
+﻿{
+  "title": "Lists & Array Math - Coding Quiz",
+  "description": "Write Python programs using lists, indexing, slicing, and mathematical operations like sum, min, max, and average.",
   "subject": "Programming",
   "difficulty": "medium",
   "ageMin": 10,
   "ageMax": 18,
-  "estimatedMinutes": 20,
-  "tags": [
-    "python",
-    "lists",
-    "coding",
-    "running-sum"
-  ]
+  "estimatedMinutes": 30,
+  "tags": ["python", "lists", "array-math", "coding"]
 }
 
 // ==================== QUESTIONS ====================
@@ -19,82 +14,122 @@
 [
   {
     "questionType": "program_submission",
-    "questionText": "Shopping List Manager",
+    "questionText": "Write a program that reads N numbers from the user and prints the sum, minimum, and maximum.\n\nFirst, read an integer N (how many numbers). Then read N integers, one per line. Print three lines:\nSum: <sum>\nMin: <min>\nMax: <max>",
+    "difficulty": "easy",
+    "points": 25,
+    "estimatedSeconds": 180,
+    "subject": "Programming",
     "ageMin": 10,
     "ageMax": 18,
-    "difficulty": "easy",
-    "estimatedSeconds": 150,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 15.0,
     "allowPartialCredit": true,
     "negativeMarking": false,
     "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 1,
     "content": {
-      "prompt": "You are given a list of items on the first input line (comma-separated). Read the list, then:\n1. Print the total number of items\n2. Print the first and last item\n3. Add 'Milk' to the end and print the updated list (comma-separated)",
-      "starterCode": "# TODO: Read items as a comma-separated string and split into a list\nitems_str = input(\"Enter items: \")\nitems = items_str.split(\",\")\n\n# TODO: Print total count\n# TODO: Print first and last item\n# TODO: Add 'Milk' and print updated list comma-separated",
-      "language": "python",
+      "starterCode": "# Read how many numbers\nn = int(input())\nnums = []\n# Read each number and add to list\n\n# Print sum, min, and max\n",
       "testCases": [
-        {
-          "input": "Bread,Eggs,Cheese",
-          "expected": "Total items: 3\nFirst: Bread\nLast: Cheese\nUpdated: Bread,Eggs,Cheese,Milk",
-          "weight": 0.5,
-          "visible": true,
-          "description": "3-item shopping list"
-        },
-        {
-          "input": "Apple",
-          "expected": "Total items: 1\nFirst: Apple\nLast: Apple\nUpdated: Apple,Milk",
-          "weight": 0.5,
-          "visible": true,
-          "description": "Single item list"
-        }
+        { "input": "4\n10\n20\n30\n40", "expectedOutput": "Sum: 100\nMin: 10\nMax: 40" },
+        { "input": "3\n5\n-3\n8", "expectedOutput": "Sum: 10\nMin: -3\nMax: 8" },
+        { "input": "1\n42", "expectedOutput": "Sum: 42\nMin: 42\nMax: 42" }
       ],
-      "timeLimitMs": 2000,
-      "memoryLimitMb": 64,
-      "allowedImports": [],
-      "forbiddenKeywords": []
-    },
-    "position": 1
+      "explanation": "Use a loop to read N numbers into a list with append(). Then use sum(), min(), and max() on the list."
+    }
   },
   {
     "questionType": "program_submission",
-    "questionText": "Running Sum Calculator",
-    "ageMin": 11,
-    "ageMax": 18,
+    "questionText": "Write a program that reads N numbers and prints their average.\n\nFirst, read an integer N. Then read N integers. Print the average rounded to 2 decimal places.\nOutput format: Average: <value>",
     "difficulty": "medium",
+    "points": 25,
     "estimatedSeconds": 180,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 18.0,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
     "allowPartialCredit": true,
     "negativeMarking": false,
     "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 2,
     "content": {
-      "prompt": "Read a list of integers (space-separated). Compute the running sum where each element becomes the sum of all elements up to that index. Print the running sum list space-separated.\nExample: [1, 2, 3, 4] → [1, 3, 6, 10]",
-      "starterCode": "# TODO: Read space-separated integers\nnums = list(map(int, input(\"Enter numbers: \").split()))\n\n# TODO: Compute running sum\n# running[i] = sum of nums[0..i]\n\n# TODO: Print the running sum list space-separated",
-      "language": "python",
+      "starterCode": "# Read how many numbers\nn = int(input())\nnums = []\n# Read each number\n\n# Calculate and print the average\n",
       "testCases": [
-        {
-          "input": "1 2 3 4",
-          "expected": "1 3 6 10",
-          "weight": 0.5,
-          "visible": true,
-          "description": "Running sum of [1,2,3,4]"
-        },
-        {
-          "input": "5 -1 3 2",
-          "expected": "5 4 7 9",
-          "weight": 0.5,
-          "visible": true,
-          "description": "Running sum with negative number"
-        }
+        { "input": "4\n10\n20\n30\n40", "expectedOutput": "Average: 25.0" },
+        { "input": "3\n1\n2\n3", "expectedOutput": "Average: 2.0" },
+        { "input": "3\n10\n20\n35", "expectedOutput": "Average: 21.67" }
       ],
-      "timeLimitMs": 2000,
-      "memoryLimitMb": 64,
-      "allowedImports": [],
-      "forbiddenKeywords": []
-    },
-    "position": 2
+      "explanation": "Average = sum(nums) / len(nums). Use round(avg, 2) to round to 2 decimal places."
+    }
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Write a program that reads N numbers and prints how many are above the average.\n\nFirst, read integer N. Then read N integers. Calculate the average, then count how many numbers are strictly above the average.\nOutput format: <count> above average",
+    "difficulty": "medium",
+    "points": 30,
+    "estimatedSeconds": 240,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 3,
+    "content": {
+      "starterCode": "# Read the numbers into a list\nn = int(input())\nnums = []\nfor i in range(n):\n    nums.append(int(input()))\n\n# Calculate average, then count above average\n",
+      "testCases": [
+        { "input": "4\n10\n20\n30\n40", "expectedOutput": "2 above average" },
+        { "input": "3\n5\n5\n5", "expectedOutput": "0 above average" },
+        { "input": "5\n1\n2\n3\n4\n100", "expectedOutput": "1 above average" }
+      ],
+      "explanation": "First find the average with sum()/len(). Then loop through the list and count numbers where num > average."
+    }
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Write a program that reads N numbers and prints only the even numbers from the list, each on its own line.\n\nFirst, read integer N. Then read N integers. Print each even number on a separate line. If no even numbers exist, print: No even numbers",
+    "difficulty": "medium",
+    "points": 25,
+    "estimatedSeconds": 180,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 4,
+    "content": {
+      "starterCode": "# Read the numbers into a list\nn = int(input())\nnums = []\nfor i in range(n):\n    nums.append(int(input()))\n\n# Print even numbers\n",
+      "testCases": [
+        { "input": "5\n1\n2\n3\n4\n5", "expectedOutput": "2\n4" },
+        { "input": "4\n10\n20\n30\n40", "expectedOutput": "10\n20\n30\n40" },
+        { "input": "3\n1\n3\n5", "expectedOutput": "No even numbers" }
+      ],
+      "explanation": "Loop through the list and check num % 2 == 0. Keep a flag or counter to detect if none were found."
+    }
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Write a program that reads N numbers and creates a new list with every element doubled.\n\nFirst, read integer N. Then read N integers. Create a new list where each value is multiplied by 2, and print it.\nOutput format: [val1, val2, ...]  (Python list format)",
+    "difficulty": "medium",
+    "points": 25,
+    "estimatedSeconds": 180,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 5,
+    "content": {
+      "starterCode": "# Read the numbers into a list\nn = int(input())\nnums = []\nfor i in range(n):\n    nums.append(int(input()))\n\n# Create doubled list and print it\n",
+      "testCases": [
+        { "input": "3\n1\n2\n3", "expectedOutput": "[2, 4, 6]" },
+        { "input": "4\n5\n10\n15\n20", "expectedOutput": "[10, 20, 30, 40]" },
+        { "input": "2\n0\n-3", "expectedOutput": "[0, -6]" }
+      ],
+      "explanation": "Create a new empty list. Loop through the original, multiply each element by 2, and append to the new list. Or use a list comprehension: [x * 2 for x in nums]."
+    }
   }
 ]

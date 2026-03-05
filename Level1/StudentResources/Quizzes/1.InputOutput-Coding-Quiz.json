@@ -1,18 +1,12 @@
-{
+﻿{
   "title": "Input & Output Coding",
-  "description": "Hands-on coding challenges using Python's input/output functions and string formatting.",
+  "description": "Hands-on coding challenges using Python's input/output functions, f-strings, and string formatting.",
   "subject": "Programming",
   "difficulty": "easy",
   "ageMin": 10,
   "ageMax": 18,
-  "estimatedMinutes": 15,
-  "tags": [
-    "python",
-    "input",
-    "output",
-    "coding",
-    "f-strings"
-  ]
+  "estimatedMinutes": 25,
+  "tags": ["python", "input", "output", "coding", "f-strings"]
 }
 
 // ==================== QUESTIONS ====================
@@ -97,5 +91,139 @@
       "forbiddenKeywords": []
     },
     "position": 2
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Personal Info Card",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 150,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 15.0,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "prompt": "Ask the user for their first name, last name, and favorite color. Print a card using this EXACT format:\n\n====================\nName: [first] [last]\nFavorite Color: [color]\n====================\n\nUse string repetition for the border line (= repeated 20 times).",
+      "starterCode": "# TODO: Ask for first name, last name, and favorite color\n\n# TODO: Print the card with borders\n# Hint: use '=' * 20 for the border",
+      "language": "python",
+      "testCases": [
+        {
+          "input": "Alex\nSmith\nBlue",
+          "expected": "====================\nName: Alex Smith\nFavorite Color: Blue\n====================",
+          "weight": 0.5,
+          "visible": true,
+          "description": "Card for Alex Smith who likes Blue"
+        },
+        {
+          "input": "Maria\nGarcia\nGreen",
+          "expected": "====================\nName: Maria Garcia\nFavorite Color: Green\n====================",
+          "weight": 0.5,
+          "visible": true,
+          "description": "Card for Maria Garcia who likes Green"
+        }
+      ],
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 64,
+      "allowedImports": [],
+      "forbiddenKeywords": []
+    },
+    "position": 3
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Unit Converter",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 180,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 18.0,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "prompt": "Ask the user for a distance in miles. Convert it to kilometers (1 mile = 1.609 km) and print the result rounded to 2 decimal places using an f-string.\n\nOutput format: [miles] miles = [km] km",
+      "starterCode": "# TODO: Ask for distance in miles\n# TODO: Convert to kilometers (1 mile = 1.609 km)\n# TODO: Print using f-string with 2 decimal places\n# Hint: f\"{value:.2f}\" formats to 2 decimal places",
+      "language": "python",
+      "testCases": [
+        {
+          "input": "5",
+          "expected": "5.0 miles = 8.05 km",
+          "weight": 0.34,
+          "visible": true,
+          "description": "Convert 5 miles to km"
+        },
+        {
+          "input": "10",
+          "expected": "10.0 miles = 16.09 km",
+          "weight": 0.33,
+          "visible": true,
+          "description": "Convert 10 miles to km"
+        },
+        {
+          "input": "26.2",
+          "expected": "26.2 miles = 42.16 km",
+          "weight": 0.33,
+          "visible": false,
+          "description": "Convert marathon distance"
+        }
+      ],
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 64,
+      "allowedImports": [],
+      "forbiddenKeywords": []
+    },
+    "position": 4
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Time Calculator",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 200,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 20.0,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "prompt": "Ask the user for a total number of seconds. Convert it to hours, minutes, and remaining seconds.\n\nOutput format:\n[total] seconds = [h] hours, [m] minutes, [s] seconds\n\nHint: Use integer division (//) and modulus (%) operators.",
+      "starterCode": "# TODO: Ask for total seconds\n# TODO: Calculate hours, minutes, and remaining seconds\n# Hint: hours = total // 3600\n# Hint: Use % to get the remainder",
+      "language": "python",
+      "testCases": [
+        {
+          "input": "3661",
+          "expected": "3661 seconds = 1 hours, 1 minutes, 1 seconds",
+          "weight": 0.34,
+          "visible": true,
+          "description": "Convert 3661 seconds"
+        },
+        {
+          "input": "7200",
+          "expected": "7200 seconds = 2 hours, 0 minutes, 0 seconds",
+          "weight": 0.33,
+          "visible": true,
+          "description": "Convert exactly 2 hours"
+        },
+        {
+          "input": "90",
+          "expected": "90 seconds = 0 hours, 1 minutes, 30 seconds",
+          "weight": 0.33,
+          "visible": false,
+          "description": "Convert 90 seconds"
+        }
+      ],
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 64,
+      "allowedImports": [],
+      "forbiddenKeywords": []
+    },
+    "position": 5
   }
 ]

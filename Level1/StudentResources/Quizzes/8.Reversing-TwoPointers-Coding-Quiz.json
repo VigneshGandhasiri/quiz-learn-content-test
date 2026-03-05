@@ -1,18 +1,12 @@
-{
-  "title": "Reversing & Two Pointers Coding",
-  "description": "Coding challenges implementing palindrome checking and in-place array reversal using two pointers.",
+﻿{
+  "title": "Reversing & Two Pointers - Coding Quiz",
+  "description": "Write Python programs that reverse lists and strings using various techniques including slicing, loops, and the two-pointer method.",
   "subject": "Programming",
   "difficulty": "medium",
   "ageMin": 10,
   "ageMax": 18,
-  "estimatedMinutes": 20,
-  "tags": [
-    "python",
-    "two-pointers",
-    "reversing",
-    "palindrome",
-    "coding"
-  ]
+  "estimatedMinutes": 30,
+  "tags": ["python", "reversing", "two-pointers", "palindrome", "coding"]
 }
 
 // ==================== QUESTIONS ====================
@@ -20,89 +14,123 @@
 [
   {
     "questionType": "program_submission",
-    "questionText": "Palindrome Checker",
+    "questionText": "Write a program that reads a word and checks if it is a palindrome.\n\nRead one string from input. If it reads the same forwards and backwards (case-insensitive), print: Palindrome\nOtherwise print: Not a palindrome",
+    "difficulty": "easy",
+    "points": 25,
+    "estimatedSeconds": 120,
+    "subject": "Programming",
     "ageMin": 10,
     "ageMax": 18,
-    "difficulty": "easy",
-    "estimatedSeconds": 150,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 15.0,
     "allowPartialCredit": true,
     "negativeMarking": false,
     "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 1,
     "content": {
-      "prompt": "Read a string from input. Using the two-pointer technique (comparing characters from the start and end moving inward), determine if the string is a palindrome (reads the same forwards and backwards). Ignore case. Print 'Yes' if it is a palindrome, 'No' otherwise.",
-      "starterCode": "# TODO: Read a string\ntext = input(\"Enter text: \").lower()\n\n# TODO: Use two pointers (left and right)\n# Compare characters moving inward\n# Print 'Yes' if palindrome, 'No' otherwise",
-      "language": "python",
+      "starterCode": "word = input()\n# Check if word is a palindrome (case-insensitive)\n",
       "testCases": [
-        {
-          "input": "racecar",
-          "expected": "Yes",
-          "weight": 0.33,
-          "visible": true,
-          "description": "racecar is a palindrome"
-        },
-        {
-          "input": "hello",
-          "expected": "No",
-          "weight": 0.33,
-          "visible": true,
-          "description": "hello is not a palindrome"
-        },
-        {
-          "input": "Level",
-          "expected": "Yes",
-          "weight": 0.34,
-          "visible": true,
-          "description": "Level (case-insensitive) is a palindrome"
-        }
+        { "input": "racecar", "expectedOutput": "Palindrome" },
+        { "input": "hello", "expectedOutput": "Not a palindrome" },
+        { "input": "Madam", "expectedOutput": "Palindrome" },
+        { "input": "level", "expectedOutput": "Palindrome" }
       ],
-      "timeLimitMs": 2000,
-      "memoryLimitMb": 64,
-      "allowedImports": [],
-      "forbiddenKeywords": []
-    },
-    "position": 1
+      "explanation": "Convert to lowercase first with .lower(), then compare word == word[::-1]."
+    }
   },
   {
     "questionType": "program_submission",
-    "questionText": "Reverse Array In-Place",
-    "ageMin": 11,
-    "ageMax": 18,
+    "questionText": "Write a program that reads N numbers into a list and prints the list reversed WITHOUT using [::-1] or .reverse().\n\nRead integer N, then N integers. Use a loop to build a new reversed list and print it in Python list format.",
     "difficulty": "medium",
+    "points": 30,
     "estimatedSeconds": 180,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 18.0,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
     "allowPartialCredit": true,
     "negativeMarking": false,
     "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 2,
     "content": {
-      "prompt": "Read a list of space-separated integers. Reverse the list in-place using two pointers (do NOT use the built-in reverse() or slicing [::-1]). Print the reversed list space-separated.",
-      "starterCode": "# TODO: Read space-separated integers\nnums = list(map(int, input(\"Enter numbers: \").split()))\n\n# TODO: Reverse in-place using two pointers\n# left starts at 0, right starts at len-1\n# Swap and move inward until they meet\n\n# TODO: Print reversed list space-separated",
-      "language": "python",
+      "starterCode": "n = int(input())\nnums = []\nfor i in range(n):\n    nums.append(int(input()))\n\n# Reverse WITHOUT [::-1] or .reverse()\n# Build a new reversed list using a loop\n",
       "testCases": [
-        {
-          "input": "1 2 3 4 5",
-          "expected": "5 4 3 2 1",
-          "weight": 0.5,
-          "visible": true,
-          "description": "Reverse [1,2,3,4,5]"
-        },
-        {
-          "input": "10 20 30",
-          "expected": "30 20 10",
-          "weight": 0.5,
-          "visible": true,
-          "description": "Reverse [10,20,30]"
-        }
+        { "input": "5\n1\n2\n3\n4\n5", "expectedOutput": "[5, 4, 3, 2, 1]" },
+        { "input": "3\n10\n20\n30", "expectedOutput": "[30, 20, 10]" },
+        { "input": "1\n42", "expectedOutput": "[42]" }
       ],
-      "timeLimitMs": 2000,
-      "memoryLimitMb": 64,
-      "allowedImports": [],
-      "forbiddenKeywords": []
-    },
-    "position": 2
+      "explanation": "Loop from the last index to 0 and append each element to a new list. Or use insert(0, item) while looping forward."
+    }
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Write a program that reverses a list in place using the two-pointer technique.\n\nRead integer N, then N integers. Reverse the list using two pointers (left and right) that swap elements and move toward each other. Print the reversed list.",
+    "difficulty": "hard",
+    "points": 30,
+    "estimatedSeconds": 240,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 3,
+    "content": {
+      "starterCode": "n = int(input())\nnums = []\nfor i in range(n):\n    nums.append(int(input()))\n\n# Two-pointer reversal\nleft = 0\nright = len(nums) - 1\n# Swap elements moving inward\n\nprint(nums)\n",
+      "testCases": [
+        { "input": "5\n1\n2\n3\n4\n5", "expectedOutput": "[5, 4, 3, 2, 1]" },
+        { "input": "4\n10\n20\n30\n40", "expectedOutput": "[40, 30, 20, 10]" },
+        { "input": "6\n1\n2\n3\n4\n5\n6", "expectedOutput": "[6, 5, 4, 3, 2, 1]" }
+      ],
+      "explanation": "While left < right: swap nums[left] and nums[right] using nums[left], nums[right] = nums[right], nums[left]. Then left += 1 and right -= 1."
+    }
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Write a program that reads a sentence and prints each word reversed, but keeps the words in their original order.\n\nExample: 'hello world' becomes 'olleh dlrow'\n\nRead one line of text. Reverse each word individually and print the result.",
+    "difficulty": "hard",
+    "points": 30,
+    "estimatedSeconds": 240,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 4,
+    "content": {
+      "starterCode": "sentence = input()\n# Split into words, reverse each word, join back together\n",
+      "testCases": [
+        { "input": "hello world", "expectedOutput": "olleh dlrow" },
+        { "input": "python is fun", "expectedOutput": "nohtyp si nuf" },
+        { "input": "racecar level", "expectedOutput": "racecar level" }
+      ],
+      "explanation": "Split the sentence with .split(), reverse each word with [::-1], and join them back with ' '.join()."
+    }
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Write a program that checks if a list of numbers is a palindrome.\n\nRead integer N, then N integers. If the list reads the same forwards and backwards, print: Palindrome list\nOtherwise print: Not a palindrome list",
+    "difficulty": "medium",
+    "points": 25,
+    "estimatedSeconds": 180,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 5,
+    "content": {
+      "starterCode": "n = int(input())\nnums = []\nfor i in range(n):\n    nums.append(int(input()))\n\n# Check if list is a palindrome\n",
+      "testCases": [
+        { "input": "5\n1\n2\n3\n2\n1", "expectedOutput": "Palindrome list" },
+        { "input": "4\n1\n2\n3\n4", "expectedOutput": "Not a palindrome list" },
+        { "input": "3\n5\n5\n5", "expectedOutput": "Palindrome list" }
+      ],
+      "explanation": "Compare nums == nums[::-1]. If they are equal, the list is a palindrome."
+    }
   }
 ]

@@ -1,16 +1,12 @@
-{
-  "title": "Functions Coding",
-  "description": "Coding challenges requiring students to write and call functions with multiple parameters.",
+﻿{
+  "title": "Functions - Coding Quiz",
+  "description": "Write Python programs using functions with parameters, return values, default arguments, and proper scope management.",
   "subject": "Programming",
   "difficulty": "medium",
   "ageMin": 10,
   "ageMax": 18,
-  "estimatedMinutes": 20,
-  "tags": [
-    "python",
-    "functions",
-    "coding"
-  ]
+  "estimatedMinutes": 30,
+  "tags": ["python", "functions", "coding"]
 }
 
 // ==================== QUESTIONS ====================
@@ -18,82 +14,122 @@
 [
   {
     "questionType": "program_submission",
-    "questionText": "Temperature Converter Function",
+    "questionText": "Write a function called area_rect(length, width) that returns the area of a rectangle.\n\nRead two integers from input (length and width, one per line). Call your function and print: Area: <result>",
+    "difficulty": "easy",
+    "points": 20,
+    "estimatedSeconds": 120,
+    "subject": "Programming",
     "ageMin": 10,
     "ageMax": 18,
-    "difficulty": "easy",
-    "estimatedSeconds": 150,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 15.0,
     "allowPartialCredit": true,
     "negativeMarking": false,
     "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 1,
     "content": {
-      "prompt": "Write two functions:\n1. celsius_to_fahrenheit(c) — returns c × 9/5 + 32\n2. fahrenheit_to_celsius(f) — returns (f - 32) × 5/9\nRead a temperature and a unit ('C' or 'F') from input. Convert it and print the result rounded to 1 decimal place with the target unit.",
-      "starterCode": "# TODO: Define celsius_to_fahrenheit(c)\n# TODO: Define fahrenheit_to_celsius(f)\n\n# Read temperature and unit\ntemp = float(input(\"Enter temperature: \"))\nunit = input(\"Enter unit (C/F): \").upper()\n\n# TODO: Convert and print\n# Example: 100.0C = 212.0F\n# Example: 32.0F = 0.0C",
-      "language": "python",
+      "starterCode": "def area_rect(length, width):\n    # Return the area\n    pass\n\nl = int(input())\nw = int(input())\nprint(f'Area: {area_rect(l, w)}')\n",
       "testCases": [
-        {
-          "input": "100\nC",
-          "expected": "100.0C = 212.0F",
-          "weight": 0.5,
-          "visible": true,
-          "description": "Convert 100°C to Fahrenheit"
-        },
-        {
-          "input": "32\nF",
-          "expected": "32.0F = 0.0C",
-          "weight": 0.5,
-          "visible": true,
-          "description": "Convert 32°F to Celsius"
-        }
+        { "input": "5\n3", "expectedOutput": "Area: 15" },
+        { "input": "10\n10", "expectedOutput": "Area: 100" },
+        { "input": "7\n1", "expectedOutput": "Area: 7" }
       ],
-      "timeLimitMs": 2000,
-      "memoryLimitMb": 64,
-      "allowedImports": [],
-      "forbiddenKeywords": []
-    },
-    "position": 1
+      "explanation": "Replace 'pass' with 'return length * width'. The function calculates and returns the product."
+    }
   },
   {
     "questionType": "program_submission",
-    "questionText": "Mini Math Library",
-    "ageMin": 11,
+    "questionText": "Write a function called is_even(n) that returns True if n is even, False otherwise.\n\nRead an integer from input. Call the function and print: Even if True, Odd if False.",
+    "difficulty": "easy",
+    "points": 20,
+    "estimatedSeconds": 120,
+    "subject": "Programming",
+    "ageMin": 10,
     "ageMax": 18,
-    "difficulty": "medium",
-    "estimatedSeconds": 180,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 18.0,
     "allowPartialCredit": true,
     "negativeMarking": false,
     "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 2,
     "content": {
-      "prompt": "Write three functions:\n1. find_max(numbers) — returns the maximum value in a list\n2. find_min(numbers) — returns the minimum value in a list\n3. find_average(numbers) — returns the average rounded to 2 decimal places\nDo NOT use the built-in max(), min(), or statistics functions.\nRead space-separated integers and print the max, min, and average.",
-      "starterCode": "# TODO: Define find_max(numbers)\n# TODO: Define find_min(numbers)\n# TODO: Define find_average(numbers)\n\n# Read input\nnums = list(map(int, input(\"Enter numbers: \").split()))\n\n# TODO: Print results\n# Max: <value>\n# Min: <value>\n# Average: <value>",
-      "language": "python",
+      "starterCode": "def is_even(n):\n    # Return True if n is even, False otherwise\n    pass\n\nnum = int(input())\nif is_even(num):\n    print('Even')\nelse:\n    print('Odd')\n",
       "testCases": [
-        {
-          "input": "3 7 1 9 4",
-          "expected": "Max: 9\nMin: 1\nAverage: 4.80",
-          "weight": 0.5,
-          "visible": true,
-          "description": "Basic list statistics"
-        },
-        {
-          "input": "10 20 30",
-          "expected": "Max: 30\nMin: 10\nAverage: 20.00",
-          "weight": 0.5,
-          "visible": true,
-          "description": "Three-element list"
-        }
+        { "input": "4", "expectedOutput": "Even" },
+        { "input": "7", "expectedOutput": "Odd" },
+        { "input": "0", "expectedOutput": "Even" }
       ],
-      "timeLimitMs": 2000,
-      "memoryLimitMb": 64,
-      "allowedImports": [],
-      "forbiddenKeywords": []
-    },
-    "position": 2
+      "explanation": "Return n % 2 == 0. If the remainder when dividing by 2 is 0, the number is even."
+    }
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Write a function called find_max(a, b, c) that returns the largest of three numbers.\n\nRead three integers (one per line). Call the function and print: Max: <result>",
+    "difficulty": "medium",
+    "points": 25,
+    "estimatedSeconds": 180,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 3,
+    "content": {
+      "starterCode": "def find_max(a, b, c):\n    # Return the largest of the three numbers\n    pass\n\nx = int(input())\ny = int(input())\nz = int(input())\nprint(f'Max: {find_max(x, y, z)}')\n",
+      "testCases": [
+        { "input": "3\n7\n5", "expectedOutput": "Max: 7" },
+        { "input": "10\n10\n10", "expectedOutput": "Max: 10" },
+        { "input": "-1\n-5\n-3", "expectedOutput": "Max: -1" }
+      ],
+      "explanation": "Use if/elif to compare, or simply return max(a, b, c). Either approach works."
+    }
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Write a function called power(base, exp=2) with a default exponent of 2.\n\nRead one or two integers from a single line (space-separated). If one number, calculate base^2. If two numbers, calculate base^exp.\nPrint: Result: <value>",
+    "difficulty": "hard",
+    "points": 30,
+    "estimatedSeconds": 240,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 4,
+    "content": {
+      "starterCode": "def power(base, exp=2):\n    # Return base raised to exp\n    pass\n\nparts = input().split()\nif len(parts) == 1:\n    print(f'Result: {power(int(parts[0]))}')\nelse:\n    print(f'Result: {power(int(parts[0]), int(parts[1]))}')\n",
+      "testCases": [
+        { "input": "5", "expectedOutput": "Result: 25" },
+        { "input": "2 10", "expectedOutput": "Result: 1024" },
+        { "input": "3 3", "expectedOutput": "Result: 27" }
+      ],
+      "explanation": "Return base ** exp. The default exp=2 means calling power(5) gives 5**2 = 25."
+    }
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Write two functions:\n- celsius_to_fahrenheit(c) that returns (c * 9/5) + 32\n- fahrenheit_to_celsius(f) that returns (f - 32) * 5/9\n\nRead a number and a unit ('C' or 'F') on one line separated by a space.\nConvert to the other unit and print the result rounded to 1 decimal place.\nOutput: <value> <unit>",
+    "difficulty": "hard",
+    "points": 30,
+    "estimatedSeconds": 240,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 5,
+    "content": {
+      "starterCode": "def celsius_to_fahrenheit(c):\n    pass\n\ndef fahrenheit_to_celsius(f):\n    pass\n\nparts = input().split()\ntemp = float(parts[0])\nunit = parts[1]\n\n# Convert and print\n",
+      "testCases": [
+        { "input": "100 C", "expectedOutput": "212.0 F" },
+        { "input": "32 F", "expectedOutput": "0.0 C" },
+        { "input": "0 C", "expectedOutput": "32.0 F" }
+      ],
+      "explanation": "If unit is 'C', convert to F using celsius_to_fahrenheit. If 'F', convert to C using fahrenheit_to_celsius. Round with round(result, 1)."
+    }
   }
 ]

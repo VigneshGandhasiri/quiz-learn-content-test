@@ -1,19 +1,12 @@
-{
-  "title": "Loop Patterns Coding",
-  "description": "Coding challenges using nested loops and classic problems like FizzBuzz and multiplication tables.",
+﻿{
+  "title": "Loop Patterns Coding Challenges",
+  "description": "Write Python programs using nested loops to create star patterns, number triangles, and grid outputs.",
   "subject": "Programming",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "ageMin": 10,
   "ageMax": 18,
-  "estimatedMinutes": 25,
-  "tags": [
-    "python",
-    "loops",
-    "patterns",
-    "nested-loops",
-    "coding",
-    "fizzbuzz"
-  ]
+  "estimatedMinutes": 30,
+  "tags": ["python", "nested-loops", "patterns", "coding"]
 }
 
 // ==================== QUESTIONS ====================
@@ -21,122 +14,131 @@
 [
   {
     "questionType": "program_submission",
-    "questionText": "Star Pattern Printer",
-    "ageMin": 10,
-    "ageMax": 18,
+    "questionText": "Write a program that reads an integer N and prints a right triangle of stars.\n\nInput: A single integer N\nOutput: A right triangle with N rows. Row 1 has 1 star, row 2 has 2 stars, etc.\n\nExample for N=4:\n*\n**\n***\n****",
     "difficulty": "easy",
-    "estimatedSeconds": 150,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 15.0,
-    "allowPartialCredit": true,
-    "negativeMarking": false,
-    "supportsReadAloud": true,
-    "content": {
-      "prompt": "Ask the user for a number n. Print a right triangle pattern of stars with n rows. Row 1 has 1 star, row 2 has 2 stars, etc.",
-      "starterCode": "# TODO: Ask for n\nn = int(input(\"Enter number of rows: \"))\n\n# TODO: Use nested loops to print the pattern\n# Row 1: *\n# Row 2: **\n# Row 3: ***\n# etc.",
-      "language": "python",
-      "testCases": [
-        {
-          "input": "4",
-          "expected": "*\n**\n***\n****",
-          "weight": 0.5,
-          "visible": true,
-          "description": "4-row right triangle"
-        },
-        {
-          "input": "3",
-          "expected": "*\n**\n***",
-          "weight": 0.5,
-          "visible": true,
-          "description": "3-row right triangle"
-        }
-      ],
-      "timeLimitMs": 2000,
-      "memoryLimitMb": 64,
-      "allowedImports": [],
-      "forbiddenKeywords": []
-    },
-    "position": 1
-  },
-  {
-    "questionType": "program_submission",
-    "questionText": "Multiplication Table Grid",
+    "points": 20,
+    "estimatedSeconds": 180,
+    "subject": "Programming",
     "ageMin": 10,
     "ageMax": 18,
-    "difficulty": "medium",
-    "estimatedSeconds": 180,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 18.0,
     "allowPartialCredit": true,
     "negativeMarking": false,
     "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 1,
     "content": {
-      "prompt": "Ask the user for a number n. Print an n×n multiplication table. Each value should be separated by a tab character (\\t). Do not print a trailing tab on any line.",
-      "starterCode": "# TODO: Ask for n\nn = int(input(\"Enter size: \"))\n\n# TODO: Use nested loops to print multiplication table\n# Example for n=3:\n# 1\t2\t3\n# 2\t4\t6\n# 3\t6\t9",
       "language": "python",
+      "starterCode": "n = int(input())\n# Print a right triangle of stars\n",
       "testCases": [
-        {
-          "input": "3",
-          "expected": "1\t2\t3\n2\t4\t6\n3\t6\t9",
-          "weight": 0.5,
-          "visible": true,
-          "description": "3x3 multiplication table"
-        },
-        {
-          "input": "4",
-          "expected": "1\t2\t3\t4\n2\t4\t6\t8\n3\t6\t9\t12\n4\t8\t12\t16",
-          "weight": 0.5,
-          "visible": true,
-          "description": "4x4 multiplication table"
-        }
+        { "input": "4", "expectedOutput": "*\n**\n***\n****" },
+        { "input": "3", "expectedOutput": "*\n**\n***" },
+        { "input": "1", "expectedOutput": "*" },
+        { "input": "5", "expectedOutput": "*\n**\n***\n****\n*****" }
       ],
-      "timeLimitMs": 2000,
-      "memoryLimitMb": 64,
-      "allowedImports": [],
-      "forbiddenKeywords": []
-    },
-    "position": 2
+      "explanation": "Use a for loop: for i in range(1, n + 1): print('*' * i). String repetition makes this simple!"
+    }
   },
   {
     "questionType": "program_submission",
-    "questionText": "FizzBuzz Classic",
-    "ageMin": 11,
+    "questionText": "Write a program that reads an integer N and prints an NxN square of stars.\n\nInput: A single integer N\nOutput: An NxN grid of stars\n\nExample for N=3:\n***\n***\n***",
+    "difficulty": "easy",
+    "points": 20,
+    "estimatedSeconds": 120,
+    "subject": "Programming",
+    "ageMin": 10,
     "ageMax": 18,
-    "difficulty": "medium",
-    "estimatedSeconds": 180,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 18.0,
     "allowPartialCredit": true,
     "negativeMarking": false,
     "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 2,
     "content": {
-      "prompt": "Ask for a number n. Print numbers from 1 to n. For multiples of 3 print 'Fizz', for multiples of 5 print 'Buzz', for multiples of both print 'FizzBuzz', otherwise print the number.",
-      "starterCode": "# TODO: Ask for n\nn = int(input(\"Enter n: \"))\n\n# TODO: Loop from 1 to n\n# If divisible by both 3 and 5: print FizzBuzz\n# Else if divisible by 3: print Fizz\n# Else if divisible by 5: print Buzz\n# Else: print the number",
       "language": "python",
+      "starterCode": "n = int(input())\n# Print an NxN square of stars\n",
       "testCases": [
-        {
-          "input": "15",
-          "expected": "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz",
-          "weight": 0.5,
-          "visible": true,
-          "description": "FizzBuzz from 1 to 15"
-        },
-        {
-          "input": "5",
-          "expected": "1\n2\nFizz\n4\nBuzz",
-          "weight": 0.5,
-          "visible": true,
-          "description": "FizzBuzz from 1 to 5"
-        }
+        { "input": "3", "expectedOutput": "***\n***\n***" },
+        { "input": "2", "expectedOutput": "**\n**" },
+        { "input": "4", "expectedOutput": "****\n****\n****\n****" },
+        { "input": "1", "expectedOutput": "*" }
       ],
-      "timeLimitMs": 2000,
-      "memoryLimitMb": 64,
-      "allowedImports": [],
-      "forbiddenKeywords": []
-    },
-    "position": 3
+      "explanation": "Use a for loop that runs N times, each time printing '*' * n."
+    }
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Write a program that reads N and prints a number triangle.\n\nInput: A single integer N\nOutput: A triangle where row i (starting from 1) contains numbers 1 through i, separated by spaces.\n\nExample for N=4:\n1\n1 2\n1 2 3\n1 2 3 4",
+    "difficulty": "medium",
+    "points": 25,
+    "estimatedSeconds": 240,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 3,
+    "content": {
+      "language": "python",
+      "starterCode": "n = int(input())\n# Print a number triangle\n",
+      "testCases": [
+        { "input": "4", "expectedOutput": "1\n1 2\n1 2 3\n1 2 3 4" },
+        { "input": "3", "expectedOutput": "1\n1 2\n1 2 3" },
+        { "input": "1", "expectedOutput": "1" },
+        { "input": "5", "expectedOutput": "1\n1 2\n1 2 3\n1 2 3 4\n1 2 3 4 5" }
+      ],
+      "explanation": "Use nested loops. Outer: for i in range(1, n+1). Inner: for j in range(1, i+1). Use end=' ' and strip trailing space, or join."
+    }
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Write a program that reads N and prints a centered pyramid of stars.\n\nInput: A single integer N (number of rows)\nOutput: A pyramid with N rows, centered using spaces.\n\nExample for N=4:\n   *\n  ***\n *****\n*******\n\nNote: Row i (0-indexed) has (n-i-1) leading spaces and (2*i+1) stars.",
+    "difficulty": "hard",
+    "points": 30,
+    "estimatedSeconds": 360,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 4,
+    "content": {
+      "language": "python",
+      "starterCode": "n = int(input())\n# Print a centered pyramid\n",
+      "testCases": [
+        { "input": "3", "expectedOutput": "  *\n ***\n*****" },
+        { "input": "4", "expectedOutput": "   *\n  ***\n *****\n*******" },
+        { "input": "1", "expectedOutput": "*" },
+        { "input": "2", "expectedOutput": " *\n***" }
+      ],
+      "explanation": "For each row i: print ' ' * (n - i - 1) + '*' * (2 * i + 1). The spaces center the stars."
+    }
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Write a multiplication table! Read N and print the NxN multiplication table.\n\nInput: A single integer N\nOutput: Each row shows products, separated by tabs (\\t).\n\nExample for N=3:\n1\t2\t3\n2\t4\t6\n3\t6\t9",
+    "difficulty": "medium",
+    "points": 25,
+    "estimatedSeconds": 240,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 5,
+    "content": {
+      "language": "python",
+      "starterCode": "n = int(input())\n# Print the multiplication table\n",
+      "testCases": [
+        { "input": "3", "expectedOutput": "1\t2\t3\n2\t4\t6\n3\t6\t9" },
+        { "input": "2", "expectedOutput": "1\t2\n2\t4" },
+        { "input": "4", "expectedOutput": "1\t2\t3\t4\n2\t4\t6\t8\n3\t6\t9\t12\n4\t8\t12\t16" }
+      ],
+      "explanation": "Use nested loops for rows (i) and columns (j). Print i*j with end='\\t', then print() for new row. Handle last column carefully."
+    }
   }
 ]

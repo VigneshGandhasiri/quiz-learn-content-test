@@ -1,16 +1,12 @@
-{
-  "title": "Match-Case Coding",
-  "description": "Coding challenges using Python's match-case statement for pattern-based branching.",
+﻿{
+  "title": "Match-Case Coding Challenges",
+  "description": "Write Python programs using match-case statements to solve real-world pattern matching problems.",
   "subject": "Programming",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "ageMin": 10,
   "ageMax": 18,
-  "estimatedMinutes": 15,
-  "tags": [
-    "python",
-    "match-case",
-    "coding"
-  ]
+  "estimatedMinutes": 25,
+  "tags": ["python", "match-case", "pattern-matching", "coding"]
 }
 
 // ==================== QUESTIONS ====================
@@ -18,96 +14,146 @@
 [
   {
     "questionType": "program_submission",
-    "questionText": "Day of the Week Planner",
+    "questionText": "Write a program that reads a single direction command from the user and uses match-case to print the movement.\n\nInput: A string -- one of: up, down, left, right, or anything else.\n\nOutput:\n- up -> Moving Up\n- down -> Moving Down\n- left -> Moving Left\n- right -> Moving Right\n- anything else -> Invalid Direction",
+    "difficulty": "easy",
+    "points": 20,
+    "estimatedSeconds": 180,
+    "subject": "Programming",
     "ageMin": 10,
     "ageMax": 18,
-    "difficulty": "easy",
-    "estimatedSeconds": 150,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 15.0,
     "allowPartialCredit": true,
     "negativeMarking": false,
     "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 1,
     "content": {
-      "prompt": "Ask the user for a day number (1-7). Use match/case to print the corresponding day name and activity:\n1 → Monday: School\n2 → Tuesday: Sports\n3 → Wednesday: Art\n4 → Thursday: Music\n5 → Friday: Free Time\n6 → Saturday: Family\n7 → Sunday: Rest\nAnything else → Invalid day",
-      "starterCode": "# TODO: Ask for a day number\nday = int(input(\"Enter day number (1-7): \"))\n\n# TODO: Use match/case to print the day and activity\n# Example output: Monday: School",
       "language": "python",
+      "starterCode": "direction = input()\n# Use match-case to print the correct movement\n",
       "testCases": [
-        {
-          "input": "1",
-          "expected": "Monday: School",
-          "weight": 0.33,
-          "visible": true,
-          "description": "Day 1 is Monday"
-        },
-        {
-          "input": "5",
-          "expected": "Friday: Free Time",
-          "weight": 0.33,
-          "visible": true,
-          "description": "Day 5 is Friday"
-        },
-        {
-          "input": "9",
-          "expected": "Invalid day",
-          "weight": 0.34,
-          "visible": true,
-          "description": "Invalid day number"
-        }
+        { "input": "up", "expectedOutput": "Moving Up" },
+        { "input": "down", "expectedOutput": "Moving Down" },
+        { "input": "left", "expectedOutput": "Moving Left" },
+        { "input": "right", "expectedOutput": "Moving Right" },
+        { "input": "jump", "expectedOutput": "Invalid Direction" },
+        { "input": "fly", "expectedOutput": "Invalid Direction" }
       ],
-      "timeLimitMs": 2000,
-      "memoryLimitMb": 64,
-      "allowedImports": [],
-      "forbiddenKeywords": []
-    },
-    "position": 1
+      "explanation": "Use match direction: with cases for each valid direction. Use case _ for the default 'Invalid Direction' output."
+    }
   },
   {
     "questionType": "program_submission",
-    "questionText": "Shape Area Calculator",
-    "ageMin": 11,
-    "ageMax": 18,
+    "questionText": "Write a simple calculator! Read two numbers and an operator from the user, then use match-case to perform the operation.\n\nInput (3 lines):\n- First number (integer)\n- Operator (+, -, *, /)\n- Second number (integer)\n\nOutput: The result of the operation (as a float for division, integer for others).\nIf the operator is invalid, print: Unknown operator\nIf dividing by zero, print: Cannot divide by zero",
     "difficulty": "medium",
-    "estimatedSeconds": 180,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 18.0,
+    "points": 25,
+    "estimatedSeconds": 300,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
     "allowPartialCredit": true,
     "negativeMarking": false,
     "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 2,
     "content": {
-      "prompt": "Ask the user for a shape name (circle, square, triangle). Use match/case to ask for the right measurements and calculate the area.\n- circle: ask for radius, area = 3.14159 × r²\n- square: ask for side, area = side²\n- triangle: ask for base and height, area = 0.5 × base × height\n- anything else: print 'Unknown shape'\nPrint the area rounded to 2 decimal places.",
-      "starterCode": "# TODO: Ask for shape name\nshape = input(\"Enter shape: \").lower()\n\n# TODO: Use match/case for each shape\n# For each shape, ask for measurements and calculate area\n# Print: Area: <result>",
       "language": "python",
+      "starterCode": "a = int(input())\nop = input()\nb = int(input())\n# Use match-case on op to calculate and print the result\n",
       "testCases": [
-        {
-          "input": "circle\n5",
-          "expected": "Area: 78.54",
-          "weight": 0.33,
-          "visible": true,
-          "description": "Circle with radius 5"
-        },
-        {
-          "input": "square\n4",
-          "expected": "Area: 16.00",
-          "weight": 0.33,
-          "visible": true,
-          "description": "Square with side 4"
-        },
-        {
-          "input": "triangle\n6\n3",
-          "expected": "Area: 9.00",
-          "weight": 0.34,
-          "visible": true,
-          "description": "Triangle with base 6 and height 3"
-        }
+        { "input": "10\n+\n5", "expectedOutput": "15" },
+        { "input": "10\n-\n3", "expectedOutput": "7" },
+        { "input": "4\n*\n6", "expectedOutput": "24" },
+        { "input": "10\n/\n4", "expectedOutput": "2.5" },
+        { "input": "10\n/\n0", "expectedOutput": "Cannot divide by zero" },
+        { "input": "5\n%\n2", "expectedOutput": "Unknown operator" }
       ],
-      "timeLimitMs": 2000,
-      "memoryLimitMb": 64,
-      "allowedImports": [],
-      "forbiddenKeywords": []
-    },
-    "position": 2
+      "explanation": "Match on the operator string. For division, check if b is 0 first. Use case _ for unknown operators."
+    }
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Write a program that reads a month abbreviation and prints the season using match-case with the | (pipe) operator.\n\nInput: A 3-letter month abbreviation (Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec)\n\nOutput:\n- Dec, Jan, Feb -> Winter\n- Mar, Apr, May -> Spring\n- Jun, Jul, Aug -> Summer\n- Sep, Oct, Nov -> Fall\n- Anything else -> Unknown month",
+    "difficulty": "medium",
+    "points": 25,
+    "estimatedSeconds": 240,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 3,
+    "content": {
+      "language": "python",
+      "starterCode": "month = input()\n# Use match-case with | to group months into seasons\n",
+      "testCases": [
+        { "input": "Jan", "expectedOutput": "Winter" },
+        { "input": "Dec", "expectedOutput": "Winter" },
+        { "input": "Mar", "expectedOutput": "Spring" },
+        { "input": "May", "expectedOutput": "Spring" },
+        { "input": "Jul", "expectedOutput": "Summer" },
+        { "input": "Oct", "expectedOutput": "Fall" },
+        { "input": "Hello", "expectedOutput": "Unknown month" }
+      ],
+      "explanation": "Use the | operator to combine months: case 'Dec' | 'Jan' | 'Feb': print('Winter'). End with case _ for unknown input."
+    }
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Write a day planner! Read a day of the week and print the schedule using match-case.\n\nInput: A day name (Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday)\n\nOutput:\n- Monday or Wednesday -> Math class\n- Tuesday or Thursday -> Science class\n- Friday -> Free period\n- Saturday or Sunday -> No school\n- Anything else -> Invalid day",
+    "difficulty": "medium",
+    "points": 25,
+    "estimatedSeconds": 240,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 4,
+    "content": {
+      "language": "python",
+      "starterCode": "day = input()\n# Use match-case with | to print the schedule\n",
+      "testCases": [
+        { "input": "Monday", "expectedOutput": "Math class" },
+        { "input": "Wednesday", "expectedOutput": "Math class" },
+        { "input": "Tuesday", "expectedOutput": "Science class" },
+        { "input": "Thursday", "expectedOutput": "Science class" },
+        { "input": "Friday", "expectedOutput": "Free period" },
+        { "input": "Saturday", "expectedOutput": "No school" },
+        { "input": "Sunday", "expectedOutput": "No school" },
+        { "input": "Holiday", "expectedOutput": "Invalid day" }
+      ],
+      "explanation": "Group days with |: case 'Monday' | 'Wednesday' for Math, case 'Tuesday' | 'Thursday' for Science, etc."
+    }
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Build a Rock-Paper-Scissors judge! Read two players' choices and determine the winner using match-case.\n\nInput (2 lines):\n- Player 1's choice (rock, paper, scissors)\n- Player 2's choice (rock, paper, scissors)\n\nOutput:\n- If same choice -> Draw\n- Player 1 wins -> Player 1 wins\n- Player 2 wins -> Player 2 wins\n\nRules: rock beats scissors, scissors beats paper, paper beats rock.",
+    "difficulty": "hard",
+    "points": 30,
+    "estimatedSeconds": 360,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 5,
+    "content": {
+      "language": "python",
+      "starterCode": "p1 = input()\np2 = input()\n# Use match-case to determine the winner\n",
+      "testCases": [
+        { "input": "rock\nrock", "expectedOutput": "Draw" },
+        { "input": "rock\nscissors", "expectedOutput": "Player 1 wins" },
+        { "input": "rock\npaper", "expectedOutput": "Player 2 wins" },
+        { "input": "scissors\npaper", "expectedOutput": "Player 1 wins" },
+        { "input": "paper\nrock", "expectedOutput": "Player 1 wins" },
+        { "input": "paper\npaper", "expectedOutput": "Draw" },
+        { "input": "scissors\nrock", "expectedOutput": "Player 2 wins" }
+      ],
+      "explanation": "You can match on a tuple: match (p1, p2): with cases like case ('rock', 'scissors'): for Player 1 wins. Use | to group all winning combos."
+    }
   }
 ]

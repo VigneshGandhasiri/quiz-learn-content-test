@@ -1,17 +1,12 @@
-{
-  "title": "Conditional Logic",
-  "description": "Covers if/elif/else, comparison operators, and logical operators in Python.",
+﻿{
+  "title": "Conditional Logic (if / elif / else)",
+  "description": "Test your understanding of if-elif-else statements, comparison operators, boolean logic, and nested conditionals in Python.",
   "subject": "Programming",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "ageMin": 10,
   "ageMax": 18,
-  "estimatedMinutes": 8,
-  "tags": [
-    "python",
-    "conditionals",
-    "if-else",
-    "logic"
-  ]
+  "estimatedMinutes": 25,
+  "tags": ["python", "conditionals", "if-elif-else", "boolean-logic"]
 }
 
 // ==================== QUESTIONS ====================
@@ -19,224 +14,573 @@
 [
   {
     "questionType": "multiple_choice_single",
-    "questionText": "What keyword is used to start a conditional statement in Python?",
-    "ageMin": 10,
-    "ageMax": 18,
+    "questionText": "What does an if statement do in Python?",
     "difficulty": "easy",
+    "points": 10,
     "estimatedSeconds": 20,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 5.0,
-    "allowPartialCredit": false,
-    "negativeMarking": false,
-    "supportsReadAloud": true,
-    "content": {
-      "options": [
-        {
-          "id": "a",
-          "text": "if"
-        },
-        {
-          "id": "b",
-          "text": "when"
-        },
-        {
-          "id": "c",
-          "text": "check"
-        },
-        {
-          "id": "d",
-          "text": "condition"
-        }
-      ],
-      "correct_answer": "a",
-      "explanation": ""
-    },
-    "position": 1
-  },
-  {
-    "questionType": "multiple_choice_single",
-    "questionText": "What does 'elif' stand for in Python?",
-    "ageMin": 11,
-    "ageMax": 18,
-    "difficulty": "easy",
-    "estimatedSeconds": 25,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 5.0,
-    "allowPartialCredit": false,
-    "negativeMarking": false,
-    "supportsReadAloud": true,
-    "content": {
-      "options": [
-        {
-          "id": "a",
-          "text": "else if"
-        },
-        {
-          "id": "b",
-          "text": "end if"
-        },
-        {
-          "id": "c",
-          "text": "equal if"
-        },
-        {
-          "id": "d",
-          "text": "every if"
-        }
-      ],
-      "correct_answer": "a",
-      "explanation": ""
-    },
-    "position": 2
-  },
-  {
-    "questionType": "multiple_choice_single",
-    "questionText": "Which comparison operator checks for equality?",
+    "subject": "Programming",
     "ageMin": 10,
     "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 1,
+    "content": {
+      "options": [
+        { "id": "a", "text": "Runs code only when a condition is True" },
+        { "id": "b", "text": "Always runs the code inside it" },
+        { "id": "c", "text": "Loops through a list" },
+        { "id": "d", "text": "Defines a new function" }
+      ],
+      "correct_answer": "a",
+      "explanation": "An if statement checks a condition. If it's True, the indented code runs. If it's False, that code is skipped."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the correct comparison operator for \"equal to\" in Python?",
     "difficulty": "easy",
-    "estimatedSeconds": 25,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 5.0,
+    "points": 10,
+    "estimatedSeconds": 20,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
     "allowPartialCredit": false,
     "negativeMarking": false,
     "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 2,
     "content": {
       "options": [
-        {
-          "id": "a",
-          "text": "=="
-        },
-        {
-          "id": "b",
-          "text": "="
-        },
-        {
-          "id": "c",
-          "text": "!="
-        },
-        {
-          "id": "d",
-          "text": "<>"
-        }
+        { "id": "a", "text": "==" },
+        { "id": "b", "text": "=" },
+        { "id": "c", "text": "!=" },
+        { "id": "d", "text": "===" }
       ],
       "correct_answer": "a",
-      "explanation": ""
-    },
-    "position": 3
+      "explanation": "== checks if two values are equal. A single = is for assignment (setting a variable). Python doesn't use ===."
+    }
   },
   {
     "questionType": "multiple_choice_single",
-    "questionText": "What will be printed: if 5 > 3: print('Hello') else: print('Bye')",
-    "ageMin": 11,
+    "questionText": "What will this code print?\nx = 10\nif x > 5:\n    print(\"Big\")\nelse:\n    print(\"Small\")",
+    "difficulty": "easy",
+    "points": 10,
+    "estimatedSeconds": 25,
+    "subject": "Programming",
+    "ageMin": 10,
     "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 3,
+    "content": {
+      "options": [
+        { "id": "a", "text": "Big" },
+        { "id": "b", "text": "Small" },
+        { "id": "c", "text": "Big Small" },
+        { "id": "d", "text": "Error" }
+      ],
+      "correct_answer": "a",
+      "explanation": "x is 10, which is greater than 5. The condition is True, so 'Big' prints. The else block is skipped."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What does elif mean?",
+    "difficulty": "easy",
+    "points": 10,
+    "estimatedSeconds": 20,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 4,
+    "content": {
+      "options": [
+        { "id": "a", "text": "\"else if\" -- checks another condition if the previous ones were False" },
+        { "id": "b", "text": "The same as else" },
+        { "id": "c", "text": "A loop keyword" },
+        { "id": "d", "text": "A way to end the program" }
+      ],
+      "correct_answer": "a",
+      "explanation": "elif is short for 'else if'. It lets you check additional conditions after the first if fails."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the output?\nage = 15\nif age >= 18:\n    print(\"Adult\")\nelif age >= 13:\n    print(\"Teen\")\nelse:\n    print(\"Child\")",
     "difficulty": "medium",
+    "points": 10,
     "estimatedSeconds": 30,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 8.0,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
     "allowPartialCredit": false,
     "negativeMarking": false,
     "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 5,
     "content": {
       "options": [
-        {
-          "id": "a",
-          "text": "Hello"
-        },
-        {
-          "id": "b",
-          "text": "Bye"
-        },
-        {
-          "id": "c",
-          "text": "Both Hello and Bye"
-        },
-        {
-          "id": "d",
-          "text": "Nothing"
-        }
+        { "id": "a", "text": "Teen" },
+        { "id": "b", "text": "Adult" },
+        { "id": "c", "text": "Child" },
+        { "id": "d", "text": "Teen and Child" }
       ],
       "correct_answer": "a",
-      "explanation": ""
-    },
-    "position": 4
+      "explanation": "age is 15. First condition (>= 18) is False. Second condition (>= 13) is True, so 'Teen' prints. Only one branch runs."
+    }
   },
   {
     "questionType": "multiple_choice_single",
-    "questionText": "Which logical operator represents AND in Python?",
-    "ageMin": 12,
-    "ageMax": 18,
+    "questionText": "What does the 'and' operator do?",
     "difficulty": "medium",
+    "points": 10,
     "estimatedSeconds": 25,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 8.0,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
     "allowPartialCredit": false,
     "negativeMarking": false,
     "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 6,
     "content": {
       "options": [
-        {
-          "id": "a",
-          "text": "and"
-        },
-        {
-          "id": "b",
-          "text": "&&"
-        },
-        {
-          "id": "c",
-          "text": "&"
-        },
-        {
-          "id": "d",
-          "text": "AND"
-        }
+        { "id": "a", "text": "Both conditions must be True for the result to be True" },
+        { "id": "b", "text": "At least one condition must be True" },
+        { "id": "c", "text": "It flips True to False" },
+        { "id": "d", "text": "It combines two strings" }
       ],
       "correct_answer": "a",
-      "explanation": ""
-    },
-    "position": 5
+      "explanation": "'and' requires BOTH sides to be True. If either is False, the whole expression is False."
+    }
   },
   {
     "questionType": "multiple_choice_single",
-    "questionText": "What happens if no condition in an if-elif chain is True and there's no else?",
-    "ageMin": 13,
-    "ageMax": 18,
+    "questionText": "What is the output?\nx = 7\nif x > 5 and x < 10:\n    print(\"In range\")\nelse:\n    print(\"Out of range\")",
     "difficulty": "medium",
-    "estimatedSeconds": 40,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 10.0,
+    "points": 10,
+    "estimatedSeconds": 30,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
     "allowPartialCredit": false,
     "negativeMarking": false,
     "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 7,
     "content": {
       "options": [
-        {
-          "id": "a",
-          "text": "Nothing happens, the program continues"
-        },
-        {
-          "id": "b",
-          "text": "An error occurs"
-        },
-        {
-          "id": "c",
-          "text": "The first condition automatically runs"
-        },
-        {
-          "id": "d",
-          "text": "The program terminates"
-        }
+        { "id": "a", "text": "In range" },
+        { "id": "b", "text": "Out of range" },
+        { "id": "c", "text": "Error" },
+        { "id": "d", "text": "Nothing" }
       ],
       "correct_answer": "a",
-      "explanation": ""
-    },
-    "position": 6
+      "explanation": "x is 7. Is 7 > 5? Yes. Is 7 < 10? Yes. Both True with 'and' means the whole condition is True."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What does the 'or' operator do?",
+    "difficulty": "medium",
+    "points": 10,
+    "estimatedSeconds": 25,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 8,
+    "content": {
+      "options": [
+        { "id": "a", "text": "At least one condition must be True for the result to be True" },
+        { "id": "b", "text": "Both conditions must be True" },
+        { "id": "c", "text": "It reverses the condition" },
+        { "id": "d", "text": "It means 'not equal'" }
+      ],
+      "correct_answer": "a",
+      "explanation": "'or' only needs ONE side to be True. It's only False when BOTH sides are False."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the output?\nhas_ticket = True\nis_vip = False\nif has_ticket or is_vip:\n    print(\"Welcome!\")\nelse:\n    print(\"Sorry!\")",
+    "difficulty": "medium",
+    "points": 10,
+    "estimatedSeconds": 30,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 9,
+    "content": {
+      "options": [
+        { "id": "a", "text": "Welcome!" },
+        { "id": "b", "text": "Sorry!" },
+        { "id": "c", "text": "Error" },
+        { "id": "d", "text": "Welcome! Sorry!" }
+      ],
+      "correct_answer": "a",
+      "explanation": "With 'or', only one needs to be True. has_ticket is True, so the whole condition is True. Welcome!"
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What does the 'not' operator do?",
+    "difficulty": "medium",
+    "points": 10,
+    "estimatedSeconds": 20,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 10,
+    "content": {
+      "options": [
+        { "id": "a", "text": "Flips True to False and False to True" },
+        { "id": "b", "text": "Checks if two values are equal" },
+        { "id": "c", "text": "Checks if both conditions are True" },
+        { "id": "d", "text": "Ends the program" }
+      ],
+      "correct_answer": "a",
+      "explanation": "'not' reverses a boolean value. not True is False, and not False is True."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the output?\ntemp = 35\nif temp > 30:\n    print(\"Hot\")\nif temp > 20:\n    print(\"Warm\")\nif temp > 10:\n    print(\"Cool\")",
+    "difficulty": "hard",
+    "points": 15,
+    "estimatedSeconds": 40,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 11,
+    "content": {
+      "options": [
+        { "id": "a", "text": "Hot\nWarm\nCool" },
+        { "id": "b", "text": "Hot" },
+        { "id": "c", "text": "Hot\nWarm" },
+        { "id": "d", "text": "Cool" }
+      ],
+      "correct_answer": "a",
+      "explanation": "These are THREE separate if statements (not elif!). Each one is checked independently. 35 > 30, 35 > 20, and 35 > 10 are ALL True."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the output?\nscore = 85\nif score >= 90:\n    grade = \"A\"\nelif score >= 80:\n    grade = \"B\"\nelif score >= 70:\n    grade = \"C\"\nelse:\n    grade = \"F\"\nprint(grade)",
+    "difficulty": "medium",
+    "points": 10,
+    "estimatedSeconds": 30,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 12,
+    "content": {
+      "options": [
+        { "id": "a", "text": "B" },
+        { "id": "b", "text": "A" },
+        { "id": "c", "text": "C" },
+        { "id": "d", "text": "F" }
+      ],
+      "correct_answer": "a",
+      "explanation": "Score 85: not >= 90 (skip A), but >= 80 (match B!). Once a match is found, the rest are skipped."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the output of this nested if?\nnum = 12\nif num > 0:\n    if num % 2 == 0:\n        print(\"Positive Even\")\n    else:\n        print(\"Positive Odd\")\nelse:\n    print(\"Not Positive\")",
+    "difficulty": "hard",
+    "points": 15,
+    "estimatedSeconds": 40,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 13,
+    "content": {
+      "options": [
+        { "id": "a", "text": "Positive Even" },
+        { "id": "b", "text": "Positive Odd" },
+        { "id": "c", "text": "Not Positive" },
+        { "id": "d", "text": "Error" }
+      ],
+      "correct_answer": "a",
+      "explanation": "num is 12. First: 12 > 0 is True (enter inner if). Then: 12 % 2 == 0 is True (12 is even). So it prints 'Positive Even'."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "Which comparison operator means \"not equal to\"?",
+    "difficulty": "easy",
+    "points": 10,
+    "estimatedSeconds": 15,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 14,
+    "content": {
+      "options": [
+        { "id": "a", "text": "!=" },
+        { "id": "b", "text": "<>" },
+        { "id": "c", "text": "=/=" },
+        { "id": "d", "text": "not=" }
+      ],
+      "correct_answer": "a",
+      "explanation": "!= means 'not equal to' in Python. For example, 5 != 3 is True because 5 and 3 are different."
+    }
+  },
+  {
+    "questionType": "multiple_choice_multi",
+    "questionText": "Which of these are valid Python comparison operators? (Select all that apply)",
+    "difficulty": "medium",
+    "points": 15,
+    "estimatedSeconds": 35,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 15,
+    "content": {
+      "options": [
+        { "id": "a", "text": "==" },
+        { "id": "b", "text": ">=" },
+        { "id": "c", "text": "<=" },
+        { "id": "d", "text": "!=" },
+        { "id": "e", "text": "===" },
+        { "id": "f", "text": "<>" }
+      ],
+      "correct_answers": ["a", "b", "c", "d"],
+      "explanation": "Python uses ==, !=, >, <, >=, and <=. It does NOT use === (that's JavaScript) or <> (deprecated)."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "In an if-elif-else chain, it's possible for more than one branch to run.",
+    "difficulty": "medium",
+    "points": 10,
+    "estimatedSeconds": 20,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 16,
+    "content": {
+      "options": [
+        { "id": "a", "text": "True" },
+        { "id": "b", "text": "False" }
+      ],
+      "correct_answer": "b",
+      "explanation": "In an if-elif-else chain, ONLY ONE branch runs -- the first one whose condition is True. Once matched, the rest are skipped."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "The expression not (5 > 3) evaluates to False.",
+    "difficulty": "hard",
+    "points": 10,
+    "estimatedSeconds": 25,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 17,
+    "content": {
+      "options": [
+        { "id": "a", "text": "True" },
+        { "id": "b", "text": "False" }
+      ],
+      "correct_answer": "a",
+      "explanation": "5 > 3 is True. 'not True' flips it to False. So not (5 > 3) evaluates to False."
+    }
+  },
+  {
+    "questionType": "fill_in_blank",
+    "questionText": "The keyword ___ is used when you want to check another condition after the if-block's condition is False.",
+    "difficulty": "easy",
+    "points": 10,
+    "estimatedSeconds": 15,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 18,
+    "content": {
+      "blanks": [
+        {
+          "position": 1,
+          "accepted_answers": ["elif", "else if"]
+        }
+      ],
+      "explanation": "elif (short for 'else if') lets you test additional conditions. It only runs if all conditions above it were False."
+    }
+  },
+  {
+    "questionType": "fill_in_blank",
+    "questionText": "To check if x is between 1 and 10 (inclusive), you can write: if x >= 1 ___ x <= 10:",
+    "difficulty": "medium",
+    "points": 10,
+    "estimatedSeconds": 20,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 19,
+    "content": {
+      "blanks": [
+        {
+          "position": 1,
+          "accepted_answers": ["and"]
+        }
+      ],
+      "explanation": "'and' ensures BOTH conditions must be True. x must be >= 1 AND <= 10 to be in that range."
+    }
+  },
+  {
+    "questionType": "matching",
+    "questionText": "Match each operator to its meaning.",
+    "difficulty": "easy",
+    "points": 15,
+    "estimatedSeconds": 45,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 20,
+    "content": {
+      "leftItems": [
+        { "id": "l1", "text": "==" },
+        { "id": "l2", "text": "!=" },
+        { "id": "l3", "text": ">=" },
+        { "id": "l4", "text": "<=" }
+      ],
+      "rightItems": [
+        { "id": "r1", "text": "Equal to" },
+        { "id": "r2", "text": "Not equal to" },
+        { "id": "r3", "text": "Greater than or equal to" },
+        { "id": "r4", "text": "Less than or equal to" }
+      ],
+      "correctPairs": [
+        { "left": "l1", "right": "r1" },
+        { "left": "l2", "right": "r2" },
+        { "left": "l3", "right": "r3" },
+        { "left": "l4", "right": "r4" }
+      ],
+      "explanation": "These are the four comparison operators that use two characters. Remember: == compares, = assigns!"
+    }
+  },
+  {
+    "questionType": "matching",
+    "questionText": "Match each boolean expression to its result.",
+    "difficulty": "hard",
+    "points": 15,
+    "estimatedSeconds": 60,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 21,
+    "content": {
+      "leftItems": [
+        { "id": "l1", "text": "True and True" },
+        { "id": "l2", "text": "True and False" },
+        { "id": "l3", "text": "False or True" },
+        { "id": "l4", "text": "not True" }
+      ],
+      "rightItems": [
+        { "id": "r1", "text": "True" },
+        { "id": "r2", "text": "False" },
+        { "id": "r3", "text": "True" },
+        { "id": "r4", "text": "False" }
+      ],
+      "correctPairs": [
+        { "left": "l1", "right": "r1" },
+        { "left": "l2", "right": "r2" },
+        { "left": "l3", "right": "r3" },
+        { "left": "l4", "right": "r4" }
+      ],
+      "explanation": "'and' needs both True. 'or' needs at least one True. 'not' flips the value."
+    }
+  },
+  {
+    "questionType": "ordering",
+    "questionText": "Put these Python lines in order to create a proper if-elif-else block that categorizes a temperature.",
+    "difficulty": "medium",
+    "points": 15,
+    "estimatedSeconds": 45,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 22,
+    "content": {
+      "items": [
+        { "id": "s1", "text": "temp = 75" },
+        { "id": "s2", "text": "if temp >= 90:" },
+        { "id": "s3", "text": "    print(\"Hot\")" },
+        { "id": "s4", "text": "elif temp >= 70:" },
+        { "id": "s5", "text": "    print(\"Warm\")" },
+        { "id": "s6", "text": "else:" },
+        { "id": "s7", "text": "    print(\"Cold\")" }
+      ],
+      "correctOrder": ["s1", "s2", "s3", "s4", "s5", "s6", "s7"],
+      "explanation": "First set the variable, then check conditions from most specific (>= 90) to least specific, with else as the final catch-all."
+    }
   }
 ]

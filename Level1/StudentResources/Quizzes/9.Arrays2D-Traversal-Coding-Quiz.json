@@ -1,17 +1,12 @@
-{
-  "title": "2D Arrays Coding",
-  "description": "Coding challenges involving matrix row/column sums and diagonal sum computations.",
+﻿{
+  "title": "2D Arrays & Traversal - Coding Quiz",
+  "description": "Write Python programs that work with 2D lists (grids), using nested loops for traversal and performing operations on rows, columns, and diagonals.",
   "subject": "Programming",
   "difficulty": "medium",
-  "ageMin": 11,
+  "ageMin": 10,
   "ageMax": 18,
-  "estimatedMinutes": 20,
-  "tags": [
-    "python",
-    "2d-arrays",
-    "matrix",
-    "coding"
-  ]
+  "estimatedMinutes": 30,
+  "tags": ["python", "2d-arrays", "grids", "traversal", "coding"]
 }
 
 // ==================== QUESTIONS ====================
@@ -19,82 +14,122 @@
 [
   {
     "questionType": "program_submission",
-    "questionText": "Matrix Row and Column Sums",
-    "ageMin": 11,
-    "ageMax": 18,
-    "difficulty": "medium",
+    "questionText": "Write a program that reads a 2D grid and prints the sum of all elements.\n\nFirst read two integers: R (rows) and C (columns) on one line separated by a space.\nThen read R lines, each containing C space-separated integers.\nPrint: Total: <sum>",
+    "difficulty": "easy",
+    "points": 25,
     "estimatedSeconds": 180,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 18.0,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
     "allowPartialCredit": true,
     "negativeMarking": false,
     "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 1,
     "content": {
-      "prompt": "Read an integer n (size of square matrix). Then read n lines each containing n space-separated integers. Print the sum of each row on one line (space-separated), then the sum of each column on the next line (space-separated).",
-      "starterCode": "# TODO: Read n\nn = int(input())\n\n# TODO: Read n rows of n integers each\nmatrix = []\nfor i in range(n):\n    row = list(map(int, input().split()))\n    matrix.append(row)\n\n# TODO: Calculate and print row sums (space-separated)\n# TODO: Calculate and print column sums (space-separated)",
-      "language": "python",
+      "starterCode": "r, c = map(int, input().split())\ngrid = []\nfor i in range(r):\n    row = list(map(int, input().split()))\n    grid.append(row)\n\n# Calculate and print total sum\n",
       "testCases": [
-        {
-          "input": "3\n1 2 3\n4 5 6\n7 8 9",
-          "expected": "6 15 24\n12 15 18",
-          "weight": 0.5,
-          "visible": true,
-          "description": "3x3 matrix row and column sums"
-        },
-        {
-          "input": "2\n1 0\n0 1",
-          "expected": "1 1\n1 1",
-          "weight": 0.5,
-          "visible": true,
-          "description": "2x2 identity matrix"
-        }
+        { "input": "2 3\n1 2 3\n4 5 6", "expectedOutput": "Total: 21" },
+        { "input": "3 3\n1 0 0\n0 1 0\n0 0 1", "expectedOutput": "Total: 3" },
+        { "input": "1 4\n10 20 30 40", "expectedOutput": "Total: 100" }
       ],
-      "timeLimitMs": 2000,
-      "memoryLimitMb": 64,
-      "allowedImports": [],
-      "forbiddenKeywords": []
-    },
-    "position": 1
+      "explanation": "Use nested loops to visit every element and add it to a running total. Or sum each row and add the row sums."
+    }
   },
   {
     "questionType": "program_submission",
-    "questionText": "Diagonal Sum",
-    "ageMin": 11,
-    "ageMax": 18,
+    "questionText": "Write a program that reads a square grid (NxN) and prints the main diagonal elements.\n\nRead integer N, then N rows of N space-separated integers.\nPrint the diagonal elements separated by spaces on one line.",
     "difficulty": "medium",
-    "estimatedSeconds": 150,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 15.0,
+    "points": 25,
+    "estimatedSeconds": 180,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
     "allowPartialCredit": true,
     "negativeMarking": false,
     "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 2,
     "content": {
-      "prompt": "Read an integer n (size of square matrix), then read n lines with n space-separated integers. Print the sum of the primary diagonal (top-left to bottom-right) and the sum of the secondary diagonal (top-right to bottom-left) on separate lines.",
-      "starterCode": "# TODO: Read n\nn = int(input())\n\n# TODO: Read the matrix\nmatrix = []\nfor i in range(n):\n    row = list(map(int, input().split()))\n    matrix.append(row)\n\n# TODO: Calculate primary diagonal sum: matrix[i][i]\n# TODO: Calculate secondary diagonal sum: matrix[i][n-1-i]\n# Print each on a separate line",
-      "language": "python",
+      "starterCode": "n = int(input())\ngrid = []\nfor i in range(n):\n    row = list(map(int, input().split()))\n    grid.append(row)\n\n# Print main diagonal elements\n",
       "testCases": [
-        {
-          "input": "3\n1 2 3\n4 5 6\n7 8 9",
-          "expected": "Primary: 15\nSecondary: 15",
-          "weight": 0.5,
-          "visible": true,
-          "description": "3x3 matrix diagonals"
-        },
-        {
-          "input": "2\n1 2\n3 4",
-          "expected": "Primary: 5\nSecondary: 5",
-          "weight": 0.5,
-          "visible": true,
-          "description": "2x2 matrix diagonals"
-        }
+        { "input": "3\n1 2 3\n4 5 6\n7 8 9", "expectedOutput": "1 5 9" },
+        { "input": "2\n10 20\n30 40", "expectedOutput": "10 40" },
+        { "input": "4\n1 0 0 0\n0 2 0 0\n0 0 3 0\n0 0 0 4", "expectedOutput": "1 2 3 4" }
       ],
-      "timeLimitMs": 2000,
-      "memoryLimitMb": 64,
-      "allowedImports": [],
-      "forbiddenKeywords": []
-    },
-    "position": 2
+      "explanation": "The main diagonal is where row == col. Loop i from 0 to n-1 and collect grid[i][i]. Use print(*diag) or ' '.join()."
+    }
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Write a program that reads a grid and prints the sum of each row.\n\nRead R and C on one line (space-separated), then R rows of C space-separated integers.\nFor each row, print: Row <number>: <sum>\n(Row numbers start at 1)",
+    "difficulty": "medium",
+    "points": 25,
+    "estimatedSeconds": 180,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 3,
+    "content": {
+      "starterCode": "r, c = map(int, input().split())\ngrid = []\nfor i in range(r):\n    row = list(map(int, input().split()))\n    grid.append(row)\n\n# Print sum of each row\n",
+      "testCases": [
+        { "input": "2 3\n1 2 3\n4 5 6", "expectedOutput": "Row 1: 6\nRow 2: 15" },
+        { "input": "3 2\n10 20\n30 40\n50 60", "expectedOutput": "Row 1: 30\nRow 2: 70\nRow 3: 110" },
+        { "input": "1 3\n5 10 15", "expectedOutput": "Row 1: 30" }
+      ],
+      "explanation": "Loop through each row with an index. Use sum(grid[i]) to get the row total and print it."
+    }
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Write a program that reads a grid and finds the largest element along with its position.\n\nRead R and C on one line, then the grid.\nPrint: Max: <value> at row <r> col <c>\n(Use 0-based row and column indices)",
+    "difficulty": "hard",
+    "points": 30,
+    "estimatedSeconds": 240,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 4,
+    "content": {
+      "starterCode": "r, c = map(int, input().split())\ngrid = []\nfor i in range(r):\n    row = list(map(int, input().split()))\n    grid.append(row)\n\n# Find maximum element and its position\n",
+      "testCases": [
+        { "input": "2 3\n1 2 3\n4 5 6", "expectedOutput": "Max: 6 at row 1 col 2" },
+        { "input": "3 3\n9 1 1\n1 1 1\n1 1 1", "expectedOutput": "Max: 9 at row 0 col 0" },
+        { "input": "2 2\n10 20\n30 5", "expectedOutput": "Max: 30 at row 1 col 0" }
+      ],
+      "explanation": "Track the max value, max_row, and max_col as you traverse. Update whenever grid[r][c] > current max."
+    }
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Write a program that reads a square grid and prints its transpose (rows become columns, columns become rows).\n\nRead integer N, then the NxN grid. Print the transposed grid, with each row on its own line and values separated by spaces.",
+    "difficulty": "hard",
+    "points": 30,
+    "estimatedSeconds": 300,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 5,
+    "content": {
+      "starterCode": "n = int(input())\ngrid = []\nfor i in range(n):\n    row = list(map(int, input().split()))\n    grid.append(row)\n\n# Print transposed grid (rows become columns)\n",
+      "testCases": [
+        { "input": "3\n1 2 3\n4 5 6\n7 8 9", "expectedOutput": "1 4 7\n2 5 8\n3 6 9" },
+        { "input": "2\n1 2\n3 4", "expectedOutput": "1 3\n2 4" },
+        { "input": "3\n1 0 0\n0 2 0\n0 0 3", "expectedOutput": "1 0 0\n0 2 0\n0 0 3" }
+      ],
+      "explanation": "In a transpose, element at [r][c] moves to [c][r]. Loop column first (outer), then row (inner), printing grid[row][col]."
+    }
   }
 ]

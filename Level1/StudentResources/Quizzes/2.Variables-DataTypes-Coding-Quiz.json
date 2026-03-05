@@ -1,17 +1,12 @@
-{
+﻿{
   "title": "Variables & Data Types Coding",
-  "description": "Coding challenges that require creating variables and performing basic arithmetic.",
+  "description": "Hands-on coding challenges with variables, type conversion, swapping, and data type operations.",
   "subject": "Programming",
   "difficulty": "easy",
   "ageMin": 10,
   "ageMax": 18,
-  "estimatedMinutes": 15,
-  "tags": [
-    "python",
-    "variables",
-    "data-types",
-    "coding"
-  ]
+  "estimatedMinutes": 25,
+  "tags": ["python", "variables", "data-types", "coding"]
 }
 
 // ==================== QUESTIONS ====================
@@ -19,7 +14,7 @@
 [
   {
     "questionType": "program_submission",
-    "questionText": "Variable Creation and Assignment",
+    "questionText": "Temperature Converter",
     "ageMin": 10,
     "ageMax": 18,
     "difficulty": "easy",
@@ -31,16 +26,30 @@
     "negativeMarking": false,
     "supportsReadAloud": true,
     "content": {
-      "prompt": "Create variables for a student profile: name (string), age (integer), grade (float), and is_enrolled (boolean). Print each variable.",
-      "starterCode": "# TODO: Create the following variables:\n# name - your name as a string\n# age - your age as an integer\n# grade - your current grade as a float (like 85.5)\n# is_enrolled - True if you're enrolled in school\n\n# Create your variables here\n\n# Print each variable\nprint(f\"Name: {name}\")\nprint(f\"Age: {age}\")\nprint(f\"Grade: {grade}\")\nprint(f\"Enrolled: {is_enrolled}\")",
+      "prompt": "Ask the user for a temperature in Celsius (as a decimal). Convert it to Fahrenheit using the formula: F = C * 9/5 + 32. Print the result rounded to 1 decimal place.\n\nOutput format: [C]C = [F]F",
+      "starterCode": "# TODO: Ask for temperature in Celsius\n# TODO: Convert to Fahrenheit: F = C * 9/5 + 32\n# TODO: Print the result",
       "language": "python",
       "testCases": [
         {
-          "input": "",
-          "expected": "Name: Alice\nAge: 16\nGrade: 92.5\nEnrolled: True",
-          "weight": 1.0,
+          "input": "0",
+          "expected": "0.0C = 32.0F",
+          "weight": 0.34,
           "visible": true,
-          "description": "Student profile creation"
+          "description": "Freezing point of water"
+        },
+        {
+          "input": "100",
+          "expected": "100.0C = 212.0F",
+          "weight": 0.33,
+          "visible": true,
+          "description": "Boiling point of water"
+        },
+        {
+          "input": "37",
+          "expected": "37.0C = 98.6F",
+          "weight": 0.33,
+          "visible": false,
+          "description": "Body temperature"
         }
       ],
       "timeLimitMs": 2000,
@@ -52,28 +61,35 @@
   },
   {
     "questionType": "program_submission",
-    "questionText": "Basic Calculator",
-    "ageMin": 11,
+    "questionText": "Variable Swap Challenge",
+    "ageMin": 10,
     "ageMax": 18,
     "difficulty": "easy",
-    "estimatedSeconds": 180,
+    "estimatedSeconds": 120,
     "subject": "programming",
     "locale": "en-US",
-    "points": 18.0,
+    "points": 15.0,
     "allowPartialCredit": true,
     "negativeMarking": false,
     "supportsReadAloud": true,
     "content": {
-      "prompt": "Create a simple calculator that takes two numbers and performs addition, subtraction, multiplication, and division.",
-      "starterCode": "# Get two numbers from user\nfirst_number = float(input(\"Enter first number: \"))\nsecond_number = float(input(\"Enter second number: \"))\n\n# TODO: Calculate and display all four operations\n# Addition: first_number + second_number\n# Subtraction: first_number - second_number\n# Multiplication: first_number * second_number\n# Division: first_number / second_number\n\n# Your calculations here",
+      "prompt": "Read two values from the user. Print them swapped (second value first, first value second).\n\nOutput format:\nBefore: a=[first] b=[second]\nAfter: a=[second] b=[first]",
+      "starterCode": "# TODO: Read two values\n# TODO: Print before swap\n# TODO: Swap the values\n# TODO: Print after swap",
       "language": "python",
       "testCases": [
         {
-          "input": "10\n5",
-          "expected": "Addition: 15.0\nSubtraction: 5.0\nMultiplication: 50.0\nDivision: 2.0",
-          "weight": 1.0,
+          "input": "hello\nworld",
+          "expected": "Before: a=hello b=world\nAfter: a=world b=hello",
+          "weight": 0.5,
           "visible": true,
-          "description": "Basic arithmetic operations"
+          "description": "Swap hello and world"
+        },
+        {
+          "input": "10\n20",
+          "expected": "Before: a=10 b=20\nAfter: a=20 b=10",
+          "weight": 0.5,
+          "visible": true,
+          "description": "Swap 10 and 20"
         }
       ],
       "timeLimitMs": 2000,
@@ -82,5 +98,132 @@
       "forbiddenKeywords": []
     },
     "position": 2
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Type Detective",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 180,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 18.0,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "prompt": "Read a value from the user. Try to convert it: first try int, then float. Report what the original type was (always str from input) and what it can be converted to.\n\nIf it can be converted to int, print: [value] can be an int: [int_value]\nIf it can be a float (but not int), print: [value] can be a float: [float_value]\nOtherwise print: [value] is just text",
+      "starterCode": "# TODO: Read a value from the user\n# TODO: Try converting to int first, then float\n# Hint: use try/except to handle errors",
+      "language": "python",
+      "testCases": [
+        {
+          "input": "42",
+          "expected": "42 can be an int: 42",
+          "weight": 0.34,
+          "visible": true,
+          "description": "Integer input"
+        },
+        {
+          "input": "3.14",
+          "expected": "3.14 can be a float: 3.14",
+          "weight": 0.33,
+          "visible": true,
+          "description": "Float input"
+        },
+        {
+          "input": "hello",
+          "expected": "hello is just text",
+          "weight": 0.33,
+          "visible": false,
+          "description": "Text input"
+        }
+      ],
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 64,
+      "allowedImports": [],
+      "forbiddenKeywords": []
+    },
+    "position": 3
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Score Tracker",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "medium",
+    "estimatedSeconds": 180,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 18.0,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "prompt": "Read a player's name and three test scores (integers). Calculate the total and average. Print the results.\n\nOutput format:\nPlayer: [name]\nScores: [s1], [s2], [s3]\nTotal: [total]\nAverage: [avg]\n\nRound the average to 1 decimal place.",
+      "starterCode": "# TODO: Read player name and 3 scores\n# TODO: Calculate total and average\n# TODO: Print the results",
+      "language": "python",
+      "testCases": [
+        {
+          "input": "Alex\n80\n90\n100",
+          "expected": "Player: Alex\nScores: 80, 90, 100\nTotal: 270\nAverage: 90.0",
+          "weight": 0.5,
+          "visible": true,
+          "description": "Basic score tracking"
+        },
+        {
+          "input": "Sam\n75\n82\n91",
+          "expected": "Player: Sam\nScores: 75, 82, 91\nTotal: 248\nAverage: 82.7",
+          "weight": 0.5,
+          "visible": false,
+          "description": "Scores with decimal average"
+        }
+      ],
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 64,
+      "allowedImports": [],
+      "forbiddenKeywords": []
+    },
+    "position": 4
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "String Info",
+    "ageMin": 10,
+    "ageMax": 18,
+    "difficulty": "easy",
+    "estimatedSeconds": 150,
+    "subject": "programming",
+    "locale": "en-US",
+    "points": 15.0,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "content": {
+      "prompt": "Ask the user for a word. Print the following info about it:\n- The word itself\n- Its length\n- The word repeated 3 times\n\nOutput format:\nWord: [word]\nLength: [length]\nRepeated: [word repeated 3 times]",
+      "starterCode": "# TODO: Ask for a word\n# TODO: Print the word, its length, and the word repeated 3 times",
+      "language": "python",
+      "testCases": [
+        {
+          "input": "Python",
+          "expected": "Word: Python\nLength: 6\nRepeated: PythonPythonPython",
+          "weight": 0.5,
+          "visible": true,
+          "description": "Info about Python"
+        },
+        {
+          "input": "Hi",
+          "expected": "Word: Hi\nLength: 2\nRepeated: HiHiHi",
+          "weight": 0.5,
+          "visible": true,
+          "description": "Info about Hi"
+        }
+      ],
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 64,
+      "allowedImports": [],
+      "forbiddenKeywords": []
+    },
+    "position": 5
   }
 ]

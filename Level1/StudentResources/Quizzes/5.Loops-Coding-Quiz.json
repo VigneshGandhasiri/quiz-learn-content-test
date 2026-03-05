@@ -1,18 +1,12 @@
-{
-  "title": "Loops Coding",
-  "description": "Coding challenges using for and while loops including loop control with break and continue.",
+﻿{
+  "title": "Loops Coding Challenges",
+  "description": "Write Python programs using for and while loops to solve problems with repetition, counting, and accumulation.",
   "subject": "Programming",
   "difficulty": "medium",
   "ageMin": 10,
   "ageMax": 18,
-  "estimatedMinutes": 20,
-  "tags": [
-    "python",
-    "loops",
-    "coding",
-    "while",
-    "for"
-  ]
+  "estimatedMinutes": 25,
+  "tags": ["python", "loops", "for", "while", "coding"]
 }
 
 // ==================== QUESTIONS ====================
@@ -20,82 +14,130 @@
 [
   {
     "questionType": "program_submission",
-    "questionText": "Simple Counter Loop",
+    "questionText": "Write a program that reads an integer N and prints all numbers from 1 to N, each on its own line.\n\nInput: A single integer N (N >= 1)\nOutput: Numbers from 1 to N, one per line",
+    "difficulty": "easy",
+    "points": 20,
+    "estimatedSeconds": 120,
+    "subject": "Programming",
     "ageMin": 10,
     "ageMax": 18,
-    "difficulty": "easy",
-    "estimatedSeconds": 120,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 12.0,
     "allowPartialCredit": true,
     "negativeMarking": false,
     "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 1,
     "content": {
-      "prompt": "Write a program that uses a for loop to count from 1 to 10 and prints each number.",
-      "starterCode": "# TODO: Create a for loop that counts from 1 to 10\n# Print each number on a new line\n\n# Your loop should print:\n# 1\n# 2\n# 3\n# ...\n# 10\n\nprint(\"Counting complete!\")",
       "language": "python",
+      "starterCode": "n = int(input())\n# Print numbers from 1 to n\n",
       "testCases": [
-        {
-          "input": "",
-          "expected": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10\nCounting complete!",
-          "weight": 1.0,
-          "visible": true,
-          "description": "Count from 1 to 10"
-        }
+        { "input": "5", "expectedOutput": "1\n2\n3\n4\n5" },
+        { "input": "3", "expectedOutput": "1\n2\n3" },
+        { "input": "1", "expectedOutput": "1" }
       ],
-      "timeLimitMs": 2000,
-      "memoryLimitMb": 64,
-      "allowedImports": [],
-      "forbiddenKeywords": []
-    },
-    "position": 1
+      "explanation": "Use for i in range(1, n + 1) since range stops before the end value."
+    }
   },
   {
     "questionType": "program_submission",
-    "questionText": "Password Validation with While Loop",
-    "ageMin": 13,
-    "ageMax": 18,
+    "questionText": "Write a program that reads an integer N and calculates N factorial (N!).\n\nN! = 1 * 2 * 3 * ... * N\n0! = 1\n\nInput: A single integer N (N >= 0)\nOutput: The factorial of N",
     "difficulty": "medium",
+    "points": 25,
     "estimatedSeconds": 240,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 20.0,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
     "allowPartialCredit": true,
     "negativeMarking": false,
     "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 2,
     "content": {
-      "prompt": "Create a password validation system that keeps asking for a password until the user enters the correct one ('python123').",
-      "starterCode": "correct_password = \"python123\"\nattempts = 0\nmax_attempts = 3\n\n# TODO: Use a while loop to ask for password\n# - Keep track of attempts\n# - If password is correct, print \"Access granted!\" and exit\n# - If max attempts reached, print \"Access denied!\"\n# - For wrong password, print \"Incorrect password. Try again.\"\n\nprint(\"Password Security System\")\n\n# Your while loop here",
       "language": "python",
+      "starterCode": "n = int(input())\n# Calculate and print n!\n",
       "testCases": [
-        {
-          "input": "python123",
-          "expected": "Password Security System\nAccess granted!",
-          "weight": 0.4,
-          "visible": true,
-          "description": "Correct password first try"
-        },
-        {
-          "input": "wrong\npython123",
-          "expected": "Password Security System\nIncorrect password. Try again.\nAccess granted!",
-          "weight": 0.3,
-          "visible": true,
-          "description": "Correct on second try"
-        },
-        {
-          "input": "wrong1\nwrong2\nwrong3",
-          "expected": "Password Security System\nIncorrect password. Try again.\nIncorrect password. Try again.\nIncorrect password. Try again.\nAccess denied!",
-          "weight": 0.3,
-          "visible": false,
-          "description": "Max attempts exceeded"
-        }
+        { "input": "5", "expectedOutput": "120" },
+        { "input": "0", "expectedOutput": "1" },
+        { "input": "1", "expectedOutput": "1" },
+        { "input": "4", "expectedOutput": "24" },
+        { "input": "7", "expectedOutput": "5040" }
       ],
-      "timeLimitMs": 2000,
-      "memoryLimitMb": 64,
-      "allowedImports": [],
-      "forbiddenKeywords": []
-    },
-    "position": 2
+      "explanation": "Start with result = 1, then use a for loop: for i in range(1, n + 1): result *= i. Print result."
+    }
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Write a FizzBuzz program! Read N, then for each number from 1 to N:\n- If divisible by both 3 and 5: print FizzBuzz\n- If divisible by 3 only: print Fizz\n- If divisible by 5 only: print Buzz\n- Otherwise: print the number\n\nInput: A single integer N\nOutput: FizzBuzz results, one per line",
+    "difficulty": "medium",
+    "points": 25,
+    "estimatedSeconds": 300,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 3,
+    "content": {
+      "language": "python",
+      "starterCode": "n = int(input())\n# Print FizzBuzz from 1 to n\n",
+      "testCases": [
+        { "input": "5", "expectedOutput": "1\n2\nFizz\n4\nBuzz" },
+        { "input": "15", "expectedOutput": "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz" },
+        { "input": "3", "expectedOutput": "1\n2\nFizz" }
+      ],
+      "explanation": "Use a for loop and check divisibility with %. Check 'both 3 and 5' first (using and), then 3, then 5, else the number."
+    }
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Write a program that keeps reading numbers from the user until they enter 0 (the sentinel). Then print the sum of all numbers entered (not counting the 0).\n\nInput: Multiple integers, one per line, ending with 0\nOutput: The sum of all numbers (excluding the sentinel 0)",
+    "difficulty": "medium",
+    "points": 25,
+    "estimatedSeconds": 240,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 4,
+    "content": {
+      "language": "python",
+      "starterCode": "# Read numbers until 0 is entered, then print the sum\n",
+      "testCases": [
+        { "input": "5\n3\n7\n0", "expectedOutput": "15" },
+        { "input": "10\n20\n30\n0", "expectedOutput": "60" },
+        { "input": "0", "expectedOutput": "0" },
+        { "input": "-5\n5\n0", "expectedOutput": "0" }
+      ],
+      "explanation": "Use a while loop: read input, check if it's 0 to break, otherwise add to a running total. Print the total after the loop."
+    }
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Write a program that reads an integer N and prints a countdown from N to 1, followed by \"Go!\" on the last line.\n\nInput: A single integer N (N >= 1)\nOutput: Numbers from N down to 1, then Go!, each on its own line",
+    "difficulty": "easy",
+    "points": 20,
+    "estimatedSeconds": 180,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 5,
+    "content": {
+      "language": "python",
+      "starterCode": "n = int(input())\n# Countdown from n to 1, then print Go!\n",
+      "testCases": [
+        { "input": "3", "expectedOutput": "3\n2\n1\nGo!" },
+        { "input": "5", "expectedOutput": "5\n4\n3\n2\n1\nGo!" },
+        { "input": "1", "expectedOutput": "1\nGo!" }
+      ],
+      "explanation": "Use range(n, 0, -1) to count backwards, or a while loop starting at n and decrementing. After the loop, print 'Go!'."
+    }
   }
 ]

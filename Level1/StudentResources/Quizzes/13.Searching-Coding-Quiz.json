@@ -1,18 +1,12 @@
-{
-  "title": "Searching Algorithms Coding",
-  "description": "Coding challenges implementing linear search and binary search from scratch.",
+﻿{
+  "title": "Searching Algorithms -- Coding Quiz",
+  "description": "Write Python programs implementing linear search and binary search algorithms.",
   "subject": "Programming",
   "difficulty": "medium",
   "ageMin": 10,
   "ageMax": 18,
-  "estimatedMinutes": 20,
-  "tags": [
-    "python",
-    "searching",
-    "linear-search",
-    "binary-search",
-    "coding"
-  ]
+  "estimatedMinutes": 30,
+  "tags": ["python", "searching", "linear-search", "binary-search", "coding"]
 }
 
 // ==================== QUESTIONS ====================
@@ -20,82 +14,140 @@
 [
   {
     "questionType": "program_submission",
-    "questionText": "Linear Search",
+    "questionText": "Write a linear search program. Read N (number of items), then N integers on separate lines, then a target value. Print the 0-based index where the target is found, or -1 if not found. If it appears more than once, print the FIRST index.\n\nExample:\nInput:\n5\n10\n20\n30\n40\n50\n30\n\nOutput:\n2",
+    "difficulty": "easy",
+    "points": 20,
+    "estimatedSeconds": 180,
+    "subject": "Programming",
     "ageMin": 10,
     "ageMax": 18,
-    "difficulty": "easy",
-    "estimatedSeconds": 120,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 15.0,
     "allowPartialCredit": true,
     "negativeMarking": false,
     "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 1,
     "content": {
-      "prompt": "Read a list of space-separated integers, then read a target integer. Implement linear search — check each element one by one. If found, print 'Found at index <i>'. If not found, print 'Not found'.",
-      "starterCode": "# TODO: Read list and target\nnums = list(map(int, input(\"Enter numbers: \").split()))\ntarget = int(input(\"Enter target: \"))\n\n# TODO: Implement linear search\n# Loop through nums, compare each to target\n# Print 'Found at index <i>' or 'Not found'",
       "language": "python",
+      "starterCode": "n = int(input())\nnums = []\nfor _ in range(n):\n    nums.append(int(input()))\ntarget = int(input())\n# Linear search for target\n",
       "testCases": [
-        {
-          "input": "5 3 8 1 9\n8",
-          "expected": "Found at index 2",
-          "weight": 0.5,
-          "visible": true,
-          "description": "Target 8 found at index 2"
-        },
-        {
-          "input": "10 20 30 40\n25",
-          "expected": "Not found",
-          "weight": 0.5,
-          "visible": true,
-          "description": "Target 25 not in list"
-        }
+        { "input": "5\n10\n20\n30\n40\n50\n30", "expected_output": "2" },
+        { "input": "4\n5\n10\n15\n20\n25", "expected_output": "-1" },
+        { "input": "3\n7\n7\n7\n7", "expected_output": "0" },
+        { "input": "1\n42\n42", "expected_output": "0" },
+        { "input": "6\n3\n1\n4\n1\n5\n9\n5", "expected_output": "4" }
       ],
-      "timeLimitMs": 2000,
-      "memoryLimitMb": 64,
-      "allowedImports": [],
-      "forbiddenKeywords": []
-    },
-    "position": 1
+      "explanation": "Loop through the list with enumerate or range. When nums[i] == target, print i and stop. If loop ends, print -1."
+    }
   },
   {
     "questionType": "program_submission",
-    "questionText": "Binary Search",
-    "ageMin": 11,
-    "ageMax": 18,
+    "questionText": "Write a binary search program. Read N, then N integers in SORTED order (one per line), then a target. Print the 0-based index where the target is found, or -1 if not found.\n\nExample:\nInput:\n7\n2\n4\n6\n8\n10\n12\n14\n10\n\nOutput:\n4",
     "difficulty": "medium",
-    "estimatedSeconds": 180,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 18.0,
+    "points": 25,
+    "estimatedSeconds": 300,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
     "allowPartialCredit": true,
     "negativeMarking": false,
     "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 2,
     "content": {
-      "prompt": "Read a sorted list of space-separated integers, then read a target. Implement binary search using left and right pointers. Print 'Found at index <i>' if found, or 'Not found'. Also print the number of comparisons made.",
-      "starterCode": "# TODO: Read sorted list and target\nnums = list(map(int, input(\"Enter sorted numbers: \").split()))\ntarget = int(input(\"Enter target: \"))\n\n# TODO: Implement binary search\n# left = 0, right = len(nums) - 1\n# While left <= right:\n#   mid = (left + right) // 2\n#   Compare nums[mid] with target\n#   Count each comparison\n# Print 'Found at index <i>' or 'Not found'\n# Print 'Comparisons: <count>'",
       "language": "python",
+      "starterCode": "n = int(input())\nnums = []\nfor _ in range(n):\n    nums.append(int(input()))\ntarget = int(input())\n# Binary search for target\n",
       "testCases": [
-        {
-          "input": "1 3 5 7 9 11 13 15\n7",
-          "expected": "Found at index 3\nComparisons: 1",
-          "weight": 0.5,
-          "visible": true,
-          "description": "Target 7 found at mid on first try"
-        },
-        {
-          "input": "2 4 6 8 10\n5",
-          "expected": "Not found\nComparisons: 3",
-          "weight": 0.5,
-          "visible": true,
-          "description": "Target 5 not in sorted list"
-        }
+        { "input": "7\n2\n4\n6\n8\n10\n12\n14\n10", "expected_output": "4" },
+        { "input": "5\n1\n3\n5\n7\n9\n5", "expected_output": "2" },
+        { "input": "5\n1\n3\n5\n7\n9\n4", "expected_output": "-1" },
+        { "input": "1\n100\n100", "expected_output": "0" },
+        { "input": "6\n10\n20\n30\n40\n50\n60\n60", "expected_output": "5" },
+        { "input": "6\n10\n20\n30\n40\n50\n60\n10", "expected_output": "0" }
       ],
-      "timeLimitMs": 2000,
-      "memoryLimitMb": 64,
-      "allowedImports": [],
-      "forbiddenKeywords": []
-    },
-    "position": 2
+      "explanation": "Use low=0, high=n-1. While low<=high: mid=(low+high)//2. Compare nums[mid] with target. Adjust low or high."
+    }
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Write a program that counts how many comparisons linear search makes to find the target. Read N, then N integers, then the target. Print the number of comparisons made (each element checked counts as one comparison). If found, count up to and including the found element. If not found, count is N.\n\nExample:\nInput:\n5\n10\n20\n30\n40\n50\n30\n\nOutput:\n3",
+    "difficulty": "medium",
+    "points": 25,
+    "estimatedSeconds": 240,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 3,
+    "content": {
+      "language": "python",
+      "starterCode": "n = int(input())\nnums = []\nfor _ in range(n):\n    nums.append(int(input()))\ntarget = int(input())\n# Count comparisons in linear search\n",
+      "testCases": [
+        { "input": "5\n10\n20\n30\n40\n50\n30", "expected_output": "3" },
+        { "input": "5\n10\n20\n30\n40\n50\n10", "expected_output": "1" },
+        { "input": "5\n10\n20\n30\n40\n50\n99", "expected_output": "5" },
+        { "input": "1\n5\n5", "expected_output": "1" },
+        { "input": "4\n1\n2\n3\n4\n4", "expected_output": "4" }
+      ],
+      "explanation": "Increment a counter each time you compare an element. Return the counter when found or after checking all elements."
+    }
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Write a program that reads N sorted integers (one per line, N given first) and a target. Use binary search to find whether the target exists. Print 'Found at index X' if found, or 'Not found' if not.\n\nExample:\nInput:\n5\n1\n3\n5\n7\n9\n7\n\nOutput:\nFound at index 3",
+    "difficulty": "medium",
+    "points": 25,
+    "estimatedSeconds": 300,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 4,
+    "content": {
+      "language": "python",
+      "starterCode": "n = int(input())\nnums = []\nfor _ in range(n):\n    nums.append(int(input()))\ntarget = int(input())\n# Binary search and print result\n",
+      "testCases": [
+        { "input": "5\n1\n3\n5\n7\n9\n7", "expected_output": "Found at index 3" },
+        { "input": "5\n1\n3\n5\n7\n9\n2", "expected_output": "Not found" },
+        { "input": "3\n10\n20\n30\n10", "expected_output": "Found at index 0" },
+        { "input": "4\n2\n4\n6\n8\n8", "expected_output": "Found at index 3" },
+        { "input": "1\n5\n5", "expected_output": "Found at index 0" },
+        { "input": "1\n5\n10", "expected_output": "Not found" }
+      ],
+      "explanation": "Standard binary search. Format the output string with the index when found."
+    }
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Write a program that reads N integers (one per line, N given first) and a target. First sort the list, then use binary search to find the target. Print 'Found' or 'Not found'.\n\nThis tests the idea that you can sort first, then use binary search on unsorted data.\n\nExample:\nInput:\n5\n30\n10\n50\n20\n40\n20\n\nOutput:\nFound",
+    "difficulty": "hard",
+    "points": 30,
+    "estimatedSeconds": 360,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 5,
+    "content": {
+      "language": "python",
+      "starterCode": "n = int(input())\nnums = []\nfor _ in range(n):\n    nums.append(int(input()))\ntarget = int(input())\n# Sort the list, then binary search\n",
+      "testCases": [
+        { "input": "5\n30\n10\n50\n20\n40\n20", "expected_output": "Found" },
+        { "input": "5\n30\n10\n50\n20\n40\n99", "expected_output": "Not found" },
+        { "input": "3\n3\n1\n2\n2", "expected_output": "Found" },
+        { "input": "4\n9\n7\n5\n3\n1", "expected_output": "Not found" },
+        { "input": "1\n42\n42", "expected_output": "Found" },
+        { "input": "6\n15\n3\n8\n22\n1\n10\n10", "expected_output": "Found" }
+      ],
+      "explanation": "Sort the list with .sort(), then run binary search. This shows how sort + binary search handles unsorted input."
+    }
   }
 ]

@@ -1,16 +1,12 @@
-{
-  "title": "Conditional Logic Coding",
-  "description": "Coding challenges using if/elif/else with multiple conditions and edge-case handling.",
+﻿{
+  "title": "Conditional Logic Coding Challenges",
+  "description": "Write Python programs using if-elif-else statements, comparison operators, and boolean logic to solve problems.",
   "subject": "Programming",
   "difficulty": "medium",
   "ageMin": 10,
   "ageMax": 18,
-  "estimatedMinutes": 20,
-  "tags": [
-    "python",
-    "conditionals",
-    "coding"
-  ]
+  "estimatedMinutes": 25,
+  "tags": ["python", "conditionals", "if-elif", "coding"]
 }
 
 // ==================== QUESTIONS ====================
@@ -18,131 +14,144 @@
 [
   {
     "questionType": "program_submission",
-    "questionText": "Age Category Classifier",
+    "questionText": "Write a program that reads a student's score (integer) and prints their letter grade.\n\nInput: A single integer (0-100)\n\nOutput:\n- 90 or above: A\n- 80-89: B\n- 70-79: C\n- 60-69: D\n- Below 60: F",
+    "difficulty": "easy",
+    "points": 20,
+    "estimatedSeconds": 180,
+    "subject": "Programming",
     "ageMin": 10,
     "ageMax": 18,
-    "difficulty": "easy",
-    "estimatedSeconds": 150,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 15.0,
     "allowPartialCredit": true,
     "negativeMarking": false,
     "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 1,
     "content": {
-      "prompt": "Write a program that classifies people into age categories: Child (0-12), Teenager (13-19), Adult (20-64), Senior (65+). Handle negative ages as errors.",
-      "starterCode": "age = int(input(\"Enter your age: \"))\n\n# TODO: Add conditional logic to classify age\n# Categories:\n# - Negative ages: \"Error: Age cannot be negative!\"\n# - 0-12: \"You are a Child!\"\n# - 13-19: \"You are a Teenager!\"\n# - 20-64: \"You are an Adult!\"\n# - 65+: \"You are a Senior!\"\n\nprint(\"Classification complete.\")",
       "language": "python",
+      "starterCode": "score = int(input())\n# Use if-elif-else to print the grade\n",
       "testCases": [
-        {
-          "input": "10",
-          "expected": "You are a Child!\nClassification complete.",
-          "weight": 0.2,
-          "visible": true,
-          "description": "Child category"
-        },
-        {
-          "input": "16",
-          "expected": "You are a Teenager!\nClassification complete.",
-          "weight": 0.2,
-          "visible": true,
-          "description": "Teenager category"
-        },
-        {
-          "input": "30",
-          "expected": "You are an Adult!\nClassification complete.",
-          "weight": 0.2,
-          "visible": false,
-          "description": "Adult category"
-        },
-        {
-          "input": "70",
-          "expected": "You are a Senior!\nClassification complete.",
-          "weight": 0.2,
-          "visible": false,
-          "description": "Senior category"
-        },
-        {
-          "input": "-5",
-          "expected": "Error: Age cannot be negative!\nClassification complete.",
-          "weight": 0.2,
-          "visible": false,
-          "description": "Error handling"
-        }
+        { "input": "95", "expectedOutput": "A" },
+        { "input": "85", "expectedOutput": "B" },
+        { "input": "72", "expectedOutput": "C" },
+        { "input": "65", "expectedOutput": "D" },
+        { "input": "45", "expectedOutput": "F" },
+        { "input": "90", "expectedOutput": "A" },
+        { "input": "80", "expectedOutput": "B" }
       ],
-      "timeLimitMs": 2000,
-      "memoryLimitMb": 64,
-      "allowedImports": [],
-      "forbiddenKeywords": []
-    },
-    "position": 1
+      "explanation": "Use an if-elif-else chain checking from highest to lowest: if score >= 90, elif score >= 80, etc."
+    }
   },
   {
     "questionType": "program_submission",
-    "questionText": "Grade Calculator with Feedback",
-    "ageMin": 11,
+    "questionText": "Write a program that determines if a year is a leap year.\n\nInput: A single integer (year)\n\nOutput: Leap year or Not a leap year\n\nRules:\n- Divisible by 4 -> leap year\n- BUT if divisible by 100 -> NOT a leap year\n- UNLESS also divisible by 400 -> leap year",
+    "difficulty": "hard",
+    "points": 30,
+    "estimatedSeconds": 300,
+    "subject": "Programming",
+    "ageMin": 10,
     "ageMax": 18,
-    "difficulty": "medium",
-    "estimatedSeconds": 180,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 18.0,
     "allowPartialCredit": true,
     "negativeMarking": false,
     "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 2,
     "content": {
-      "prompt": "Create a grade calculator that assigns letter grades and provides feedback. Handle invalid scores (negative or over 100).",
-      "starterCode": "score = int(input(\"Enter your test score: \"))\n\n# TODO: Implement grade calculation\n# Grade Scale:\n# - Invalid (< 0 or > 100): \"Invalid score! Must be 0-100.\"\n# - 90-100: \"Grade: A\" and \"Excellent work!\"\n# - 80-89: \"Grade: B\" and \"Good job!\"\n# - 70-79: \"Grade: C\" and \"You passed!\"\n# - 60-69: \"Grade: D\" and \"You need improvement.\"\n# - 0-59: \"Grade: F\" and \"Please study harder.\"\n\nprint(\"Grade calculation complete.\")",
       "language": "python",
+      "starterCode": "year = int(input())\n# Determine if the year is a leap year\n",
       "testCases": [
-        {
-          "input": "95",
-          "expected": "Grade: A\nExcellent work!\nGrade calculation complete.",
-          "weight": 0.2,
-          "visible": true,
-          "description": "A grade"
-        },
-        {
-          "input": "85",
-          "expected": "Grade: B\nGood job!\nGrade calculation complete.",
-          "weight": 0.2,
-          "visible": true,
-          "description": "B grade"
-        },
-        {
-          "input": "75",
-          "expected": "Grade: C\nYou passed!\nGrade calculation complete.",
-          "weight": 0.2,
-          "visible": false,
-          "description": "C grade"
-        },
-        {
-          "input": "65",
-          "expected": "Grade: D\nYou need improvement.\nGrade calculation complete.",
-          "weight": 0.2,
-          "visible": false,
-          "description": "D grade"
-        },
-        {
-          "input": "45",
-          "expected": "Grade: F\nPlease study harder.\nGrade calculation complete.",
-          "weight": 0.1,
-          "visible": false,
-          "description": "F grade"
-        },
-        {
-          "input": "105",
-          "expected": "Invalid score! Must be 0-100.\nGrade calculation complete.",
-          "weight": 0.1,
-          "visible": false,
-          "description": "Invalid high score"
-        }
+        { "input": "2024", "expectedOutput": "Leap year" },
+        { "input": "2023", "expectedOutput": "Not a leap year" },
+        { "input": "1900", "expectedOutput": "Not a leap year" },
+        { "input": "2000", "expectedOutput": "Leap year" },
+        { "input": "2100", "expectedOutput": "Not a leap year" },
+        { "input": "400", "expectedOutput": "Leap year" }
       ],
-      "timeLimitMs": 2000,
-      "memoryLimitMb": 64,
-      "allowedImports": [],
-      "forbiddenKeywords": []
-    },
-    "position": 2
+      "explanation": "Check divisible by 400 first (leap), then by 100 (not leap), then by 4 (leap), else not leap. Or combine with and/or."
+    }
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Write a ticket price calculator! Read a person's age and whether it's a weekend (yes/no).\n\nInput (2 lines):\n- Age (integer)\n- Weekend (yes or no)\n\nPricing:\n- Under 5: Free\n- 5-12: $5 on weekday, $8 on weekend\n- 13-64: $10 on weekday, $12 on weekend\n- 65 and over: $7 on weekday, $9 on weekend\n\nOutput: Just the dollar amount like: $5",
+    "difficulty": "hard",
+    "points": 30,
+    "estimatedSeconds": 360,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 3,
+    "content": {
+      "language": "python",
+      "starterCode": "age = int(input())\nweekend = input()\n# Calculate and print the ticket price\n",
+      "testCases": [
+        { "input": "3\nno", "expectedOutput": "Free" },
+        { "input": "3\nyes", "expectedOutput": "Free" },
+        { "input": "8\nno", "expectedOutput": "$5" },
+        { "input": "8\nyes", "expectedOutput": "$8" },
+        { "input": "25\nno", "expectedOutput": "$10" },
+        { "input": "25\nyes", "expectedOutput": "$12" },
+        { "input": "70\nno", "expectedOutput": "$7" },
+        { "input": "70\nyes", "expectedOutput": "$9" }
+      ],
+      "explanation": "Use nested if-elif-else: outer checks age ranges, inner checks weekend. Or use and to combine conditions."
+    }
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Write a number classifier! Read a number and print ALL categories it fits.\n\nInput: An integer\n\nOutput (each on its own line, in this order):\n- If positive: Positive\n- If negative: Negative\n- If zero: Zero\n- If even: Even\n- If odd: Odd\n\nNote: Zero is even!",
+    "difficulty": "medium",
+    "points": 25,
+    "estimatedSeconds": 240,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 4,
+    "content": {
+      "language": "python",
+      "starterCode": "num = int(input())\n# Print all categories that apply\n",
+      "testCases": [
+        { "input": "6", "expectedOutput": "Positive\nEven" },
+        { "input": "-3", "expectedOutput": "Negative\nOdd" },
+        { "input": "0", "expectedOutput": "Zero\nEven" },
+        { "input": "7", "expectedOutput": "Positive\nOdd" },
+        { "input": "-8", "expectedOutput": "Negative\nEven" }
+      ],
+      "explanation": "Use separate if statements (not elif) so multiple categories can print. Check positive, negative, zero first, then even/odd."
+    }
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Write a password strength checker! Read a password string and rate it.\n\nInput: A single string (the password)\n\nRules (check in order):\n- Length < 4: Too short\n- Length 4-7: Weak\n- Length 8-11: Medium\n- Length 12 or more: Strong\n\nOutput: The strength rating (Too short, Weak, Medium, or Strong)",
+    "difficulty": "easy",
+    "points": 20,
+    "estimatedSeconds": 180,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 5,
+    "content": {
+      "language": "python",
+      "starterCode": "password = input()\n# Check the length and print the strength\n",
+      "testCases": [
+        { "input": "abc", "expectedOutput": "Too short" },
+        { "input": "pass", "expectedOutput": "Weak" },
+        { "input": "hello12", "expectedOutput": "Weak" },
+        { "input": "mypass99", "expectedOutput": "Medium" },
+        { "input": "securepass1", "expectedOutput": "Medium" },
+        { "input": "supersecure!!", "expectedOutput": "Strong" }
+      ],
+      "explanation": "Use len(password) with if-elif-else: if len < 4 'Too short', elif len < 8 'Weak', elif len < 12 'Medium', else 'Strong'."
+    }
   }
 ]

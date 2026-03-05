@@ -1,17 +1,12 @@
-{
-  "title": "Sets & Dictionaries Coding",
-  "description": "Coding challenges using sets and dictionaries for frequency counting and set operations.",
+﻿{
+  "title": "Sets & Dictionaries -- Coding Quiz",
+  "description": "Write Python programs that use sets and dictionaries to solve problems with uniqueness, frequency counting, and key-value lookups.",
   "subject": "Programming",
   "difficulty": "medium",
   "ageMin": 10,
   "ageMax": 18,
-  "estimatedMinutes": 20,
-  "tags": [
-    "python",
-    "sets",
-    "dictionaries",
-    "coding"
-  ]
+  "estimatedMinutes": 30,
+  "tags": ["python", "sets", "dictionaries", "coding", "frequency-counting"]
 }
 
 // ==================== QUESTIONS ====================
@@ -19,82 +14,137 @@
 [
   {
     "questionType": "program_submission",
-    "questionText": "Word Frequency Counter",
+    "questionText": "Write a program that reads N integers (one per line, with N given first) and prints how many unique numbers there are.\n\nExample:\nInput:\n5\n3\n1\n3\n2\n1\n\nOutput:\n3",
+    "difficulty": "easy",
+    "points": 20,
+    "estimatedSeconds": 180,
+    "subject": "Programming",
     "ageMin": 10,
     "ageMax": 18,
-    "difficulty": "easy",
-    "estimatedSeconds": 150,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 15.0,
     "allowPartialCredit": true,
     "negativeMarking": false,
     "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 1,
     "content": {
-      "prompt": "Read a sentence from input. Count the frequency of each word using a dictionary. Print each word and its count in the order they first appear, one per line in the format 'word: count'.",
-      "starterCode": "# TODO: Read a sentence\nsentence = input(\"Enter sentence: \")\n\n# TODO: Split into words\n# TODO: Count frequency using a dictionary\n# TODO: Print each word and count in first-appearance order\n# Format: word: count",
       "language": "python",
+      "starterCode": "n = int(input())\n# Read n numbers and count the unique ones\n",
       "testCases": [
-        {
-          "input": "the cat sat on the mat",
-          "expected": "the: 2\ncat: 1\nsat: 1\non: 1\nmat: 1",
-          "weight": 0.5,
-          "visible": true,
-          "description": "Simple sentence with repeated word"
-        },
-        {
-          "input": "hello hello hello",
-          "expected": "hello: 3",
-          "weight": 0.5,
-          "visible": true,
-          "description": "All same word"
-        }
+        { "input": "5\n3\n1\n3\n2\n1", "expected_output": "3" },
+        { "input": "4\n7\n7\n7\n7", "expected_output": "1" },
+        { "input": "3\n10\n20\n30", "expected_output": "3" },
+        { "input": "1\n42", "expected_output": "1" },
+        { "input": "6\n1\n2\n3\n1\n2\n3", "expected_output": "3" }
       ],
-      "timeLimitMs": 2000,
-      "memoryLimitMb": 64,
-      "allowedImports": [],
-      "forbiddenKeywords": []
-    },
-    "position": 1
+      "explanation": "Add each number to a set, then print len(the_set). Sets handle duplicates automatically."
+    }
   },
   {
     "questionType": "program_submission",
-    "questionText": "Unique Elements Finder",
-    "ageMin": 11,
-    "ageMax": 18,
+    "questionText": "Write a program that reads a string and prints each character with its frequency, one per line, in the order each character first appears.\n\nFormat: character: count\n\nExample:\nInput:\nhello\n\nOutput:\nh: 1\ne: 1\nl: 2\no: 1",
     "difficulty": "medium",
-    "estimatedSeconds": 180,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 18.0,
+    "points": 25,
+    "estimatedSeconds": 300,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
     "allowPartialCredit": true,
     "negativeMarking": false,
     "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 2,
     "content": {
-      "prompt": "Read two lines of space-separated integers (two lists). Using sets, find and print:\n1. Elements common to both lists (intersection), sorted\n2. Elements in the first list but not the second (difference), sorted\n3. All unique elements from both lists combined (union), sorted\nPrint each on a separate line, space-separated.",
-      "starterCode": "# TODO: Read two lists\nlist1 = list(map(int, input(\"Enter list 1: \").split()))\nlist2 = list(map(int, input(\"Enter list 2: \").split()))\n\n# TODO: Convert to sets\n# TODO: Find intersection, difference, union\n# TODO: Print each sorted and space-separated\n# Common: ...\n# Only in first: ...\n# All unique: ...",
       "language": "python",
+      "starterCode": "text = input()\n# Count frequency of each character and print in order of first appearance\n",
       "testCases": [
-        {
-          "input": "1 2 3 4 5\n3 4 5 6 7",
-          "expected": "Common: 3 4 5\nOnly in first: 1 2\nAll unique: 1 2 3 4 5 6 7",
-          "weight": 0.5,
-          "visible": true,
-          "description": "Overlapping lists"
-        },
-        {
-          "input": "10 20\n30 40",
-          "expected": "Common: \nOnly in first: 10 20\nAll unique: 10 20 30 40",
-          "weight": 0.5,
-          "visible": true,
-          "description": "No overlap"
-        }
+        { "input": "hello", "expected_output": "h: 1\ne: 1\nl: 2\no: 1" },
+        { "input": "aabbc", "expected_output": "a: 2\nb: 2\nc: 1" },
+        { "input": "abcabc", "expected_output": "a: 2\nb: 2\nc: 2" },
+        { "input": "x", "expected_output": "x: 1" },
+        { "input": "mississippi", "expected_output": "m: 1\ni: 4\ns: 4\np: 2" }
       ],
-      "timeLimitMs": 2000,
-      "memoryLimitMb": 64,
-      "allowedImports": [],
-      "forbiddenKeywords": []
-    },
-    "position": 2
+      "explanation": "Use a dictionary to count each character. Track first-appearance order by checking if the character is already a key before adding."
+    }
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Write a program that reads two lines, each containing space-separated integers. Print the numbers that appear in BOTH lines (the intersection), sorted in ascending order, separated by spaces.\n\nExample:\nInput:\n1 2 3 4 5\n3 4 5 6 7\n\nOutput:\n3 4 5",
+    "difficulty": "medium",
+    "points": 25,
+    "estimatedSeconds": 240,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 3,
+    "content": {
+      "language": "python",
+      "starterCode": "line1 = input().split()\nline2 = input().split()\n# Find common numbers and print them sorted\n",
+      "testCases": [
+        { "input": "1 2 3 4 5\n3 4 5 6 7", "expected_output": "3 4 5" },
+        { "input": "10 20 30\n30 40 50", "expected_output": "30" },
+        { "input": "1 2 3\n4 5 6", "expected_output": "" },
+        { "input": "5 5 3 3\n3 3 5 5", "expected_output": "3 5" },
+        { "input": "1 2\n1 2", "expected_output": "1 2" }
+      ],
+      "explanation": "Convert both lists to sets of ints, use & for intersection, sort the result, and print space-separated."
+    }
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Write a simple phone book program.\n- First line: N (number of entries)\n- Next N lines: each has a name and number separated by a space\n- Next line: a name to look up\n\nIf the name is found, print: name: number\nIf not found, print: Not found\n\nExample:\nInput:\n3\nAlice 12345\nBob 67890\nCarl 11111\nBob\n\nOutput:\nBob: 67890",
+    "difficulty": "medium",
+    "points": 25,
+    "estimatedSeconds": 300,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 4,
+    "content": {
+      "language": "python",
+      "starterCode": "n = int(input())\nphone_book = {}\n# Read n entries into the dictionary, then look up a name\n",
+      "testCases": [
+        { "input": "3\nAlice 12345\nBob 67890\nCarl 11111\nBob", "expected_output": "Bob: 67890" },
+        { "input": "2\nAna 55555\nZoe 99999\nZoe", "expected_output": "Zoe: 99999" },
+        { "input": "2\nAna 55555\nZoe 99999\nMax", "expected_output": "Not found" },
+        { "input": "1\nSam 10000\nSam", "expected_output": "Sam: 10000" },
+        { "input": "3\nA 1\nB 2\nC 3\nD", "expected_output": "Not found" }
+      ],
+      "explanation": "Build a dictionary from entries (name -> number). Use 'in' to check if the lookup name exists, then print the result."
+    }
+  },
+  {
+    "questionType": "program_submission",
+    "questionText": "Write a program that reads N integers (one per line, with N given first) and prints the most frequent number. If there is a tie, print the smallest number among the most frequent.\n\nExample:\nInput:\n6\n1\n2\n2\n3\n3\n1\n\nOutput:\n1",
+    "difficulty": "hard",
+    "points": 30,
+    "estimatedSeconds": 360,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 5,
+    "content": {
+      "language": "python",
+      "starterCode": "n = int(input())\n# Read numbers, find the most frequent (smallest if tie)\n",
+      "testCases": [
+        { "input": "6\n1\n2\n2\n3\n3\n1", "expected_output": "1" },
+        { "input": "5\n4\n4\n4\n2\n2", "expected_output": "4" },
+        { "input": "1\n99", "expected_output": "99" },
+        { "input": "4\n5\n5\n3\n3", "expected_output": "3" },
+        { "input": "7\n1\n1\n2\n2\n3\n3\n3", "expected_output": "3" }
+      ],
+      "explanation": "Count frequencies with a dictionary. Find the max count, then among numbers with that count pick the smallest."
+    }
   }
 ]

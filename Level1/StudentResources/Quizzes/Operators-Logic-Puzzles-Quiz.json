@@ -1,0 +1,660 @@
+{
+  "title": "Python Operators & Logic Puzzles",
+  "description": "Test your understanding of Python arithmetic, comparison, logical, bitwise, membership, and identity operators through tricky logic puzzles and code-output questions.",
+  "subject": "Programming",
+  "difficulty": "medium",
+  "ageMin": 12,
+  "ageMax": 18,
+  "estimatedMinutes": 20,
+  "tags": ["python", "operators", "logic", "programming", "puzzles"]
+}
+
+// ==================== QUESTIONS ====================
+
+[
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the output of: print(10 // 3)",
+    "difficulty": "easy",
+    "points": 10,
+    "estimatedSeconds": 20,
+    "subject": "Programming",
+    "ageMin": 12,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 1,
+    "content": {
+      "options": [
+        { "id": "a", "text": "3.33" },
+        { "id": "b", "text": "3" },
+        { "id": "c", "text": "3.0" },
+        { "id": "d", "text": "4" }
+      ],
+      "correct_answer": "b",
+      "explanation": "The // operator performs floor (integer) division. 10 // 3 = 3 (the quotient without the remainder)."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the output of: print(2 ** 3 ** 2)",
+    "difficulty": "hard",
+    "points": 15,
+    "estimatedSeconds": 40,
+    "subject": "Programming",
+    "ageMin": 12,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 2,
+    "content": {
+      "options": [
+        { "id": "a", "text": "64" },
+        { "id": "b", "text": "512" },
+        { "id": "c", "text": "256" },
+        { "id": "d", "text": "81" }
+      ],
+      "correct_answer": "b",
+      "explanation": "The ** operator is right-associative, so 2 ** 3 ** 2 is evaluated as 2 ** (3 ** 2) = 2 ** 9 = 512."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the output of: print(17 % 5)",
+    "difficulty": "easy",
+    "points": 10,
+    "estimatedSeconds": 20,
+    "subject": "Programming",
+    "ageMin": 12,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 3,
+    "content": {
+      "options": [
+        { "id": "a", "text": "3" },
+        { "id": "b", "text": "2" },
+        { "id": "c", "text": "3.4" },
+        { "id": "d", "text": "12" }
+      ],
+      "correct_answer": "b",
+      "explanation": "The % operator returns the remainder. 17 ÷ 5 = 3 remainder 2, so 17 % 5 = 2."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the output of: print(True + True + False)",
+    "difficulty": "medium",
+    "points": 10,
+    "estimatedSeconds": 30,
+    "subject": "Programming",
+    "ageMin": 12,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 4,
+    "content": {
+      "options": [
+        { "id": "a", "text": "True" },
+        { "id": "b", "text": "1" },
+        { "id": "c", "text": "2" },
+        { "id": "d", "text": "Error" }
+      ],
+      "correct_answer": "c",
+      "explanation": "In Python, True equals 1 and False equals 0 when used in arithmetic. So True + True + False = 1 + 1 + 0 = 2."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the output of: print(not 0 and not '')",
+    "difficulty": "medium",
+    "points": 10,
+    "estimatedSeconds": 30,
+    "subject": "Programming",
+    "ageMin": 12,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 5,
+    "content": {
+      "options": [
+        { "id": "a", "text": "True" },
+        { "id": "b", "text": "False" },
+        { "id": "c", "text": "0" },
+        { "id": "d", "text": "Error" }
+      ],
+      "correct_answer": "a",
+      "explanation": "0 is falsy so not 0 = True. '' (empty string) is falsy so not '' = True. True and True = True."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the output of: print(5 > 3 > 1)",
+    "difficulty": "medium",
+    "points": 10,
+    "estimatedSeconds": 25,
+    "subject": "Programming",
+    "ageMin": 12,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 6,
+    "content": {
+      "options": [
+        { "id": "a", "text": "True" },
+        { "id": "b", "text": "False" },
+        { "id": "c", "text": "Error" },
+        { "id": "d", "text": "1" }
+      ],
+      "correct_answer": "a",
+      "explanation": "Python supports chained comparisons. 5 > 3 > 1 is equivalent to (5 > 3) and (3 > 1), both True, so the result is True."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the output of: print(1 < 2 > 0)",
+    "difficulty": "medium",
+    "points": 10,
+    "estimatedSeconds": 30,
+    "subject": "Programming",
+    "ageMin": 12,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 7,
+    "content": {
+      "options": [
+        { "id": "a", "text": "True" },
+        { "id": "b", "text": "False" },
+        { "id": "c", "text": "Error" },
+        { "id": "d", "text": "None" }
+      ],
+      "correct_answer": "a",
+      "explanation": "Chained comparisons: 1 < 2 > 0 means (1 < 2) and (2 > 0). Both are True, so the result is True."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the output of:\nx = [1, 2, 3]\ny = [1, 2, 3]\nprint(x == y, x is y)",
+    "difficulty": "hard",
+    "points": 15,
+    "estimatedSeconds": 40,
+    "subject": "Programming",
+    "ageMin": 12,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 8,
+    "content": {
+      "options": [
+        { "id": "a", "text": "True True" },
+        { "id": "b", "text": "True False" },
+        { "id": "c", "text": "False True" },
+        { "id": "d", "text": "False False" }
+      ],
+      "correct_answer": "b",
+      "explanation": "== checks value equality (both lists have the same elements -> True). 'is' checks identity (they are different objects in memory -> False)."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the output of: print(3 or 5)",
+    "difficulty": "medium",
+    "points": 10,
+    "estimatedSeconds": 25,
+    "subject": "Programming",
+    "ageMin": 12,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 9,
+    "content": {
+      "options": [
+        { "id": "a", "text": "True" },
+        { "id": "b", "text": "5" },
+        { "id": "c", "text": "3" },
+        { "id": "d", "text": "8" }
+      ],
+      "correct_answer": "c",
+      "explanation": "The 'or' operator returns the first truthy value. Since 3 is truthy, it is returned immediately without evaluating 5."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the output of: print(0 or '' or [] or 'hello' or 42)",
+    "difficulty": "hard",
+    "points": 15,
+    "estimatedSeconds": 40,
+    "subject": "Programming",
+    "ageMin": 12,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 10,
+    "content": {
+      "options": [
+        { "id": "a", "text": "0" },
+        { "id": "b", "text": "True" },
+        { "id": "c", "text": "hello" },
+        { "id": "d", "text": "42" }
+      ],
+      "correct_answer": "c",
+      "explanation": "'or' returns the first truthy value. 0, '', and [] are all falsy. 'hello' is the first truthy value, so it is returned."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the output of: print(3 and 5)",
+    "difficulty": "medium",
+    "points": 10,
+    "estimatedSeconds": 25,
+    "subject": "Programming",
+    "ageMin": 12,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 11,
+    "content": {
+      "options": [
+        { "id": "a", "text": "True" },
+        { "id": "b", "text": "3" },
+        { "id": "c", "text": "5" },
+        { "id": "d", "text": "8" }
+      ],
+      "correct_answer": "c",
+      "explanation": "The 'and' operator returns the last truthy value if all are truthy. 3 is truthy, so it checks 5, which is also truthy. It returns 5."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "In Python, does the expression 'not not True' evaluate to True?",
+    "difficulty": "easy",
+    "points": 5,
+    "estimatedSeconds": 15,
+    "subject": "Programming",
+    "ageMin": 12,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 12,
+    "content": {
+      "options": [
+        { "id": "a", "text": "True" },
+        { "id": "b", "text": "False" }
+      ],
+      "correct_answer": "a",
+      "explanation": "not True = False, then not False = True. Double negation returns the original boolean value."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "In Python, does 0.1 + 0.2 == 0.3 evaluate to True?",
+    "difficulty": "hard",
+    "points": 10,
+    "estimatedSeconds": 20,
+    "subject": "Programming",
+    "ageMin": 12,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 13,
+    "content": {
+      "options": [
+        { "id": "a", "text": "True" },
+        { "id": "b", "text": "False" }
+      ],
+      "correct_answer": "b",
+      "explanation": "Due to floating-point precision, 0.1 + 0.2 = 0.30000000000000004 in Python, so it does NOT equal 0.3 exactly."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the output of: print(~5)",
+    "difficulty": "hard",
+    "points": 15,
+    "estimatedSeconds": 40,
+    "subject": "Programming",
+    "ageMin": 12,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 14,
+    "content": {
+      "options": [
+        { "id": "a", "text": "-5" },
+        { "id": "b", "text": "-6" },
+        { "id": "c", "text": "4" },
+        { "id": "d", "text": "-4" }
+      ],
+      "correct_answer": "b",
+      "explanation": "The ~ operator is the bitwise NOT. For any integer n, ~n = -(n + 1). So ~5 = -(5 + 1) = -6."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the output of: print(6 & 3)",
+    "difficulty": "hard",
+    "points": 15,
+    "estimatedSeconds": 45,
+    "subject": "Programming",
+    "ageMin": 12,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 15,
+    "content": {
+      "options": [
+        { "id": "a", "text": "7" },
+        { "id": "b", "text": "2" },
+        { "id": "c", "text": "3" },
+        { "id": "d", "text": "1" }
+      ],
+      "correct_answer": "b",
+      "explanation": "& is the bitwise AND operator. 6 in binary is 110, 3 is 011. 110 & 011 = 010 = 2."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the output of: print(6 | 3)",
+    "difficulty": "hard",
+    "points": 15,
+    "estimatedSeconds": 45,
+    "subject": "Programming",
+    "ageMin": 12,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 16,
+    "content": {
+      "options": [
+        { "id": "a", "text": "7" },
+        { "id": "b", "text": "2" },
+        { "id": "c", "text": "9" },
+        { "id": "d", "text": "5" }
+      ],
+      "correct_answer": "a",
+      "explanation": "| is the bitwise OR operator. 6 in binary is 110, 3 is 011. 110 | 011 = 111 = 7."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the output of: print(6 ^ 3)",
+    "difficulty": "hard",
+    "points": 15,
+    "estimatedSeconds": 45,
+    "subject": "Programming",
+    "ageMin": 12,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 17,
+    "content": {
+      "options": [
+        { "id": "a", "text": "7" },
+        { "id": "b", "text": "5" },
+        { "id": "c", "text": "3" },
+        { "id": "d", "text": "9" }
+      ],
+      "correct_answer": "b",
+      "explanation": "^ is the bitwise XOR operator. 6 in binary is 110, 3 is 011. 110 ^ 011 = 101 = 5."
+    }
+  },
+  {
+    "questionType": "multiple_choice_multi",
+    "questionText": "Which of the following expressions evaluate to True in Python?",
+    "difficulty": "medium",
+    "points": 15,
+    "estimatedSeconds": 50,
+    "subject": "Programming",
+    "ageMin": 12,
+    "ageMax": 18,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 18,
+    "content": {
+      "options": [
+        { "id": "a", "text": "'cat' in 'concatenate'" },
+        { "id": "b", "text": "10 not in [1, 2, 3]" },
+        { "id": "c", "text": "'' in 'python'" },
+        { "id": "d", "text": "5 not in [1, 2, 3, 4]" },
+        { "id": "e", "text": "'py' in 'Python'" }
+      ],
+      "correct_answers": ["a", "b", "c"],
+      "explanation": "'cat' appears inside 'concatenate' -> True. 10 is not in the list -> True. An empty string is a substring of any string -> True. 5 is not in [1,2,3,4] -> False. 'py' is not in 'Python' because Python is case-sensitive ('Py' != 'py') -> False."
+    }
+  },
+  {
+    "questionType": "fill_in_blank",
+    "questionText": "In Python, the expression  8 << 2  evaluates to ___.",
+    "difficulty": "hard",
+    "points": 10,
+    "estimatedSeconds": 35,
+    "subject": "Programming",
+    "ageMin": 12,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 19,
+    "content": {
+      "blanks": [
+        {
+          "position": 1,
+          "accepted_answers": ["32"]
+        }
+      ],
+      "explanation": "<< is the left-shift operator. 8 in binary is 1000. Shifting left by 2 gives 100000 = 32. Equivalently, 8 x 2^2 = 32."
+    }
+  },
+  {
+    "questionType": "fill_in_blank",
+    "questionText": "What does  print(bool(-1))  output? Answer: ___",
+    "difficulty": "medium",
+    "points": 10,
+    "estimatedSeconds": 25,
+    "subject": "Programming",
+    "ageMin": 12,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 20,
+    "content": {
+      "blanks": [
+        {
+          "position": 1,
+          "accepted_answers": ["True"]
+        }
+      ],
+      "explanation": "In Python, any non-zero number is truthy. -1 is non-zero, so bool(-1) = True."
+    }
+  },
+  {
+    "questionType": "matching",
+    "questionText": "Match each Python operator to its description.",
+    "difficulty": "medium",
+    "points": 15,
+    "estimatedSeconds": 60,
+    "subject": "Programming",
+    "ageMin": 12,
+    "ageMax": 18,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 21,
+    "content": {
+      "leftItems": [
+        { "id": "l1", "text": "//" },
+        { "id": "l2", "text": "**" },
+        { "id": "l3", "text": "%" },
+        { "id": "l4", "text": "^" }
+      ],
+      "rightItems": [
+        { "id": "r1", "text": "Floor division" },
+        { "id": "r2", "text": "Exponentiation" },
+        { "id": "r3", "text": "Modulus (remainder)" },
+        { "id": "r4", "text": "Bitwise XOR" }
+      ],
+      "correctPairs": [
+        { "left": "l1", "right": "r1" },
+        { "left": "l2", "right": "r2" },
+        { "left": "l3", "right": "r3" },
+        { "left": "l4", "right": "r4" }
+      ],
+      "explanation": "// does floor division, ** raises to a power, % gives the remainder, and ^ performs bitwise exclusive OR."
+    }
+  },
+  {
+    "questionType": "matching",
+    "questionText": "Match each expression to its output in Python.",
+    "difficulty": "hard",
+    "points": 20,
+    "estimatedSeconds": 70,
+    "subject": "Programming",
+    "ageMin": 12,
+    "ageMax": 18,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 22,
+    "content": {
+      "leftItems": [
+        { "id": "l1", "text": "0 and 7" },
+        { "id": "l2", "text": "0 or 7" },
+        { "id": "l3", "text": "not []" },
+        { "id": "l4", "text": "'' or 'hi'" }
+      ],
+      "rightItems": [
+        { "id": "r1", "text": "0" },
+        { "id": "r2", "text": "7" },
+        { "id": "r3", "text": "True" },
+        { "id": "r4", "text": "'hi'" }
+      ],
+      "correctPairs": [
+        { "left": "l1", "right": "r1" },
+        { "left": "l2", "right": "r2" },
+        { "left": "l3", "right": "r3" },
+        { "left": "l4", "right": "r4" }
+      ],
+      "explanation": "'and' returns the first falsy value (0). 'or' returns the first truthy value (7). not [] -> True because [] is falsy. '' is falsy so 'or' returns 'hi'."
+    }
+  },
+  {
+    "questionType": "ordering",
+    "questionText": "Arrange Python's operators from HIGHEST to LOWEST precedence.",
+    "difficulty": "hard",
+    "points": 15,
+    "estimatedSeconds": 60,
+    "subject": "Programming",
+    "ageMin": 12,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 23,
+    "content": {
+      "items": [
+        { "id": "s1", "text": "** (exponentiation)" },
+        { "id": "s2", "text": "* / // % (multiplication/division)" },
+        { "id": "s3", "text": "+ - (addition/subtraction)" },
+        { "id": "s4", "text": "Comparison (== != < >)" },
+        { "id": "s5", "text": "not" },
+        { "id": "s6", "text": "and" },
+        { "id": "s7", "text": "or" }
+      ],
+      "correctOrder": ["s1", "s2", "s3", "s4", "s5", "s6", "s7"],
+      "explanation": "Python operator precedence (high to low): ** -> * / // % -> + - -> comparisons -> not -> and -> or."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the output of:\na = 10\na += 5\na *= 2\nprint(a)",
+    "difficulty": "easy",
+    "points": 10,
+    "estimatedSeconds": 25,
+    "subject": "Programming",
+    "ageMin": 12,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 24,
+    "content": {
+      "options": [
+        { "id": "a", "text": "30" },
+        { "id": "b", "text": "25" },
+        { "id": "c", "text": "20" },
+        { "id": "d", "text": "40" }
+      ],
+      "correct_answer": "a",
+      "explanation": "a starts at 10, += 5 makes it 15, *= 2 makes it 30."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the output of: print('hello' * 0 or 'world')",
+    "difficulty": "hard",
+    "points": 15,
+    "estimatedSeconds": 40,
+    "subject": "Programming",
+    "ageMin": 12,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 25,
+    "content": {
+      "options": [
+        { "id": "a", "text": "hello" },
+        { "id": "b", "text": "world" },
+        { "id": "c", "text": "helloworld" },
+        { "id": "d", "text": "Empty string" }
+      ],
+      "correct_answer": "b",
+      "explanation": "'hello' * 0 produces '' (empty string), which is falsy. The 'or' operator then returns the next value, 'world'."
+    }
+  }
+]

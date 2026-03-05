@@ -1,19 +1,12 @@
-{
-  "title": "Loops",
-  "description": "Covers for loops, while loops, range(), break, continue, and infinite loops in Python.",
+﻿{
+  "title": "Loops (for and while)",
+  "description": "Test your understanding of for loops, while loops, range(), break, continue, and loop patterns in Python.",
   "subject": "Programming",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "ageMin": 10,
   "ageMax": 18,
-  "estimatedMinutes": 8,
-  "tags": [
-    "python",
-    "loops",
-    "for",
-    "while",
-    "break",
-    "continue"
-  ]
+  "estimatedMinutes": 25,
+  "tags": ["python", "for-loop", "while-loop", "range", "break", "continue"]
 }
 
 // ==================== QUESTIONS ====================
@@ -21,224 +14,569 @@
 [
   {
     "questionType": "multiple_choice_single",
-    "questionText": "What is the main purpose of loops in programming?",
+    "questionText": "What does range(5) produce?",
+    "difficulty": "easy",
+    "points": 10,
+    "estimatedSeconds": 20,
+    "subject": "Programming",
     "ageMin": 10,
     "ageMax": 18,
-    "difficulty": "easy",
-    "estimatedSeconds": 30,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 5.0,
     "allowPartialCredit": false,
     "negativeMarking": false,
     "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 1,
     "content": {
       "options": [
-        {
-          "id": "a",
-          "text": "To execute a block of code repeatedly"
-        },
-        {
-          "id": "b",
-          "text": "To store multiple values in variables"
-        },
-        {
-          "id": "c",
-          "text": "To make decisions in code"
-        },
-        {
-          "id": "d",
-          "text": "To create user interfaces"
-        }
+        { "id": "a", "text": "0, 1, 2, 3, 4" },
+        { "id": "b", "text": "1, 2, 3, 4, 5" },
+        { "id": "c", "text": "0, 1, 2, 3, 4, 5" },
+        { "id": "d", "text": "1, 2, 3, 4" }
       ],
       "correct_answer": "a",
-      "explanation": ""
-    },
-    "position": 1
+      "explanation": "range(5) starts at 0 and goes up to (but NOT including) 5. So it gives 0, 1, 2, 3, 4."
+    }
   },
   {
     "questionType": "multiple_choice_single",
-    "questionText": "Which loop is best when you know exactly how many times to repeat?",
+    "questionText": "How many times does this loop run?\nfor i in range(3):\n    print(i)",
+    "difficulty": "easy",
+    "points": 10,
+    "estimatedSeconds": 20,
+    "subject": "Programming",
     "ageMin": 10,
     "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 2,
+    "content": {
+      "options": [
+        { "id": "a", "text": "3 times" },
+        { "id": "b", "text": "4 times" },
+        { "id": "c", "text": "2 times" },
+        { "id": "d", "text": "0 times" }
+      ],
+      "correct_answer": "a",
+      "explanation": "range(3) gives 0, 1, 2 -- that's 3 values, so the loop runs 3 times."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What does range(2, 6) produce?",
     "difficulty": "easy",
+    "points": 10,
+    "estimatedSeconds": 20,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 3,
+    "content": {
+      "options": [
+        { "id": "a", "text": "2, 3, 4, 5" },
+        { "id": "b", "text": "2, 3, 4, 5, 6" },
+        { "id": "c", "text": "1, 2, 3, 4, 5" },
+        { "id": "d", "text": "3, 4, 5, 6" }
+      ],
+      "correct_answer": "a",
+      "explanation": "range(2, 6) starts at 2 and goes up to but NOT including 6. So: 2, 3, 4, 5."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the output?\nfor i in range(1, 10, 3):\n    print(i, end=\" \")",
+    "difficulty": "medium",
+    "points": 10,
+    "estimatedSeconds": 30,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 4,
+    "content": {
+      "options": [
+        { "id": "a", "text": "1 4 7 " },
+        { "id": "b", "text": "1 3 6 9 " },
+        { "id": "c", "text": "1 4 7 10 " },
+        { "id": "d", "text": "3 6 9 " }
+      ],
+      "correct_answer": "a",
+      "explanation": "range(1, 10, 3) starts at 1, steps by 3: 1, 4, 7. Next would be 10, but 10 is not < 10, so it stops."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is a while loop best used for?",
+    "difficulty": "easy",
+    "points": 10,
     "estimatedSeconds": 25,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 5.0,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
     "allowPartialCredit": false,
     "negativeMarking": false,
     "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 5,
     "content": {
       "options": [
-        {
-          "id": "a",
-          "text": "for loop"
-        },
-        {
-          "id": "b",
-          "text": "while loop"
-        },
-        {
-          "id": "c",
-          "text": "if loop"
-        },
-        {
-          "id": "d",
-          "text": "switch loop"
-        }
+        { "id": "a", "text": "Repeating code when you don't know exactly how many times" },
+        { "id": "b", "text": "Repeating code exactly 10 times" },
+        { "id": "c", "text": "Looping through a list" },
+        { "id": "d", "text": "Defining a function" }
       ],
       "correct_answer": "a",
-      "explanation": ""
-    },
-    "position": 2
+      "explanation": "while loops repeat until a condition becomes False. They're perfect when you don't know the exact number of repetitions."
+    }
   },
   {
     "questionType": "multiple_choice_single",
-    "questionText": "What does range(1, 6) generate in Python?",
-    "ageMin": 11,
-    "ageMax": 18,
+    "questionText": "What is the output?\ncount = 0\nwhile count < 3:\n    print(count)\n    count += 1",
     "difficulty": "easy",
+    "points": 10,
     "estimatedSeconds": 30,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 5.0,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
     "allowPartialCredit": false,
     "negativeMarking": false,
     "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 6,
     "content": {
       "options": [
-        {
-          "id": "a",
-          "text": "Numbers 1, 2, 3, 4, 5"
-        },
-        {
-          "id": "b",
-          "text": "Numbers 1, 2, 3, 4, 5, 6"
-        },
-        {
-          "id": "c",
-          "text": "Numbers 0, 1, 2, 3, 4, 5"
-        },
-        {
-          "id": "d",
-          "text": "Numbers 6, 5, 4, 3, 2, 1"
-        }
+        { "id": "a", "text": "0\n1\n2" },
+        { "id": "b", "text": "1\n2\n3" },
+        { "id": "c", "text": "0\n1\n2\n3" },
+        { "id": "d", "text": "It runs forever" }
       ],
       "correct_answer": "a",
-      "explanation": ""
-    },
-    "position": 3
+      "explanation": "count starts at 0. Loop runs while count < 3. It prints 0, 1, 2, then count becomes 3 and the condition is False."
+    }
   },
   {
     "questionType": "multiple_choice_single",
-    "questionText": "What happens when you use 'break' in a loop?",
-    "ageMin": 12,
-    "ageMax": 18,
+    "questionText": "What does the 'break' statement do?",
     "difficulty": "medium",
-    "estimatedSeconds": 35,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 8.0,
+    "points": 10,
+    "estimatedSeconds": 20,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
     "allowPartialCredit": false,
     "negativeMarking": false,
     "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 7,
     "content": {
       "options": [
-        {
-          "id": "a",
-          "text": "The loop exits immediately"
-        },
-        {
-          "id": "b",
-          "text": "The loop pauses for 1 second"
-        },
-        {
-          "id": "c",
-          "text": "The current iteration is skipped"
-        },
-        {
-          "id": "d",
-          "text": "The loop restarts from the beginning"
-        }
+        { "id": "a", "text": "Immediately exits the loop completely" },
+        { "id": "b", "text": "Skips to the next iteration" },
+        { "id": "c", "text": "Ends the program" },
+        { "id": "d", "text": "Pauses the loop for a moment" }
       ],
       "correct_answer": "a",
-      "explanation": ""
-    },
-    "position": 4
+      "explanation": "break stops the loop right away and jumps to the code after the loop. No more iterations happen."
+    }
   },
   {
     "questionType": "multiple_choice_single",
-    "questionText": "What does 'continue' do in a loop?",
-    "ageMin": 12,
-    "ageMax": 18,
+    "questionText": "What does the 'continue' statement do?",
     "difficulty": "medium",
-    "estimatedSeconds": 35,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 8.0,
+    "points": 10,
+    "estimatedSeconds": 20,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
     "allowPartialCredit": false,
     "negativeMarking": false,
     "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 8,
     "content": {
       "options": [
-        {
-          "id": "a",
-          "text": "Skips the rest of the current iteration and moves to the next"
-        },
-        {
-          "id": "b",
-          "text": "Exits the loop completely"
-        },
-        {
-          "id": "c",
-          "text": "Restarts the loop from the beginning"
-        },
-        {
-          "id": "d",
-          "text": "Pauses the loop execution"
-        }
+        { "id": "a", "text": "Skips the rest of the current iteration and goes to the next one" },
+        { "id": "b", "text": "Exits the loop completely" },
+        { "id": "c", "text": "Restarts the loop from the beginning" },
+        { "id": "d", "text": "Continues running the loop forever" }
       ],
       "correct_answer": "a",
-      "explanation": ""
-    },
-    "position": 5
+      "explanation": "continue skips everything below it in the current iteration and jumps back to the loop's condition check."
+    }
   },
   {
     "questionType": "multiple_choice_single",
-    "questionText": "What happens if a while loop's condition never becomes False?",
-    "ageMin": 12,
-    "ageMax": 18,
+    "questionText": "What is the output?\nfor i in range(5):\n    if i == 3:\n        break\n    print(i, end=\" \")",
     "difficulty": "medium",
+    "points": 10,
     "estimatedSeconds": 35,
-    "subject": "programming",
-    "locale": "en-US",
-    "points": 8.0,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
     "allowPartialCredit": false,
     "negativeMarking": false,
     "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 9,
     "content": {
       "options": [
-        {
-          "id": "a",
-          "text": "The loop runs forever (infinite loop)"
-        },
-        {
-          "id": "b",
-          "text": "The loop runs exactly once"
-        },
-        {
-          "id": "c",
-          "text": "Python automatically stops it after 1000 iterations"
-        },
-        {
-          "id": "d",
-          "text": "The loop never starts"
-        }
+        { "id": "a", "text": "0 1 2 " },
+        { "id": "b", "text": "0 1 2 3 " },
+        { "id": "c", "text": "0 1 2 4 " },
+        { "id": "d", "text": "0 1 2 3 4 " }
       ],
       "correct_answer": "a",
-      "explanation": ""
-    },
-    "position": 6
+      "explanation": "The loop prints 0, 1, 2. When i reaches 3, break runs BEFORE the print, so 3 is never printed and the loop ends."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the output?\nfor i in range(5):\n    if i == 3:\n        continue\n    print(i, end=\" \")",
+    "difficulty": "medium",
+    "points": 10,
+    "estimatedSeconds": 35,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 10,
+    "content": {
+      "options": [
+        { "id": "a", "text": "0 1 2 4 " },
+        { "id": "b", "text": "0 1 2 3 4 " },
+        { "id": "c", "text": "0 1 2 " },
+        { "id": "d", "text": "4 " }
+      ],
+      "correct_answer": "a",
+      "explanation": "continue skips printing when i is 3, but the loop continues. So 3 is skipped but 4 still prints."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What causes an infinite loop?",
+    "difficulty": "medium",
+    "points": 10,
+    "estimatedSeconds": 25,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 11,
+    "content": {
+      "options": [
+        { "id": "a", "text": "A while loop whose condition never becomes False" },
+        { "id": "b", "text": "Using range() with big numbers" },
+        { "id": "c", "text": "Using break inside a loop" },
+        { "id": "d", "text": "Printing inside a loop" }
+      ],
+      "correct_answer": "a",
+      "explanation": "If a while loop's condition stays True forever (maybe you forgot to update a counter), it runs indefinitely."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the output?\nfor letter in \"Hi\":\n    print(letter)",
+    "difficulty": "easy",
+    "points": 10,
+    "estimatedSeconds": 25,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 12,
+    "content": {
+      "options": [
+        { "id": "a", "text": "H\ni" },
+        { "id": "b", "text": "Hi" },
+        { "id": "c", "text": "H i" },
+        { "id": "d", "text": "Error" }
+      ],
+      "correct_answer": "a",
+      "explanation": "A for loop can iterate through a string character by character. It prints H, then i (each on a new line)."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What is the output?\ntotal = 0\nfor i in range(1, 4):\n    total += i\nprint(total)",
+    "difficulty": "medium",
+    "points": 10,
+    "estimatedSeconds": 30,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 13,
+    "content": {
+      "options": [
+        { "id": "a", "text": "6" },
+        { "id": "b", "text": "10" },
+        { "id": "c", "text": "3" },
+        { "id": "d", "text": "4" }
+      ],
+      "correct_answer": "a",
+      "explanation": "range(1, 4) gives 1, 2, 3. Total: 0 + 1 = 1, + 2 = 3, + 3 = 6."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "What keyword is used like a sentinel (password) to keep asking for input until a specific value is entered?",
+    "difficulty": "hard",
+    "points": 15,
+    "estimatedSeconds": 35,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 14,
+    "content": {
+      "options": [
+        { "id": "a", "text": "A while loop that checks if input != the sentinel value" },
+        { "id": "b", "text": "A for loop with range(100)" },
+        { "id": "c", "text": "An if statement" },
+        { "id": "d", "text": "A match-case block" }
+      ],
+      "correct_answer": "a",
+      "explanation": "A sentinel value is a special value (like 'quit' or -1) that signals the loop to stop. while loops are perfect for this pattern."
+    }
+  },
+  {
+    "questionType": "multiple_choice_multi",
+    "questionText": "Which of the following are valid uses of range()? (Select all that apply)",
+    "difficulty": "medium",
+    "points": 15,
+    "estimatedSeconds": 40,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 15,
+    "content": {
+      "options": [
+        { "id": "a", "text": "range(5)" },
+        { "id": "b", "text": "range(2, 8)" },
+        { "id": "c", "text": "range(0, 10, 2)" },
+        { "id": "d", "text": "range(10, 0, -1)" },
+        { "id": "e", "text": "range(\"hello\")" }
+      ],
+      "correct_answers": ["a", "b", "c", "d"],
+      "explanation": "range() takes 1, 2, or 3 integer arguments: range(stop), range(start, stop), or range(start, stop, step). Strings are not valid."
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "A for loop in Python can iterate over strings, lists, and range objects.",
+    "difficulty": "easy",
+    "points": 5,
+    "estimatedSeconds": 15,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 16,
+    "content": {
+      "options": [
+        { "id": "a", "text": "True" },
+        { "id": "b", "text": "False" }
+      ],
+      "correct_answer": "a",
+      "explanation": "Python's for loop can loop through any iterable: strings (char by char), lists, tuples, ranges, and more!"
+    }
+  },
+  {
+    "questionType": "multiple_choice_single",
+    "questionText": "The code inside a while loop always runs at least once.",
+    "difficulty": "hard",
+    "points": 10,
+    "estimatedSeconds": 25,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 17,
+    "content": {
+      "options": [
+        { "id": "a", "text": "True" },
+        { "id": "b", "text": "False" }
+      ],
+      "correct_answer": "b",
+      "explanation": "If the condition is already False when the while loop starts, the body never runs. Example: while False: print('Hi') prints nothing."
+    }
+  },
+  {
+    "questionType": "fill_in_blank",
+    "questionText": "To immediately stop a loop and exit it, use the ___ keyword.",
+    "difficulty": "easy",
+    "points": 10,
+    "estimatedSeconds": 15,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 18,
+    "content": {
+      "blanks": [
+        {
+          "position": 1,
+          "accepted_answers": ["break"]
+        }
+      ],
+      "explanation": "break immediately exits the loop. The program continues with whatever code comes after the loop."
+    }
+  },
+  {
+    "questionType": "fill_in_blank",
+    "questionText": "range(0, 10, ___) would produce the values 0, 2, 4, 6, 8.",
+    "difficulty": "medium",
+    "points": 10,
+    "estimatedSeconds": 20,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 19,
+    "content": {
+      "blanks": [
+        {
+          "position": 1,
+          "accepted_answers": ["2"]
+        }
+      ],
+      "explanation": "The third argument to range() is the step size. A step of 2 skips every other number: 0, 2, 4, 6, 8."
+    }
+  },
+  {
+    "questionType": "matching",
+    "questionText": "Match each loop concept to its description.",
+    "difficulty": "medium",
+    "points": 15,
+    "estimatedSeconds": 50,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 20,
+    "content": {
+      "leftItems": [
+        { "id": "l1", "text": "for loop" },
+        { "id": "l2", "text": "while loop" },
+        { "id": "l3", "text": "break" },
+        { "id": "l4", "text": "continue" }
+      ],
+      "rightItems": [
+        { "id": "r1", "text": "Repeats for each item in a sequence" },
+        { "id": "r2", "text": "Repeats as long as a condition is True" },
+        { "id": "r3", "text": "Exits the loop immediately" },
+        { "id": "r4", "text": "Skips to the next iteration" }
+      ],
+      "correctPairs": [
+        { "left": "l1", "right": "r1" },
+        { "left": "l2", "right": "r2" },
+        { "left": "l3", "right": "r3" },
+        { "left": "l4", "right": "r4" }
+      ],
+      "explanation": "for loops are great for known sequences, while loops for unknown iterations, break to exit, continue to skip."
+    }
+  },
+  {
+    "questionType": "matching",
+    "questionText": "Match each range() call to its output.",
+    "difficulty": "hard",
+    "points": 15,
+    "estimatedSeconds": 60,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": true,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 21,
+    "content": {
+      "leftItems": [
+        { "id": "l1", "text": "range(3)" },
+        { "id": "l2", "text": "range(1, 4)" },
+        { "id": "l3", "text": "range(0, 6, 2)" },
+        { "id": "l4", "text": "range(5, 0, -2)" }
+      ],
+      "rightItems": [
+        { "id": "r1", "text": "0, 1, 2" },
+        { "id": "r2", "text": "1, 2, 3" },
+        { "id": "r3", "text": "0, 2, 4" },
+        { "id": "r4", "text": "5, 3, 1" }
+      ],
+      "correctPairs": [
+        { "left": "l1", "right": "r1" },
+        { "left": "l2", "right": "r2" },
+        { "left": "l3", "right": "r3" },
+        { "left": "l4", "right": "r4" }
+      ],
+      "explanation": "range(stop) starts at 0, range(start, stop) starts at start, and the third argument is the step (can be negative to count down)."
+    }
+  },
+  {
+    "questionType": "ordering",
+    "questionText": "Trace through this while loop. Put the printed values in order.\nx = 1\nwhile x <= 8:\n    print(x)\n    x *= 2",
+    "difficulty": "hard",
+    "points": 15,
+    "estimatedSeconds": 45,
+    "subject": "Programming",
+    "ageMin": 10,
+    "ageMax": 18,
+    "allowPartialCredit": false,
+    "negativeMarking": false,
+    "supportsReadAloud": true,
+    "locale": "en-US",
+    "position": 22,
+    "content": {
+      "items": [
+        { "id": "s1", "text": "1" },
+        { "id": "s2", "text": "2" },
+        { "id": "s3", "text": "4" },
+        { "id": "s4", "text": "8" }
+      ],
+      "correctOrder": ["s1", "s2", "s3", "s4"],
+      "explanation": "x starts at 1, doubles each time: 1, 2, 4, 8. When x becomes 16, 16 <= 8 is False, so the loop stops."
+    }
   }
 ]
